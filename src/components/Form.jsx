@@ -53,6 +53,12 @@ const useStyles = makeStyles({
     '& label': {
       color: '#e3f2fd !important',
     },
+    '& div': {
+      '& input': {
+        color: '#fff',
+      },
+      backgroundColor: 'rgb(242 115 115 / 6%)',
+    },
     '& div:hover::before': {
       borderBottom: '1px solid #e3f2fd !important',
     },
@@ -66,8 +72,9 @@ const useStyles = makeStyles({
   },
   radio: {
     margin: '5px 10px !important',
-    '& span.Mui-checked': {
-      color: '#e3f2fd !important',
+    color: '#e3f2fd !important',
+    '& span': {
+      color: '#fff',
     },
   },
   buttonPrimary: {
@@ -105,69 +112,78 @@ const MaterialUiForm = ({ timeline }) => {
 
   return (
     <Box className={classes.root} ref={form}>
-      <FormGroup>
-        <TextField
-          name="Name"
-          label="Name"
-          variant="filled"
-          className={classes.textfield}
-        />
-        <TextField
-          name="email"
-          label="Email"
-          variant="filled"
-          className={classes.textfield}
-        />
-        <TextField
-          name="phone number"
-          label="Phone Number"
-          variant="filled"
-          className={classes.textfield}
-        />
-        <FormLabel
-          id="demo-row-radio-buttons-group-label"
-          className={classes.label}
-        >
-          Gender
-        </FormLabel>
-        <RadioGroup
-          row
-          aria-labelledby="demo-row-radio-buttons-group-label"
-          name="row-radio-buttons-group"
-        >
-          <FormControlLabel
-            value="female"
-            control={<Radio />}
-            label="Female"
-            className={classes.radio}
+      <div className="login-box">
+        <FormGroup>
+          <TextField
+            name="Name"
+            label="Name"
+            variant="filled"
+            className={classes.textfield}
           />
-          <FormControlLabel
-            value="male"
-            control={<Radio />}
-            label="Male"
-            className={classes.radio}
+          <TextField
+            name="email"
+            label="Email"
+            variant="filled"
+            className={classes.textfield}
           />
-          <FormControlLabel
-            value="other"
-            control={<Radio />}
-            label="Other"
-            className={classes.radio}
+          <TextField
+            name="phone number"
+            label="Phone Number"
+            variant="filled"
+            className={classes.textfield}
           />
-        </RadioGroup>
-        <TextField
-          name="college"
-          label="College"
-          variant="filled"
-          className={classes.textfield}
-        />
-        <Button
-          type="submit"
-          className={classes.buttonPrimary}
-          variant="contained"
-        >
-          Submit
-        </Button>
-      </FormGroup>
+          <FormLabel
+            id="demo-row-radio-buttons-group-label"
+            className={classes.label}
+          >
+            Gender
+          </FormLabel>
+          <RadioGroup
+            row
+            aria-labelledby="demo-row-radio-buttons-group-label"
+            name="row-radio-buttons-group"
+          >
+            <FormControlLabel
+              value="female"
+              control={<Radio />}
+              label="Female"
+              className={classes.radio}
+            />
+            <FormControlLabel
+              value="male"
+              control={<Radio />}
+              label="Male"
+              className={classes.radio}
+            />
+            <FormControlLabel
+              value="other"
+              control={<Radio />}
+              label="Other"
+              className={classes.radio}
+            />
+          </RadioGroup>
+          <TextField
+            name="college"
+            label="College"
+            variant="filled"
+            className={classes.textfield}
+          />
+          {/* <Button
+            type="submit"
+            className={classes.buttonPrimary}
+            variant="contained"
+          >
+            Submit
+          </Button> */}
+          <Button id="submitBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </Button>
+        </FormGroup>
+      </div>
     </Box>
   )
 }

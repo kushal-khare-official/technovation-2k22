@@ -155,8 +155,14 @@ header {
 
 header h1 {
   font-family: Horizon;
-  font-size: 5rem;
+  font-size: 11vw;
   margin: 0.5rem auto;
   width: fit-content;
   letter-spacing: 0.2ch;
+}
+
+@media screen and (min-width: 720px) {
+  header h1 {
+    font-size: 5rem;
+  }
 }

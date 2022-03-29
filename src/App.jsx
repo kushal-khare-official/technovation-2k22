@@ -4,7 +4,8 @@ import gsap from 'gsap'
 import './App.css'
 import BgLeft from './components/BgLeft'
 import BgRight from './components/BgRight'
-import Form from './components/form1'
+import Form from './components/Form'
+import './components/form.css'
 
 function App() {
   const [tl, setTl] = useState(() => gsap.timeline())
@@ -32,8 +33,8 @@ function App() {
         <header>
           <h1>Technovation</h1>
         </header>
-        {/* <Form timeline={tl2} /> */}
-        <Form></Form>
+        <Form timeline={tl2} />
+        {/* <Form></Form> */}
       </main>
     </div>
   )
