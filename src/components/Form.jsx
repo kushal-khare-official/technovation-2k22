@@ -39,10 +39,8 @@ const validate = (values) => {
 
 const useStyles = makeStyles({
   root: {
-    // background: '#7341C0',
     border: 0,
     borderRadius: 3,
-    // boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
     color: 'white',
     padding: '30px',
     maxWidth: '500px',
@@ -93,20 +91,22 @@ const MaterialUiForm = ({ timeline }) => {
   useEffect(() => {
     timeline.staggerFromTo(
       form.current,
-      0.7,
+      2,
       {
-        opacity: 0,
-        scale: 0,
+        // opacity: 0,
+        // scale: 0,
+        y: 1000,
         transformOrigin: 'center center',
         force3D: true,
       },
       {
-        opacity: 1,
-        scale: 1,
+        // opacity: 1,
+        // scale: 1,
+        y: 0,
         ease: Elastic.easeInOut,
         force3D: true,
       },
-      0.009
+      3
     )
   }, [timeline])
 
@@ -168,13 +168,6 @@ const MaterialUiForm = ({ timeline }) => {
             variant="filled"
             className={classes.textfield}
           />
-          {/* <Button
-            type="submit"
-            className={classes.buttonPrimary}
-            variant="contained"
-          >
-            Submit
-          </Button> */}
           <Button id="submitBtn">
             <span></span>
             <span></span>

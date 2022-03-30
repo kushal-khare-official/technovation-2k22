@@ -3,6 +3,10 @@
   src: local('Horizon'), url(./assets/fonts/Horizon.ttf) format('truetype');
 }
 
+.App {
+  overflow: hidden;
+}
+
 .App,
 .BgLeft,
 .BgRight {
@@ -143,11 +147,10 @@
 
 main {
   min-height: 100vh;
-  /* background: white; */
+  overflow: hidden;
 }
 
 header {
-  /* background-color: #004d40; */
   color: white;
   min-height: 10rem;
   padding-top: 1rem;
