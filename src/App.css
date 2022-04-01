@@ -3,6 +3,8 @@
   src: local('Horizon'), url(./assets/fonts/Horizon.ttf) format('truetype');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
 .App {
   overflow: hidden;
 }
@@ -146,11 +148,13 @@
 }
 
 main {
+  transform: translateY(45%);
   min-height: 100vh;
-  overflow: hidden;
+  overflow: visible;
 }
 
 header {
+  transform: translateY(-50%);
   color: white;
   min-height: 10rem;
   padding-top: 1rem;
@@ -164,8 +168,19 @@ header h1 {
   letter-spacing: 0.2ch;
 }
 
+header h4 {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 4vw;
+  margin: 0.5rem auto;
+  width: fit-content;
+  letter-spacing: 0.2ch;
+}
+
 @media screen and (min-width: 720px) {
   header h1 {
     font-size: 5rem;
+  }
+  header h4 {
+    font-size: 2rem;
   }
 }

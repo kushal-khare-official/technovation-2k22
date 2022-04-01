@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react'
-import { Elastic } from 'gsap'
+import React, { useEffect, useRef } from "react";
+import { Elastic } from "gsap";
 
 import {
   TextField,
@@ -10,83 +10,85 @@ import {
   FormLabel,
   FormControlLabel,
   Box,
-} from '@mui/material'
-import { makeStyles } from '@mui/styles'
-import asyncValidate from '../utils/asyncValidate'
+} from "@mui/material";
+import { makeStyles } from "@mui/styles";
+import asyncValidate from "../utils/asyncValidate";
+import ThankYou from "./Thankyou";
 
 const validate = (values) => {
-  const errors = {}
+  const errors = {};
   const requiredFields = [
-    'firstName',
-    'lastName',
-    'email',
-    'favoriteColor',
-    'notes',
-  ]
+    "firstName",
+    "lastName",
+    "email",
+    "favoriteColor",
+    "notes",
+  ];
   requiredFields.forEach((field) => {
     if (!values[field]) {
-      errors[field] = 'Required'
+      errors[field] = "Required";
     }
-  })
+  });
   if (
     values.email &&
     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
   ) {
-    errors.email = 'Invalid email address'
+    errors.email = "Invalid email address";
   }
-  return errors
-}
+  return errors;
+};
 
-const useStyles = makeStyles({
-  root: {
-    border: 0,
-    borderRadius: 3,
-    color: 'white',
-    padding: '30px',
-    maxWidth: '500px',
-    margin: 'auto',
-  },
-  textfield: {
-    margin: '10px !important',
-    '& label': {
-      color: '#e3f2fd !important',
+const MaterialUiForm = ({ timeline, displayForm }) => {
+  const form = useRef();
+  const classes = useStyles();
+
+  const useStyles = makeStyles({
+    root: {
+      border: 0,
+      borderRadius: 3,
+      color: "white",
+      padding: "30px",
+      maxWidth: "500px",
+      margin: "auto",
+      display: displayForm,
     },
-    '& div': {
-      '& input': {
-        color: '#fff',
+    textfield: {
+      margin: "10px !important",
+      "& label": {
+        color: "#e3f2fd !important",
       },
-      backgroundColor: 'rgb(242 115 115 / 6%)',
+      "& div": {
+        "& input": {
+          color: "#fff",
+        },
+        backgroundColor: "rgb(242 115 115 / 6%)",
+      },
+      "& div:hover::before": {
+        borderBottom: "1px solid #e3f2fd !important",
+      },
+      "& div::after": {
+        borderBottom: "3px solid #e3f2fd !important",
+      },
     },
-    '& div:hover::before': {
-      borderBottom: '1px solid #e3f2fd !important',
+    label: {
+      margin: "10px !important",
+      color: "#e3f2fd !important",
     },
-    '& div::after': {
-      borderBottom: '3px solid #e3f2fd !important',
+    radio: {
+      margin: "5px 10px !important",
+      color: "#e3f2fd !important",
+      "& span": {
+        color: "#fff",
+      },
     },
-  },
-  label: {
-    margin: '10px !important',
-    color: '#e3f2fd !important',
-  },
-  radio: {
-    margin: '5px 10px !important',
-    color: '#e3f2fd !important',
-    '& span': {
-      color: '#fff',
+    buttonPrimary: {
+      margin: "20px auto !important",
+      background: "#004D40 !important",
+      color: "#e3f2fd !important",
+      maxWidth: "100px",
+      fontWeight: "bold",
     },
-  },
-  buttonPrimary: {
-    margin: '20px auto !important',
-    background: '#004D40 !important',
-    color: '#e3f2fd !important',
-    maxWidth: '100px',
-    fontWeight: 'bold',
-  },
-})
-
-const MaterialUiForm = ({ timeline }) => {
-  const form = useRef()
-  const classes = useStyles()
+  });
 
   useEffect(() => {
     timeline.staggerFromTo(
@@ -96,7 +98,7 @@ const MaterialUiForm = ({ timeline }) => {
         // opacity: 0,
         // scale: 0,
         y: 1000,
-        transformOrigin: 'center center',
+        transformOrigin: "center center",
         force3D: true,
       },
       {
@@ -107,8 +109,8 @@ const MaterialUiForm = ({ timeline }) => {
         force3D: true,
       },
       3
-    )
-  }, [timeline])
+    );
+  }, [timeline]);
 
   return (
     <Box className={classes.root} ref={form}>
@@ -176,9 +178,10 @@ const MaterialUiForm = ({ timeline }) => {
             Submit
           </Button>
         </FormGroup>
+        {/* <ThankYou></ThankYou> */}
       </div>
     </Box>
-  )
-}
+  );
+};
 
-export default MaterialUiForm
+export default MaterialUiForm;
