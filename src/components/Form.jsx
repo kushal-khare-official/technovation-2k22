@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from "react";
-import { Elastic } from "gsap";
+import React, { useRef } from 'react'
 
 import {
   TextField,
@@ -10,108 +9,86 @@ import {
   FormLabel,
   FormControlLabel,
   Box,
-} from "@mui/material";
-import { makeStyles } from "@mui/styles";
-import asyncValidate from "../utils/asyncValidate";
-import ThankYou from "./Thankyou";
+} from '@mui/material'
+import { makeStyles } from '@mui/styles'
+import asyncValidate from '../utils/asyncValidate'
+import ThankYou from './Thankyou'
 
 const validate = (values) => {
-  const errors = {};
+  const errors = {}
   const requiredFields = [
-    "firstName",
-    "lastName",
-    "email",
-    "favoriteColor",
-    "notes",
-  ];
+    'firstName',
+    'lastName',
+    'email',
+    'favoriteColor',
+    'notes',
+  ]
   requiredFields.forEach((field) => {
     if (!values[field]) {
-      errors[field] = "Required";
+      errors[field] = 'Required'
     }
-  });
+  })
   if (
     values.email &&
     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
   ) {
-    errors.email = "Invalid email address";
+    errors.email = 'Invalid email address'
   }
-  return errors;
-};
+  return errors
+}
 
 const MaterialUiForm = ({ timeline, displayForm }) => {
-  const form = useRef();
+  const form = useRef()
 
   const useStyles = makeStyles({
     root: {
       border: 0,
       borderRadius: 3,
-      color: "white",
-      padding: "30px",
-      maxWidth: "500px",
-      margin: "auto",
+      color: 'white',
+      padding: '30px',
+      maxWidth: '500px',
+      margin: 'auto',
       display: displayForm,
     },
     textfield: {
-      margin: "10px !important",
-      "& label": {
-        color: "#e3f2fd !important",
+      margin: '10px !important',
+      '& label': {
+        color: '#e3f2fd !important',
       },
-      "& div": {
-        "& input": {
-          color: "#fff",
+      '& div': {
+        '& input': {
+          color: '#fff',
         },
-        backgroundColor: "rgb(242 115 115 / 6%)",
+        backgroundColor: 'rgb(242 115 115 / 6%)',
       },
-      "& div:hover::before": {
-        borderBottom: "1px solid #e3f2fd !important",
+      '& div:hover::before': {
+        borderBottom: '1px solid #e3f2fd !important',
       },
-      "& div::after": {
-        borderBottom: "3px solid #e3f2fd !important",
+      '& div::after': {
+        borderBottom: '3px solid #e3f2fd !important',
       },
     },
     label: {
-      margin: "10px !important",
-      color: "#e3f2fd !important",
+      margin: '10px !important',
+      color: '#e3f2fd !important',
     },
     radio: {
-      margin: "5px 10px !important",
-      color: "#e3f2fd !important",
-      "& span": {
-        color: "#fff",
+      margin: '5px 10px !important',
+      color: '#e3f2fd !important',
+      '& span': {
+        color: '#fff',
       },
     },
     buttonPrimary: {
-      margin: "20px auto !important",
-      background: "#004D40 !important",
-      color: "#e3f2fd !important",
-      maxWidth: "100px",
-      fontWeight: "bold",
+      margin: '20px auto !important',
+      background: '#004D40 !important',
+      color: '#e3f2fd !important',
+      maxWidth: '100px',
+      fontWeight: 'bold',
     },
-  });
+  })
 
-  const classes = useStyles();
-
-  useEffect(() => {
-    timeline.staggerFromTo(
-      form.current,
-      2,
-      {
-        // opacity: 0,
-        // scale: 0,
-        y: 1000,
-        transformOrigin: "center center",
-        force3D: true,
-      },
-      {
-        // opacity: 1,
-        // scale: 1,
-        y: 0,
-        ease: Elastic.easeInOut,
-        force3D: true,
-      },
-      3
-    );
-  }, [timeline]);
+  const classes = useStyles()
 
   return (
     <Box className={classes.root} ref={form}>
@@ -182,7 +159,7 @@ const MaterialUiForm = ({ timeline, displayForm }) => {
         {/* <ThankYou></ThankYou> */}
       </div>
     </Box>
-  );
-};
+  )
+}
 
-export default MaterialUiForm;
+export default MaterialUiForm
