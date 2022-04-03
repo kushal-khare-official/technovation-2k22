@@ -40,7 +40,6 @@ const validate = (values) => {
 
 const MaterialUiForm = ({ timeline, displayForm }) => {
   const form = useRef();
-  const classes = useStyles();
 
   const useStyles = makeStyles({
     root: {
@@ -89,6 +88,8 @@ const MaterialUiForm = ({ timeline, displayForm }) => {
       fontWeight: "bold",
     },
   });
+
+  const classes = useStyles();
 
   useEffect(() => {
     timeline.staggerFromTo(
