@@ -18,6 +18,7 @@
 }
 .login__btn {
   padding: 10px;
+  margin-top: 10px;
   font-size: 18px;
   margin-bottom: 10px;
   border: none;
@@ -25,8 +26,12 @@
   background-color: black;
 }
 .login__google {
-  background-color: #4285f4;
+  background-color: #ff0068;
 }
 .login div {
   margin-top: 7px;
+}
+
+#link {
+  color: #ff0068;
 }

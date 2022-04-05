@@ -212,7 +212,7 @@ const MaterialUiForm = () => {
             Payment Details
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            <img src={payQR} width="100%" />
+            <img src={payQR} alt="BHIM Pay QR Code" width="100%" />
           </Typography>
         </Box>
       </Modal>

@@ -4,12 +4,9 @@ import gsap, { Elastic } from 'gsap'
 import './App.css'
 import BgLeft from './components/BgLeft'
 import BgRight from './components/BgRight'
-import Form from './components/Form'
 import './components/form.css'
 import Home from './components/Home'
-import ThankYou from './components/Thankyou'
 import { Button } from '@mui/material'
-import { Transform } from '@mui/icons-material'
 
 function App() {
   const main = useRef()
@@ -19,7 +16,6 @@ function App() {
   const [tl, setTl] = useState(() => gsap.timeline())
   const [tl2, setTl2] = useState(() => gsap.timeline())
   const [tl3, setTl3] = useState(() => gsap.timeline())
-  const [displayForm, setDisplayForm] = useState('none')
 
   const animateMain = () => {
     tl2.staggerFromTo(
