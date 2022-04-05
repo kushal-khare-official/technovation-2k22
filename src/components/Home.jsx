@@ -5,6 +5,8 @@ import Register from './Register'
 import Reset from './Reset'
 import Dashboard from './Dashboard'
 import Form from './Form'
+import Form2 from './Form2'
+
 function Home(props) {
   return (
     <div
@@ -19,6 +21,7 @@ function Home(props) {
           <Route exact path="/reset" element={<Reset />} />
           <Route exact path="/dashboard" element={<Dashboard />} />
           <Route exact path="/form" element={<Form />} />
+          <Route exact path="/form2" element={<Form2 />} />
         </Routes>
       </Router>
     </div>

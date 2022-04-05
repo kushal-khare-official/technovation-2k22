@@ -112,7 +112,7 @@ function App() {
       <main ref={main}>
         <header>
           <h1>Technovation</h1>
-          <h4>28th-30th April, 2K22</h4>
+          <h4>27th-30th April, 2K22</h4>
         </header>
         <Button
           variant="contained"
