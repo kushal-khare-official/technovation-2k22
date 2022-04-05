@@ -1,5 +1,4 @@
 .login-box {
-  margin-top: -30%;
   padding: 25px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
@@ -22,40 +21,6 @@
   padding: 0;
   color: #fff;
   text-align: center;
-}
-
-.login-box .user-box {
-  position: relative;
-}
-
-.login-box .user-box input {
-  width: 100%;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  margin-bottom: 30px;
-  border: none;
-  border-bottom: 1px solid #fff;
-  outline: none;
-  background: transparent;
-}
-.login-box .user-box label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  pointer-events: none;
-  transition: 0.5s;
-}
-
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
-  top: -20px;
-  left: 0;
-  color: #ff0068;
-  font-size: 12px;
 }
 
 #submitBtn {

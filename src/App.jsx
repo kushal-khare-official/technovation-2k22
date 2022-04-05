@@ -1,127 +1,113 @@
-import React, { useEffect, useState, useRef } from 'react'
-import gsap, { Elastic } from 'gsap'
+import React from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { makeStyles } from '@mui/styles'
 
+import Layout from './components/Layout'
+import Login from './components/login'
+import Register from './components/Register'
+import Reset from './components/Reset'
+import Dashboard from './components/Dashboard'
+import Form from './components/Form'
+import Form2 from './components/Form2'
 import './App.css'
-import BgLeft from './components/BgLeft'
-import BgRight from './components/BgRight'
-import './components/form.css'
-import Home from './components/Home'
-import { Button } from '@mui/material'
 
 function App() {
-  const main = useRef()
-  const registerBtn = useRef()
-  const home = useRef()
+  const useStyles = makeStyles({
+    root: {
+      border: 0,
+      borderRadius: 3,
+      color: 'white',
+      padding: '30px',
+      maxWidth: '500px',
+      margin: 'auto',
+      transform: 'translateY(40%)',
+    },
+    FormGroup: {
+      border: '2px solid #fff',
+      borderRadius: '0.35em',
+      padding: '20px',
+    },
+    textfield: {
+      margin: '10px !important',
+      '& label': {
+        color: '#e3f2fd !important',
+      },
+      '& div': {
+        '& input': {
+          color: '#fff',
+        },
+        backgroundColor: 'rgb(242 115 115 / 6%)',
+      },
+      '& div:hover::before': {
+        borderBottom: '1px solid #e3f2fd !important',
+      },
+      '& div::after': {
+        borderBottom: '3px solid #e3f2fd !important',
+      },
+    },
+    select: {
+      '& div': {
+        backgroundColor: 'rgb(242 115 115 / 6%)',
+        color: '#fff',
+      },
+      '& svg': {
+        color: '#fff',
+      },
+      '&:hover::before': {
+        borderBottom: '1px solid #e3f2fd !important',
+      },
+      '&::after': {
+        borderBottom: '3px solid #e3f2fd !important',
+      },
+    },
+    label: {
+      margin: '10px !important',
+      color: '#e3f2fd !important',
+    },
+    radio: {
+      margin: '5px 10px !important',
+      color: '#e3f2fd !important',
+      '& span': {
+        color: '#fff',
+      },
+    },
+    buttonPrimary: {
+      margin: '20px auto !important',
+      background: '#004D40 !important',
+      color: '#e3f2fd !important',
+      maxWidth: '100px',
+      fontWeight: 'bold',
+    },
+    modal: {
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      width: 400,
+      backgroundColor: '#333',
+      border: '2px solid #000',
+      boxShadow: 24,
+      color: '#fff',
+      padding: '30px',
+    },
+  })
 
-  const [tl, setTl] = useState(() => gsap.timeline())
-  const [tl2, setTl2] = useState(() => gsap.timeline())
-  const [tl3, setTl3] = useState(() => gsap.timeline())
-
-  const animateMain = () => {
-    tl2.staggerFromTo(
-      registerBtn.current,
-      1,
-      {
-        opacity: 1,
-        scale: 1,
-        transformOrigin: 'center center',
-        force3D: true,
-      },
-      {
-        opacity: 0,
-        scale: 0,
-        ease: Elastic.easeInOut,
-        force3D: true,
-      },
-      0.09
-    )
-    tl3.staggerFromTo(
-      home.current,
-      2,
-      {
-        y: '50%',
-        transformOrigin: 'center center',
-        force3D: true,
-      },
-      {
-        y: 0,
-        ease: Elastic.easeInOut,
-        force3D: true,
-      },
-      0.1
-    )
-    tl2.staggerFromTo(
-      main.current,
-      2,
-      {
-        y: '45%',
-        transformOrigin: 'center center',
-        force3D: true,
-      },
-      {
-        y: '10%',
-        ease: Elastic.easeInOut,
-        force3D: true,
-      },
-      0.1
-    )
-  }
-
-  useEffect(() => {
-    tl2.staggerFromTo(
-      registerBtn.current,
-      2,
-      {
-        opacity: 0,
-        scale: 0,
-        transformOrigin: 'center center',
-        force3D: true,
-      },
-      {
-        opacity: 1,
-        scale: 1,
-        ease: Elastic.easeInOut,
-        force3D: true,
-      },
-      3
-    )
-  }, [tl2])
+  const classes = useStyles()
 
   return (
     <div className="App">
-      <BgLeft timeline={tl} />
-      <BgRight timeline={tl2} />
-      <div className="area">
-        <ul className="circles">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-      <main ref={main}>
-        <header>
-          <h1>Technovation</h1>
-          <h4>27th-30th April, 2K22</h4>
-        </header>
-        <Button
-          variant="contained"
-          style={{ marginLeft: '50%', transform: 'translateX(-50%)' }}
-          ref={registerBtn}
-          onClick={animateMain}
-        >
-          Register Now
-        </Button>
-        <Home home={home} />
-        {/* <Form timeline={tl2} display={displayForm} /> */}
-        {/* <ThankYou></ThankYou> */}
-      </main>
+      <Layout classes={classes}>
+        <Router>
+          <Routes>
+            <Route exact path="/" element={<Login classes={classes} />} />
+            <Route exact path="/register" element={<Register />} />
+            <Route exact path="/reset" element={<Reset />} />
+            <Route exact path="/dashboard" element={<Dashboard />} />
+            <Route exact path="/form" element={<Form classes={classes} />} />
+            <Route exact path="/form2" element={<Form2 classes={classes} />} />
+          </Routes>
+        </Router>
+      </Layout>
     </div>
   )
 }
