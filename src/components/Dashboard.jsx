@@ -35,17 +35,19 @@ function Dashboard() {
   }, [user, error, loading, navigate])
 
   return (
-    <div className="dashboard">
-      <div className="dashboard__container">
-        <Avatar alt={name} src={photoURL} />
-        Logged in as
-        <div>{name}</div>
-        <div>{user?.email}</div>
-        <button className="dashboard__btn" onClick={logout}>
-          Logout
-        </button>
-      </div>
-    </div>
+    <>
+      {/* <div className="dashboard"> */}
+      {/* <div className="dashboard__container"> */}
+      <Avatar alt={name} src={photoURL} />
+      Logged in as
+      <div>{name}</div>
+      <div>{user?.email}</div>
+      <button className="dashboard__btn" onClick={logout}>
+        Logout
+      </button>
+      {/* </div> */}
+      {/* </div> */}
+    </>
   )
 }
 export default Dashboard

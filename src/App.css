@@ -148,13 +148,12 @@
 }
 
 main {
-  transform: translateY(45%);
+  transform: translateY(35vh);
   min-height: 100vh;
   overflow: visible;
 }
 
 header {
-  transform: translateY(-50%);
   color: white;
   min-height: 10rem;
   padding-top: 1rem;

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 
 import {
   TextField,
@@ -8,39 +8,37 @@ import {
   FormGroup,
   FormLabel,
   FormControlLabel,
-  Box,
   Select,
   MenuItem,
   FormControl,
   InputLabel,
 } from '@mui/material'
-import { makeStyles } from '@mui/styles'
 import { useNavigate } from 'react-router-dom'
 
-const validate = (values) => {
-  const errors = {}
-  const requiredFields = [
-    'firstName',
-    'lastName',
-    'email',
-    'favoriteColor',
-    'notes',
-  ]
-  requiredFields.forEach((field) => {
-    if (!values[field]) {
-      errors[field] = 'Required'
-    }
-  })
-  if (
-    values.email &&
-    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
-  ) {
-    errors.email = 'Invalid email address'
-  }
-  return errors
-}
+// const validate = (values) => {
+//   const errors = {}
+//   const requiredFields = [
+//     'firstName',
+//     'lastName',
+//     'email',
+//     'favoriteColor',
+//     'notes',
+//   ]
+//   requiredFields.forEach((field) => {
+//     if (!values[field]) {
+//       errors[field] = 'Required'
+//     }
+//   })
+//   if (
+//     values.email &&
+//     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+//   ) {
+//     errors.email = 'Invalid email address'
+//   }
+//   return errors
+// }
 
-const MaterialUiForm = ({classes}) => {
+const MaterialUiForm = ({ classes }) => {
   const navigate = useNavigate()
 
   const [collegeName, setCollegeName] = useState('')

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { TextField, Button, FormGroup, Box } from '@mui/material'
 import GoogleButton from 'react-google-button'
 import { useAuthState } from 'react-firebase-hooks/auth'
@@ -9,7 +9,6 @@ import {
   logInWithEmailAndPassword,
   signInWithGoogle,
 } from '../firebase.js'
-import './login.css'
 
 function Login({ classes }) {
   const [email, setEmail] = useState('')
@@ -49,7 +48,6 @@ function Login({ classes }) {
       <Button
         style={{
           marginTop: '20px',
-          // background: '#1C0926',
         }}
         id="submitBtn"
         variant="filled"
@@ -71,25 +69,23 @@ function Login({ classes }) {
       <Box style={{ margin: 'auto' }}>
         <Button
           style={{
-            marginTop: '40px',
+            marginTop: '20px',
+            marginLeft: '50%',
+            transform: 'translateX(-50%)',
             background: '#1C0926',
+            fontSize: '0.75rem',
           }}
           variant="filled"
           onClick={() => navigate('/reset')}
         >
           Forgot Password
         </Button>
-        <Button
-          style={{
-            marginTop: '40px',
-            marginLeft: '40px',
-            background: '#1C0926',
-          }}
-          onClick={() => navigate('/register')}
-          variant="filled"
-        >
-          Register Now
-        </Button>
+        <div style={{ marginTop: '20px' }}>
+          Don't Have an account Yet?{' '}
+          <Link id="link" to="/register">
+            Register Now
+          </Link>{' '}
+        </div>
       </Box>
     </FormGroup>
   )

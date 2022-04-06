@@ -1,20 +1,20 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import gsap, { Elastic } from 'gsap'
 import { Box, Button } from '@mui/material'
 
 import BgLeft from './BgLeft'
 import BgRight from './BgRight'
 import './Layout.css'
-import './form.css'
+import './Forms.css'
 
 function Layout({ classes, children }) {
   const main = useRef()
   const registerBtn = useRef()
   const home = useRef()
 
-  const [tl, setTl] = useState(() => gsap.timeline())
-  const [tl2, setTl2] = useState(() => gsap.timeline())
-  const [tl3, setTl3] = useState(() => gsap.timeline())
+  const [tl] = useState(() => gsap.timeline())
+  const [tl2] = useState(() => gsap.timeline())
+  const [tl3] = useState(() => gsap.timeline())
 
   const animateMain = () => {
     tl.staggerFromTo(
@@ -38,12 +38,12 @@ function Layout({ classes, children }) {
       home.current,
       2,
       {
-        y: '35%',
+        y: '40vh',
         transformOrigin: 'center center',
         force3D: true,
       },
       {
-        y: '-20%',
+        y: '0',
         ease: Elastic.easeInOut,
         force3D: true,
       },
@@ -53,12 +53,12 @@ function Layout({ classes, children }) {
       main.current,
       2,
       {
-        y: '45%',
+        y: '35vh',
         transformOrigin: 'center center',
         force3D: true,
       },
       {
-        y: '10%',
+        y: '0',
         ease: Elastic.easeInOut,
         force3D: true,
       },
@@ -92,7 +92,8 @@ function Layout({ classes, children }) {
         <Button
           style={{
             position: 'absolute',
-            top: '40vh',
+            top: '45vh',
+            height: '200px',
             marginLeft: '50%',
             transform: 'translateX(-50%)',
           }}

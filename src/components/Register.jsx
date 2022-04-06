@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { Link, useNavigate } from 'react-router-dom'
+import GoogleButton from 'react-google-button'
+import { TextField, Button, FormGroup } from '@mui/material'
+
 import {
   auth,
   registerWithEmailAndPassword,
   signInWithGoogle,
 } from '../firebase'
-import { TextField, Button, FormGroup } from '@mui/material'
-import { makeStyles } from '@mui/styles'
-import './Register.css'
-function Register() {
+
+function Register({ classes }) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [name, setName] = useState('')
@@ -27,110 +28,58 @@ function Register() {
     if (user) navigate('/dashboard')
   }, [user, loading, error, navigate])
 
-  const useStyles = makeStyles({
-    root: {
-      border: 0,
-      borderRadius: 3,
-      color: 'white',
-      padding: '30px',
-      maxWidth: '500px',
-      margin: 'auto',
-      // display: displayForm,
-    },
-    textfield: {
-      margin: '10px !important',
-      '& label': {
-        color: '#e3f2fd !important',
-      },
-      '& div': {
-        '& input': {
-          color: '#fff',
-        },
-        backgroundColor: 'rgb(242 115 115 / 6%)',
-      },
-      '& div:hover::before': {
-        borderBottom: '1px solid #e3f2fd !important',
-      },
-      '& div::after': {
-        borderBottom: '3px solid #e3f2fd !important',
-      },
-    },
-    label: {
-      margin: '10px !important',
-      color: '#e3f2fd !important',
-    },
-    radio: {
-      margin: '5px 10px !important',
-      color: '#e3f2fd !important',
-      '& span': {
-        color: '#fff',
-      },
-    },
-    buttonPrimary: {
-      margin: '20px auto !important',
-      background: '#004D40 !important',
-      color: '#e3f2fd !important',
-      maxWidth: '100px',
-      fontWeight: 'bold',
-    },
-  })
-
-  const classes = useStyles()
-
   return (
-    <div className={classes.root}>
-      <div className="login-box">
-        <FormGroup>
-          <TextField
-            name="Name"
-            label="Name"
-            variant="filled"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className={classes.textfield}
-          />
-          <TextField
-            name="email"
-            label="Email"
-            value={email}
-            variant="filled"
-            onChange={(e) => setEmail(e.target.value)}
-            className={classes.textfield}
-          />
-          <TextField
-            name="Password"
-            label="Password"
-            variant="filled"
-            value={password}
-            type="password"
-            onChange={(e) => setPassword(e.target.value)}
-            className={classes.textfield}
-          />
+    <>
+      <FormGroup>
+        <TextField
+          name="Name"
+          label="Name"
+          variant="filled"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className={classes.textfield}
+        />
+        <TextField
+          name="email"
+          label="Email"
+          value={email}
+          variant="filled"
+          onChange={(e) => setEmail(e.target.value)}
+          className={classes.textfield}
+        />
+        <TextField
+          name="Password"
+          label="Password"
+          variant="filled"
+          value={password}
+          type="password"
+          onChange={(e) => setPassword(e.target.value)}
+          className={classes.textfield}
+        />
 
-          <Button id="submitBtn" onClick={register}>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Register
-          </Button>
-          <button
-            className="register__btn register__google"
-            onClick={signInWithGoogle}
-          >
-            Register with Google
-          </button>
-        </FormGroup>
+        <Button id="submitBtn" onClick={register}>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Register
+        </Button>
+        <GoogleButton
+          onClick={signInWithGoogle}
+          style={{ margin: 'auto', marginTop: '40px' }}
+        >
+          Register with Google
+        </GoogleButton>
+      </FormGroup>
 
-        <div>
-          Already have an account?{' '}
-          <Link id="link" to="/">
-            Login
-          </Link>{' '}
-          now.
-        </div>
+      <div style={{ marginTop: '20px', textAlign: 'center' }}>
+        Already have an account?{' '}
+        <Link id="link" to="/">
+          Login
+        </Link>{' '}
+        now.
       </div>
-    </div>
+    </>
   )
 }
 export default Register

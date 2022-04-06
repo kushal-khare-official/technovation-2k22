@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { makeStyles } from '@mui/styles'
 
 import Layout from './components/Layout'
-import Login from './components/login'
+import Login from './components/Login'
 import Register from './components/Register'
 import Reset from './components/Reset'
 import Dashboard from './components/Dashboard'
@@ -20,7 +20,7 @@ function App() {
       padding: '30px',
       maxWidth: '500px',
       margin: 'auto',
-      transform: 'translateY(40%)',
+      transform: 'translateY(40vh)',
     },
     FormGroup: {
       border: '2px solid #fff',
@@ -100,8 +100,12 @@ function App() {
         <Router>
           <Routes>
             <Route exact path="/" element={<Login classes={classes} />} />
-            <Route exact path="/register" element={<Register />} />
-            <Route exact path="/reset" element={<Reset />} />
+            <Route
+              exact
+              path="/register"
+              element={<Register classes={classes} />}
+            />
+            <Route exact path="/reset" element={<Reset classes={classes} />} />
             <Route exact path="/dashboard" element={<Dashboard />} />
             <Route exact path="/form" element={<Form classes={classes} />} />
             <Route exact path="/form2" element={<Form2 classes={classes} />} />
