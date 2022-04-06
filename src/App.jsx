@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { makeStyles } from '@mui/styles'
 
 import Layout from './components/Layout'
-import Login from './components/Login'
+import Login from './components/login'
 import Register from './components/Register'
 import Reset from './components/Reset'
 import Dashboard from './components/Dashboard'
