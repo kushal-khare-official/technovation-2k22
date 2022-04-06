@@ -1,4 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { useAuthState } from 'react-firebase-hooks/auth'
+import { query, collection, getDocs, where } from 'firebase/firestore'
 
 import {
   TextField,
@@ -13,32 +17,33 @@ import {
   FormControl,
   InputLabel,
 } from '@mui/material'
-import { useNavigate } from 'react-router-dom'
+import { auth, db, logout } from '../firebase.js'
 
 // const validate = (values) => {
-//   const errors = {}
-//   const requiredFields = [
-//     'firstName',
-//     'lastName',
-//     'email',
-//     'favoriteColor',
+  //   const errors = {}
+  //   const requiredFields = [
+    //     'firstName',
+    //     'lastName',
+    //     'email',
+    //     'favoriteColor',
 //     'notes',
 //   ]
 //   requiredFields.forEach((field) => {
-//     if (!values[field]) {
-//       errors[field] = 'Required'
-//     }
-//   })
-//   if (
-//     values.email &&
-//     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
-//   ) {
-//     errors.email = 'Invalid email address'
-//   }
-//   return errors
-// }
-
+  //     if (!values[field]) {
+    //       errors[field] = 'Required'
+    //     }
+    //   })
+    //   if (
+      //     values.email &&
+      //     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+      //   ) {
+        //     errors.email = 'Invalid email address'
+        //   }
+        //   return errors
+        // }
+        
 const MaterialUiForm = ({ classes }) => {
+  const [user, loading, error] = useAuthState(auth)
   const navigate = useNavigate()
 
   const [collegeName, setCollegeName] = useState('')
@@ -47,8 +52,29 @@ const MaterialUiForm = ({ classes }) => {
   const [branch, setBranch] = useState('')
   const [year, setYear] = useState('')
 
-  const onSubmitHandler = () => {
-    navigate('/form2')
+  const onSubmitHandler = async () => {
+    try{
+      const q = query(collection(db, 'users'), where('uid', '==', user?.uid))
+        const doc = await getDocs(q)
+        const data = doc.docs[0].data()
+
+      const userData = {
+        uid:user?.uid,
+        name:data.name,
+        email:user?.email,
+        userType:'participant',
+        collegeType:collegeType,
+        college:collegeName,
+        branch:branch,
+        year:year,
+        mobile_number:phoneNumber
+      }
+      const res = await axios.post(process.env.REACT_APP_BACKEND_URL+'/users',userData)
+      console.log(res);
+      navigate('/form2')
+    }catch(e){
+      console.log(e)
+    }
   }
 
   return (
@@ -118,10 +144,10 @@ const MaterialUiForm = ({ classes }) => {
               className={classes.select}
               onChange={(e) => setYear(e.target.value)}
             >
-              <MenuItem value="">First</MenuItem>
-              <MenuItem value={10}>Second</MenuItem>
-              <MenuItem value={20}>Thrid</MenuItem>
-              <MenuItem value={30}>Fourth</MenuItem>
+              <MenuItem value={1}>First</MenuItem>
+              <MenuItem value={2}>Second</MenuItem>
+              <MenuItem value={3}>Thrid</MenuItem>
+              <MenuItem value={4}>Fourth</MenuItem>
             </Select>
           </FormControl>
         </>
@@ -139,10 +165,10 @@ const MaterialUiForm = ({ classes }) => {
             className={classes.select}
             onChange={(e) => setYear(e.target.value)}
           >
-            <MenuItem value="">IX</MenuItem>
+            <MenuItem value={9}>IX</MenuItem>
             <MenuItem value={10}>X</MenuItem>
-            <MenuItem value={20}>XI</MenuItem>
-            <MenuItem value={30}>XII</MenuItem>
+            <MenuItem value={11}>XI</MenuItem>
+            <MenuItem value={12}>XII</MenuItem>
           </Select>
         </FormControl>
       )}

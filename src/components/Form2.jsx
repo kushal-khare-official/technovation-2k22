@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { useAuthState } from 'react-firebase-hooks/auth'
+import { auth, db, logout } from '../firebase.js'
 import {
   TextField,
   Button,
@@ -39,6 +42,8 @@ import payQR from '../assets/images/payQR.jpg'
 // }
 
 const MaterialUiForm = ({ classes }) => {
+  
+  const [user, loading, error] = useAuthState(auth)
   const navigate = useNavigate()
 
   const [tSize, setTSize] = useState('')
@@ -46,7 +51,22 @@ const MaterialUiForm = ({ classes }) => {
   const [open, setOpen] = useState(false)
   const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false)
-
+  const onSubmitHandler = async () => {
+    try{
+      
+      const userData = {
+        uid:user?.uid,
+        kitTxnId:txnId,
+        kitTxnStatus:'pending',
+        tshirtSize:tSize
+      }
+      const res = await axios.put(process.env.REACT_APP_BACKEND_URL+'/users',userData)
+      console.log(res);
+      navigate('/dashboard')
+    }catch(e){
+      console.log(e)
+    }
+  }
   return (
     <>
       <Typography
@@ -110,7 +130,7 @@ const MaterialUiForm = ({ classes }) => {
         >
           Show Payment Info
         </Button>
-        <Button id="submitBtn" onClick={() => navigate('/dashboard')}>
+        <Button id="submitBtn" onClick={onSubmitHandler}>
           <span></span>
           <span></span>
           <span></span>
