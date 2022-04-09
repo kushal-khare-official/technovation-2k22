@@ -1,23 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
-import { useNavigate } from 'react-router-dom'
-import { Link } from 'react-router-dom'
 import { TextField, Box, Button, FormGroup } from '@mui/material'
 import { auth, sendPasswordReset } from '../firebase'
 
 // import './Reset.css'
 
-function Reset({ classes }) {
+function Reset({ classes, next, setActiveScreen }) {
   const [email, setEmail] = useState('')
   const [user, loading, error] = useAuthState(auth)
-
-  const navigate = useNavigate()
 
   useEffect(() => {
     if (loading) return
     if (error) return
-    if (user) navigate('/dashboard')
-  }, [user, loading, error, navigate])
+    if (user) next()
+  }, [user, loading, error, next])
 
   return (
     <>
@@ -42,16 +38,16 @@ function Reset({ classes }) {
       <Box style={{ margin: 'auto', padding: '20px', textAlign: 'center' }}>
         <div id="register">
           Don't have an account?{' '}
-          <Link id="link" to="/register">
+          <Button variant="text" id="link" onClick={() => setActiveScreen(1)}>
             Register
-          </Link>{' '}
+          </Button>{' '}
           now.
         </div>
         <div style={{ marginTop: '20px' }}>
           Go back to{'  '}
-          <Link id="link" to="/">
+          <Button variant="text" id="link" onClick={() => setActiveScreen(0)}>
             Login
-          </Link>{' '}
+          </Button>{' '}
         </div>
       </Box>
     </>

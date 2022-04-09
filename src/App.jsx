@@ -1,17 +1,71 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import gsap, { Elastic } from 'gsap'
 import { makeStyles } from '@mui/styles'
 
 import Layout from './components/Layout'
-import Login from './components/login'
-import Register from './components/Register'
-import Reset from './components/Reset'
 import Dashboard from './components/Dashboard'
-import Form from './components/Form'
-import Form2 from './components/Form2'
 import './App.css'
 
 function App() {
+  const main = useRef()
+  const registerBtn = useRef()
+  const home = useRef()
+
+  const [tl] = useState(() => gsap.timeline())
+  const [tl2] = useState(() => gsap.timeline())
+  const [tl3] = useState(() => gsap.timeline())
+
+  const animateMain = () => {
+    tl.staggerFromTo(
+      registerBtn.current,
+      1,
+      {
+        opacity: 1,
+        scale: 1,
+        transformOrigin: 'center center',
+        force3D: true,
+      },
+      {
+        opacity: 0,
+        scale: 0,
+        ease: Elastic.easeInOut,
+        force3D: true,
+      },
+      0.09
+    )
+    tl3.staggerFromTo(
+      home.current,
+      2,
+      {
+        y: '40vh',
+        transformOrigin: 'center center',
+        force3D: true,
+      },
+      {
+        y: '0',
+        ease: Elastic.easeInOut,
+        force3D: true,
+      },
+      0.1
+    )
+    tl2.staggerFromTo(
+      main.current,
+      2,
+      {
+        y: '35vh',
+        transformOrigin: 'center center',
+        force3D: true,
+      },
+      {
+        y: '0',
+        ease: Elastic.easeInOut,
+        force3D: true,
+      },
+      0.1
+    )
+  }
+
   const useStyles = makeStyles({
     root: {
       border: 0,
@@ -23,8 +77,6 @@ function App() {
       transform: 'translateY(40vh)',
     },
     FormGroup: {
-      border: '2px solid #fff',
-      borderRadius: '0.35em',
       padding: '20px',
     },
     textfield: {
@@ -96,19 +148,21 @@ function App() {
 
   return (
     <div className="App">
-      <Layout classes={classes}>
+      <Layout
+        classes={classes}
+        main={main}
+        registerBtn={registerBtn}
+        tl={tl}
+        tl2={tl2}
+        animateMain={animateMain}
+      >
         <Router>
           <Routes>
-            <Route exact path="/" element={<Login classes={classes} />} />
             <Route
               exact
-              path="/register"
-              element={<Register classes={classes} />}
+              path="/"
+              element={<Dashboard classes={classes} home={home} />}
             />
-            <Route exact path="/reset" element={<Reset classes={classes} />} />
-            <Route exact path="/dashboard" element={<Dashboard />} />
-            <Route exact path="/form" element={<Form classes={classes} />} />
-            <Route exact path="/form2" element={<Form2 classes={classes} />} />
           </Routes>
         </Router>
       </Layout>

@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { query, collection, getDocs, where } from 'firebase/firestore'
@@ -17,34 +16,33 @@ import {
   FormControl,
   InputLabel,
 } from '@mui/material'
-import { auth, db, logout } from '../firebase.js'
+import { auth, db } from '../firebase.js'
 
 // const validate = (values) => {
-  //   const errors = {}
-  //   const requiredFields = [
-    //     'firstName',
-    //     'lastName',
-    //     'email',
-    //     'favoriteColor',
+//   const errors = {}
+//   const requiredFields = [
+//     'firstName',
+//     'lastName',
+//     'email',
+//     'favoriteColor',
 //     'notes',
 //   ]
 //   requiredFields.forEach((field) => {
-  //     if (!values[field]) {
-    //       errors[field] = 'Required'
-    //     }
-    //   })
-    //   if (
-      //     values.email &&
-      //     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
-      //   ) {
-        //     errors.email = 'Invalid email address'
-        //   }
-        //   return errors
-        // }
-        
-const MaterialUiForm = ({ classes }) => {
+//     if (!values[field]) {
+//       errors[field] = 'Required'
+//     }
+//   })
+//   if (
+//     values.email &&
+//     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+//   ) {
+//     errors.email = 'Invalid email address'
+//   }
+//   return errors
+// }
+
+const MaterialUiForm = ({ classes, prev, next }) => {
   const [user, loading, error] = useAuthState(auth)
-  const navigate = useNavigate()
 
   const [collegeName, setCollegeName] = useState('')
   const [collegeType, setCollegeType] = useState('school')
@@ -52,27 +50,32 @@ const MaterialUiForm = ({ classes }) => {
   const [branch, setBranch] = useState('')
   const [year, setYear] = useState('')
 
+  useEffect(() => {
+    if (loading) return
+    if (error) return
+    if (!user) return prev()
+  }, [user, error, loading, prev])
+
   const onSubmitHandler = async () => {
-    try{
+    try {
       const q = query(collection(db, 'users'), where('uid', '==', user?.uid))
-        const doc = await getDocs(q)
-        const data = doc.docs[0].data()
+      const doc = await getDocs(q)
+      const data = doc.docs[0].data()
 
       const userData = {
-        uid:user?.uid,
-        name:data.name,
-        email:user?.email,
-        userType:'participant',
-        collegeType:collegeType,
-        college:collegeName,
-        branch:branch,
-        year:year,
-        mobile_number:phoneNumber
+        uid: user?.uid,
+        name: data.name,
+        email: user?.email,
+        userType: 'participant',
+        collegeType: collegeType,
+        college: collegeName,
+        branch: branch,
+        year: year,
+        mobile_number: phoneNumber,
       }
-      const res = await axios.post(process.env.REACT_APP_BACKEND_URL+'/users',userData)
-      console.log(res);
-      navigate('/form2')
-    }catch(e){
+      await axios.post(process.env.REACT_APP_BACKEND_URL + '/users', userData)
+      next()
+    } catch (e) {
       console.log(e)
     }
   }

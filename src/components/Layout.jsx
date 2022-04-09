@@ -1,71 +1,20 @@
-import React, { useState, useRef } from 'react'
-import gsap, { Elastic } from 'gsap'
-import { Box, Button } from '@mui/material'
+import React from 'react'
+import { Button } from '@mui/material'
 
 import BgLeft from './BgLeft'
 import BgRight from './BgRight'
 import './Layout.css'
 import './Forms.css'
 
-function Layout({ classes, children }) {
-  const main = useRef()
-  const registerBtn = useRef()
-  const home = useRef()
-
-  const [tl] = useState(() => gsap.timeline())
-  const [tl2] = useState(() => gsap.timeline())
-  const [tl3] = useState(() => gsap.timeline())
-
-  const animateMain = () => {
-    tl.staggerFromTo(
-      registerBtn.current,
-      1,
-      {
-        opacity: 1,
-        scale: 1,
-        transformOrigin: 'center center',
-        force3D: true,
-      },
-      {
-        opacity: 0,
-        scale: 0,
-        ease: Elastic.easeInOut,
-        force3D: true,
-      },
-      0.09
-    )
-    tl3.staggerFromTo(
-      home.current,
-      2,
-      {
-        y: '40vh',
-        transformOrigin: 'center center',
-        force3D: true,
-      },
-      {
-        y: '0',
-        ease: Elastic.easeInOut,
-        force3D: true,
-      },
-      0.1
-    )
-    tl2.staggerFromTo(
-      main.current,
-      2,
-      {
-        y: '35vh',
-        transformOrigin: 'center center',
-        force3D: true,
-      },
-      {
-        y: '0',
-        ease: Elastic.easeInOut,
-        force3D: true,
-      },
-      0.1
-    )
-  }
-
+function Layout({
+  classes,
+  main,
+  registerBtn,
+  tl,
+  tl2,
+  animateMain,
+  children,
+}) {
   return (
     <>
       <BgLeft timeline={tl} />
@@ -106,9 +55,7 @@ function Layout({ classes, children }) {
             <span></span>
           </div>
         </Button>
-        <Box className={classes.root} ref={home}>
-          <div className="login-box">{children}</div>
-        </Box>
+        {children}
       </main>
     </>
   )

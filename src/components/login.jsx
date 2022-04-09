@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate, Link } from 'react-router-dom'
 import { TextField, Button, FormGroup, Box } from '@mui/material'
 import GoogleButton from 'react-google-button'
 import { useAuthState } from 'react-firebase-hooks/auth'
@@ -10,18 +9,16 @@ import {
   signInWithGoogle,
 } from '../firebase.js'
 
-function Login({ classes }) {
+function Login({ classes, next, setActiveScreen }) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [user, loading, error] = useAuthState(auth)
 
-  const navigate = useNavigate()
-
   useEffect(() => {
     if (loading) return
     if (error) return
-    if (user) navigate('/dashboard')
-  }, [user, loading, error, navigate])
+    if (user) next()
+  }, [user, loading, error, next])
 
   return (
     <FormGroup className={classes.FormGroup}>
@@ -51,7 +48,7 @@ function Login({ classes }) {
         }}
         id="submitBtn"
         variant="filled"
-        onClick={() => logInWithEmailAndPassword(email, password)}
+        onClick={() => logInWithEmailAndPassword(email, password, next)}
       >
         <span></span>
         <span></span>
@@ -60,7 +57,7 @@ function Login({ classes }) {
         Submit
       </Button>
       <GoogleButton
-        onClick={signInWithGoogle}
+        onClick={() => signInWithGoogle(next)}
         style={{ margin: 'auto', marginTop: '40px' }}
       >
         Login with Google
@@ -76,15 +73,15 @@ function Login({ classes }) {
             fontSize: '0.75rem',
           }}
           variant="filled"
-          onClick={() => navigate('/reset')}
+          onClick={() => setActiveScreen(2)}
         >
           Forgot Password
         </Button>
         <div style={{ marginTop: '20px' }}>
           Don't Have an account Yet?{' '}
-          <Link id="link" to="/register">
+          <Button variant="text" id="link" onClick={() => setActiveScreen(1)}>
             Register Now
-          </Link>{' '}
+          </Button>{' '}
         </div>
       </Box>
     </FormGroup>

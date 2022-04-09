@@ -1,17 +1,25 @@
 import React, { useEffect, useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
-import { useNavigate } from 'react-router-dom'
 import { query, collection, getDocs, where } from 'firebase/firestore'
-import { Avatar } from '@mui/material'
+import { Avatar, Box, Stepper, Step, StepLabel } from '@mui/material'
+import LogoutIcon from '@mui/icons-material/Logout'
 
-import './Dashboard.css'
 import { auth, db, logout } from '../firebase.js'
+import Login from './login'
+import Form from './Form'
+import Form2 from './Form2'
+import './Dashboard.css'
+import Register from './Register.jsx'
+import Reset from './Reset.jsx'
 
-function Dashboard() {
+const steps = ['Register/Login', 'Additional Info', 'Pay for Welcome Kit']
+
+function Dashboard({ classes, home }) {
   const [user, loading, error] = useAuthState(auth)
   const [name, setName] = useState('')
   const [photoURL, setPhotoURL] = useState('')
-  const navigate = useNavigate()
+  const [activeStep, setActiveStep] = React.useState(0)
+  const [activeScreen, setActiveScreen] = React.useState(0)
 
   useEffect(() => {
     const fetchUserName = async () => {
@@ -29,25 +37,91 @@ function Dashboard() {
 
     if (loading) return
     if (error) return
-    if (!user) return navigate('/')
-
-    fetchUserName()
-  }, [user, error, loading, navigate])
+    if (user) {
+      fetchUserName()
+      return setActiveStep(1)
+    }
+  }, [user, error, loading])
 
   return (
-    <>
-      {/* <div className="dashboard"> */}
-      {/* <div className="dashboard__container"> */}
-      <Avatar alt={name} src={photoURL} />
-      Logged in as
-      <div>{name}</div>
-      <div>{user?.email}</div>
-      <button className="dashboard__btn" onClick={logout}>
-        Logout
-      </button>
-      {/* </div> */}
-      {/* </div> */}
-    </>
+    <Box className={classes.root} ref={home}>
+      <div className="login-box">
+        {user ? (
+          <Box
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              padding: '0 20px 16px 20px',
+            }}
+          >
+            <span
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
+              <Avatar
+                alt={name}
+                src={photoURL}
+                style={{ display: 'inline-block' }}
+              />
+              <span style={{ marginLeft: '20px' }}>{name}</span>
+            </span>
+            <button
+              className="dashboard__btn"
+              onClick={() => logout(() => setActiveStep(0))}
+            >
+              <LogoutIcon />
+            </button>
+          </Box>
+        ) : null}
+        <Stepper alternativeLabel activeStep={activeStep}>
+          {steps.map((label, index) => {
+            const stepProps = {}
+            const labelProps = {}
+            return (
+              <Step key={label} {...stepProps}>
+                <StepLabel {...labelProps}>{label}</StepLabel>
+              </Step>
+            )
+          })}
+        </Stepper>
+        {activeStep === 0 ? (
+          <>
+            {activeScreen === 0 ? (
+              <Login
+                classes={classes}
+                next={() => setActiveStep(1)}
+                setActiveScreen={setActiveScreen}
+              />
+            ) : activeScreen === 1 ? (
+              <Register
+                classes={classes}
+                next={() => setActiveStep(1)}
+                setActiveScreen={setActiveScreen}
+              />
+            ) : (
+              <Reset
+                classes={classes}
+                next={() => setActiveStep(1)}
+                setActiveScreen={setActiveScreen}
+              />
+            )}
+          </>
+        ) : null}
+        {activeStep === 1 ? (
+          <Form
+            classes={classes}
+            prev={() => setActiveStep(0)}
+            next={() => setActiveStep(2)}
+          />
+        ) : null}
+        {activeStep === 2 ? (
+          <Form2 classes={classes} next={() => setActiveStep(3)} />
+        ) : null}
+      </div>
+    </Box>
   )
 }
 export default Dashboard

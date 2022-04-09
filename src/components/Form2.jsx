@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useAuthState } from 'react-firebase-hooks/auth'
-import { auth, db, logout } from '../firebase.js'
+import { auth } from '../firebase.js'
 import {
   TextField,
   Button,
@@ -41,32 +40,34 @@ import payQR from '../assets/images/payQR.jpg'
 //   return errors
 // }
 
-const MaterialUiForm = ({ classes }) => {
-  
-  const [user, loading, error] = useAuthState(auth)
-  const navigate = useNavigate()
-
+const MaterialUiForm = ({ classes, next }) => {
+  const [user] = useAuthState(auth)
   const [tSize, setTSize] = useState('')
   const [txnId, setTxnId] = useState('')
   const [open, setOpen] = useState(false)
+
   const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false)
+
   const onSubmitHandler = async () => {
-    try{
-      
+    try {
       const userData = {
-        uid:user?.uid,
-        kitTxnId:txnId,
-        kitTxnStatus:'pending',
-        tshirtSize:tSize
+        uid: user?.uid,
+        kitTxnId: txnId,
+        kitTxnStatus: 'pending',
+        tshirtSize: tSize,
       }
-      const res = await axios.put(process.env.REACT_APP_BACKEND_URL+'/users',userData)
-      console.log(res);
-      navigate('/dashboard')
-    }catch(e){
+      const res = await axios.put(
+        process.env.REACT_APP_BACKEND_URL + '/users',
+        userData
+      )
+      console.log(res)
+      next()
+    } catch (e) {
       console.log(e)
     }
   }
+
   return (
     <>
       <Typography
