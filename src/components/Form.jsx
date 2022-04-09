@@ -41,7 +41,7 @@ import { auth, db } from '../firebase.js'
 //   return errors
 // }
 
-const MaterialUiForm = ({ classes, prev, next }) => {
+const MaterialUiForm = ({ classes, setLoader, prev, next }) => {
   const [user, loading, error] = useAuthState(auth)
 
   const [collegeName, setCollegeName] = useState('')
@@ -58,6 +58,7 @@ const MaterialUiForm = ({ classes, prev, next }) => {
 
   const onSubmitHandler = async () => {
     try {
+      setLoader(true)
       const q = query(collection(db, 'users'), where('uid', '==', user?.uid))
       const doc = await getDocs(q)
       const data = doc.docs[0].data()
@@ -75,8 +76,10 @@ const MaterialUiForm = ({ classes, prev, next }) => {
       }
       await axios.post(process.env.REACT_APP_BACKEND_URL + '/users', userData)
       next()
+      setLoader(false)
     } catch (e) {
       console.log(e)
+      setLoader(false)
     }
   }
 

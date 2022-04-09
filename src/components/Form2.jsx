@@ -40,7 +40,7 @@ import payQR from '../assets/images/payQR.jpg'
 //   return errors
 // }
 
-const MaterialUiForm = ({ classes, next }) => {
+const MaterialUiForm = ({ classes, setLoader, next }) => {
   const [user] = useAuthState(auth)
   const [tSize, setTSize] = useState('')
   const [txnId, setTxnId] = useState('')
@@ -51,6 +51,7 @@ const MaterialUiForm = ({ classes, next }) => {
 
   const onSubmitHandler = async () => {
     try {
+      setLoader(true)
       const userData = {
         uid: user?.uid,
         kitTxnId: txnId,
@@ -63,8 +64,10 @@ const MaterialUiForm = ({ classes, next }) => {
       )
       console.log(res)
       next()
+      setLoader(false)
     } catch (e) {
       console.log(e)
+      setLoader(false)
     }
   }
 
