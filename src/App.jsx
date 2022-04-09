@@ -5,6 +5,7 @@ import { makeStyles } from '@mui/styles'
 
 import Layout from './components/Layout'
 import Dashboard from './components/Dashboard'
+import Home from './components/Home'
 import './App.css'
 
 function App() {
@@ -72,7 +73,6 @@ function App() {
       borderRadius: 3,
       color: 'white',
       padding: '30px',
-      maxWidth: '500px',
       margin: 'auto',
       transform: 'translateY(40vh)',
     },
@@ -151,6 +151,7 @@ function App() {
       <Layout
         classes={classes}
         main={main}
+        home={home}
         registerBtn={registerBtn}
         tl={tl}
         tl2={tl2}
@@ -160,9 +161,10 @@ function App() {
           <Routes>
             <Route
               exact
-              path="/"
-              element={<Dashboard classes={classes} home={home} />}
+              path="/dashboard"
+              element={<Dashboard classes={classes} />}
             />
+            <Route exact path="/" element={<Home classes={classes} />} />
           </Routes>
         </Router>
       </Layout>

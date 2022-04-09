@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '@mui/material'
+import { Button, Box } from '@mui/material'
 
 import BgLeft from './BgLeft'
 import BgRight from './BgRight'
@@ -9,6 +9,7 @@ import './Forms.css'
 function Layout({
   classes,
   main,
+  home,
   registerBtn,
   tl,
   tl2,
@@ -55,7 +56,9 @@ function Layout({
             <span></span>
           </div>
         </Button>
-        {children}
+        <Box className={classes.root} ref={home}>
+          {children}
+        </Box>
       </main>
     </>
   )

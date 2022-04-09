@@ -49,95 +49,93 @@ function Dashboard({ classes, home }) {
   }, [user, error, loading])
 
   return (
-    <Box className={classes.root} ref={home}>
-      <div className="login-box">
-        {loader ? (
-          <Loader />
-        ) : (
-          <>
-            {user ? (
-              <Box
+    <div className="login-box">
+      {loader ? (
+        <Loader />
+      ) : (
+        <>
+          {user ? (
+            <Box
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                padding: '0 20px 16px 20px',
+              }}
+            >
+              <span
                 style={{
                   display: 'flex',
                   alignItems: 'center',
-                  justifyContent: 'space-between',
-                  padding: '0 20px 16px 20px',
                 }}
               >
-                <span
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                  }}
-                >
-                  <Avatar
-                    alt={name}
-                    src={photoURL}
-                    style={{ display: 'inline-block' }}
-                  />
-                  <span style={{ marginLeft: '20px' }}>{name}</span>
-                </span>
-                <button
-                  className="dashboard__btn"
-                  onClick={() => logout(() => setActiveStep(0))}
-                >
-                  <LogoutIcon />
-                </button>
-              </Box>
-            ) : null}
-            <Stepper alternativeLabel activeStep={activeStep}>
-              {steps.map((label, index) => {
-                const stepProps = {}
-                const labelProps = {}
-                return (
-                  <Step key={label} {...stepProps}>
-                    <StepLabel {...labelProps}>{label}</StepLabel>
-                  </Step>
-                )
-              })}
-            </Stepper>
-            {activeStep === 0 ? (
-              <>
-                {activeScreen === 0 ? (
-                  <Login
-                    classes={classes}
-                    next={() => setActiveStep(1)}
-                    setActiveScreen={setActiveScreen}
-                  />
-                ) : activeScreen === 1 ? (
-                  <Register
-                    classes={classes}
-                    next={() => setActiveStep(1)}
-                    setActiveScreen={setActiveScreen}
-                  />
-                ) : (
-                  <Reset
-                    classes={classes}
-                    next={() => setActiveStep(1)}
-                    setActiveScreen={setActiveScreen}
-                  />
-                )}
-              </>
-            ) : null}
-            {activeStep === 1 ? (
-              <Form
-                classes={classes}
-                setLoader={setLoader}
-                prev={() => setActiveStep(0)}
-                next={() => setActiveStep(2)}
-              />
-            ) : null}
-            {activeStep === 2 ? (
-              <Form2
-                classes={classes}
-                setLoader={setLoader}
-                next={() => setActiveStep(3)}
-              />
-            ) : null}
-          </>
-        )}
-      </div>
-    </Box>
+                <Avatar
+                  alt={name}
+                  src={photoURL}
+                  style={{ display: 'inline-block' }}
+                />
+                <span style={{ marginLeft: '20px' }}>{name}</span>
+              </span>
+              <button
+                className="dashboard__btn"
+                onClick={() => logout(() => setActiveStep(0))}
+              >
+                <LogoutIcon />
+              </button>
+            </Box>
+          ) : null}
+          <Stepper alternativeLabel activeStep={activeStep}>
+            {steps.map((label, index) => {
+              const stepProps = {}
+              const labelProps = {}
+              return (
+                <Step key={label} {...stepProps}>
+                  <StepLabel {...labelProps}>{label}</StepLabel>
+                </Step>
+              )
+            })}
+          </Stepper>
+          {activeStep === 0 ? (
+            <>
+              {activeScreen === 0 ? (
+                <Login
+                  classes={classes}
+                  next={() => setActiveStep(1)}
+                  setActiveScreen={setActiveScreen}
+                />
+              ) : activeScreen === 1 ? (
+                <Register
+                  classes={classes}
+                  next={() => setActiveStep(1)}
+                  setActiveScreen={setActiveScreen}
+                />
+              ) : (
+                <Reset
+                  classes={classes}
+                  next={() => setActiveStep(1)}
+                  setActiveScreen={setActiveScreen}
+                />
+              )}
+            </>
+          ) : null}
+          {activeStep === 1 ? (
+            <Form
+              classes={classes}
+              setLoader={setLoader}
+              prev={() => setActiveStep(0)}
+              next={() => setActiveStep(2)}
+            />
+          ) : null}
+          {activeStep === 2 ? (
+            <Form2
+              classes={classes}
+              setLoader={setLoader}
+              next={() => setActiveStep(3)}
+            />
+          ) : null}
+        </>
+      )}
+    </div>
   )
 }
 export default Dashboard

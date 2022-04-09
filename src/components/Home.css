@@ -1,0 +1,27 @@
+.home-box {
+  padding: 25px 30px 25px 30px;
+  font-family: heading;
+  background: #180a2b;
+  color: black;
+  margin: 16px 2px;
+  box-shadow: 0.8px 0.8px 0.8px black;
+  cursor: pointer;
+  z-index: 10000;
+  color: white;
+  text-align: left;
+  list-style-type: none;
+  transition: opacity 0.3s linear;
+}
+
+.home-box:hover {
+  opacity: 0.5;
+  box-shadow: 2px 2px 2px black;
+}
+
+.home-box h3 {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  width: fit-content;
+}
