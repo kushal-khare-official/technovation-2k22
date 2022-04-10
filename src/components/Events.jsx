@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react'
-import gsap, { Elastic } from 'gsap'
 import { Grid } from '@mui/material'
 
 import './Events.css'
@@ -55,8 +54,6 @@ function Events({ classes }) {
   const eventRef = useRef()
 
   const [currentEvent, setCurrentEvent] = useState()
-
-  const [tl] = useState(() => gsap.timeline())
 
   const triggerEventDetails = (i) => {
     if (i >= 0) {
