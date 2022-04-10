@@ -1,0 +1,364 @@
+.label {
+  margin: -10px;
+  padding: 10px;
+}
+.openBtn {
+  background: #27d2db;
+  padding: 3px 7px 2px 7px;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.openBtn svg {
+  fill: white;
+  transform: rotate(180deg);
+  margin-top: 3px;
+}
+.eventCont {
+  position: relative;
+  display: inline-block;
+  width: 25%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  perspective: 1700px;
+  perspective-origin: 0 50%;
+}
+
+.cs-style-4 figure {
+  margin: 0;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.cs-style-4 figure > div {
+  overflow: hidden;
+}
+
+.cs-style-4 figure img {
+  border-style: none;
+  max-width: 100%;
+  display: block;
+  position: relative;
+  transition: transform 0.4s;
+  z-index: -100;
+}
+
+.cs-style-4 figure:hover img,
+.cs-style-4 figure.cs-hover img {
+  transform: translateX(25%);
+}
+
+.cs-style-4 figure:hover img,
+.cs-style-4 figure.cs-hover img {
+  transform: translateX(25%);
+}
+
+.cs-style-4 figure:hover #shift,
+.cs-style-4 figure.cs-hover #right {
+  transform: translateX(50%);
+}
+
+.cs-style-4 figcaption {
+  height: 100%;
+  width: 50%;
+  opacity: 0;
+  color: #151515;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  background: #2c3f52;
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+  transform: rotateY(-90deg);
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.cs-style-4 figure:hover figcaption,
+.cs-style-4 figure.cs-hover figcaption {
+  opacity: 1;
+  transform: rotateY(0deg);
+  transition: transform 0.4s, opacity 0.1s;
+}
+
+.cs-style-4 figcaption a {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.eventCont {
+  width: 400px;
+  padding: 0px;
+}
+/* .eventCont figure figcaption {
+  color: $hover;
+} */
+
+.eventCont figure figcaption h3,
+p {
+  color: white;
+  font-family: 'Quicksand';
+}
+.eventCont figure figcaption p {
+  margin-top: 10px;
+  color: #27d2db;
+  font-family: 'Raleway';
+}
+.eventCont figure figcaption h5 {
+  margin-top: 50px;
+  color: white;
+}
+.eventInfoTab {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background: white;
+  text-align: left;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  zoom: 0.9;
+}
+.eventInfoTab.ng-enter {
+  animation: tabIn 0.5s ease-out forwards;
+}
+.eventInfoTab.ng-leave {
+  animation: tabOut 0.5s ease-in forwards;
+}
+.eventInfoTab .event-leftPane {
+  width: 25vw;
+  display: inline-block;
+}
+.eventInfoTab .event-leftPane img {
+  height: 200px;
+  margin: auto;
+  display: block;
+}
+.closeBtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 40px;
+  width: 40px;
+  background: url('../assets/images/close.png');
+  background-size: contain;
+  margin: 10px;
+  cursor: pointer;
+  z-index: 100;
+}
+.subHeading {
+  position: relative;
+  top: -20px;
+  left: 20vw;
+  display: inline-block;
+  padding: 40px;
+}
+
+.eventHeading {
+  padding: 20px;
+  font-size: 130%;
+  font-weight: bolder;
+  color: white;
+  font-family: heading;
+  text-align: center;
+  height: 180px;
+}
+
+.eventImgMobile {
+  display: none;
+}
+
+#coordiantorPhone {
+  overflow-y: scroll;
+  color: black;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 60px;
+}
+#phone-eventHeadingCont {
+  display: none;
+}
+#coordinationPhone .headContact {
+  margin: 20px;
+}
+.headContact {
+  padding: 35px;
+}
+.phone-event-rules {
+  margin: 0px;
+  padding: 50px;
+  background: white;
+}
+.phone-event-rules ul {
+  list-style-type: square;
+  padding: 10px;
+}
+.phone-event-rules ul li ul {
+  margin-left: 20px;
+  list-style-type: circle;
+  font-size: 90%;
+}
+
+.phone-event-rules ul li ul li {
+  padding: 10px;
+}
+
+.event-rules {
+  margin-top: 60px;
+  height: 65%;
+  overflow-y: scroll;
+  font-family: 'Quicksand';
+  display: inline-block;
+  padding: 50px 50px 100px 50px;
+}
+.event-rules ul {
+  list-style-type: square;
+  padding: 10px;
+}
+.event-rules ul li ul {
+  margin-left: 50px;
+  list-style-type: circle;
+  font-size: 90%;
+}
+
+.event-rules ul li ul li {
+  padding: 10px;
+}
+.event-leftPane {
+  font-family: 'Quicksand';
+}
+.eventImgMobile {
+  display: none;
+}
+#event-leftPane #eventImgMobile {
+  display: block;
+  width: 100vw;
+  margin-left: 60px;
+}
+.coordiantor {
+  padding: 20px;
+  font-size: 75%;
+  font-size: 100%;
+  text-align: center;
+}
+.coordiantor p {
+  margin: 20px 0px 20px 0px;
+}
+.coordiantor p a {
+  color: white;
+  text-decoration: none;
+}
+.coordiantor .contactIcon {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+.coordiantor .contactIcon svg {
+  height: 20px;
+  width: 20px;
+  fill: white;
+  position: relative;
+  left: -10px;
+  top: -10px;
+}
+
+.coordiantor svg {
+  padding: 15px;
+  height: 50px;
+  width: 50px;
+}
+
+@media only screen and (max-width: 1200px) {
+  #eventCont {
+    width: 33.33%;
+  }
+  #eventHeading {
+    position: relative;
+  }
+  #event-rules {
+    height: 70%;
+    padding-bottom: 100px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  #eventCont {
+    width: 33.33%;
+  }
+}
+@media only screen and (max-width: 901px) {
+  #eventHeadingCont {
+    display: none;
+  }
+  #eventHeading {
+    font-size: 100%;
+    position: relative;
+    left: 0px;
+    padding-bottom: 5px;
+  }
+  #phone-eventHeadingCont {
+    display: block;
+    height: auto;
+  }
+  .eventInfoTab .event-leftPane img {
+    display: none;
+  }
+  #event-rules {
+    margin: 0px;
+    padding: 40px 40px 40px 100px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #eventCont {
+    width: 50%;
+  }
+  #eventHeading {
+    margin: 0px;
+    padding-top: 10px;
+    top: 12px;
+    font-size: 100%;
+    position: relative;
+    left: 0px;
+    padding-bottom: 5px;
+  }
+  #eventHeadingCont {
+    padding: 0px;
+  }
+}
+
+@keyframes tabIn {
+  0% {
+    transform: translateX(115vw);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes tabOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(115vw);
+    opacity: 0;
+  }
+}

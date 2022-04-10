@@ -10,6 +10,7 @@ function Layout({
   classes,
   main,
   home,
+  date,
   registerBtn,
   tl,
   tl2,
@@ -37,7 +38,7 @@ function Layout({
       <main ref={main}>
         <header>
           <h1>Technovation</h1>
-          <h4>27th-30th April, 2K22</h4>
+          <h4 ref={date}>27th-30th April, 2K22</h4>
         </header>
         <Button
           style={{

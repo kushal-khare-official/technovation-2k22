@@ -6,12 +6,14 @@ import { makeStyles } from '@mui/styles'
 import Layout from './components/Layout'
 import Dashboard from './components/Dashboard'
 import Home from './components/Home'
+import Events from './components/Events'
 import './App.css'
 
 function App() {
   const main = useRef()
   const registerBtn = useRef()
   const home = useRef()
+  const date = useRef()
 
   const [tl] = useState(() => gsap.timeline())
   const [tl2] = useState(() => gsap.timeline())
@@ -19,17 +21,23 @@ function App() {
 
   const animateMain = () => {
     tl.staggerFromTo(
-      registerBtn.current,
+      [registerBtn.current, date.current],
       1,
       {
         opacity: 1,
         scale: 1,
+        position: 'absolute',
+        left: '50%',
+        transform: 'translateX(-50%)',
         transformOrigin: 'center center',
         force3D: true,
       },
       {
         opacity: 0,
         scale: 0,
+        position: 'absolute',
+        left: '50%',
+        transform: 'translateX(-50%)',
         ease: Elastic.easeInOut,
         force3D: true,
       },
@@ -75,6 +83,8 @@ function App() {
       padding: '30px',
       margin: 'auto',
       transform: 'translateY(40vh)',
+      overflow: 'auto',
+      height: '75vh',
     },
     FormGroup: {
       padding: '20px',
@@ -148,26 +158,35 @@ function App() {
 
   return (
     <div className="App">
-      <Layout
-        classes={classes}
-        main={main}
-        home={home}
-        registerBtn={registerBtn}
-        tl={tl}
-        tl2={tl2}
-        animateMain={animateMain}
-      >
-        <Router>
-          <Routes>
-            <Route
-              exact
-              path="/dashboard"
-              element={<Dashboard classes={classes} />}
-            />
-            <Route exact path="/" element={<Home classes={classes} />} />
-          </Routes>
-        </Router>
-      </Layout>
+      <Router>
+        <Routes>
+          <Route
+            path="*"
+            element={
+              <Layout
+                classes={classes}
+                main={main}
+                home={home}
+                date={date}
+                registerBtn={registerBtn}
+                tl={tl}
+                tl2={tl2}
+                animateMain={animateMain}
+              >
+                <Routes>
+                  <Route
+                    exact
+                    path="/dashboard"
+                    element={<Dashboard classes={classes} />}
+                  />
+                  <Route exact path="/" element={<Home classes={classes} />} />
+                </Routes>
+              </Layout>
+            }
+          />
+          <Route exact path="/events" element={<Events classes={classes} />} />
+        </Routes>
+      </Router>
     </div>
   )
 }
