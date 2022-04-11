@@ -1,0 +1,107 @@
+.menuWrapper {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0px;
+  display: none;
+}
+.menuWrapper.ng-enter {
+  animation: bounceInUp 0.8s ease-in;
+}
+.menuWrapper.ng-leave {
+  animation: bounceOutDown 0.8s ease-out;
+}
+.menu {
+  opacity: 1;
+  width: 60px;
+  height: 100%;
+  box-sizing: content-box;
+  display: inline-block;
+  background: black;
+  z-index: 3;
+  position: fixed;
+}
+.menuIcons {
+  position: relative;
+  left: -15px;
+  top: 50px;
+  padding: 30px 0px 30px 0px;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  transition: fill 1s ease;
+  background: linear-gradient(to right, #151515 50%, black 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background 0.2s ease-in;
+  float: left;
+  fill: white;
+  z-index: 3;
+  text-align: center;
+}
+.menuIcons:hover {
+  background-position: left bottom;
+}
+
+.menuLabel {
+  color: white;
+  font-size: 80%;
+  position: relative;
+  left: 100px;
+  display: none;
+  padding: 0px;
+  cursor: pointer;
+}
+.menuIcons:hover .menuLabel {
+  color: #27d2db;
+}
+
+@keyframes bounceInUp {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceOutDown {
+  20% {
+    transform: translate3d(0, 10px, 0);
+  }
+
+  40%,
+  45% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0);
+  }
+}
