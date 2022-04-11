@@ -40,7 +40,7 @@ import payQR from '../assets/images/payQR.jpg'
 //   return errors
 // }
 
-const MaterialUiForm = ({ classes, setLoader, next }) => {
+const Form2 = ({ classes, setLoader, next }) => {
   const [user] = useAuthState(auth)
   const [tSize, setTSize] = useState('')
   const [txnId, setTxnId] = useState('')
@@ -161,4 +161,4 @@ const MaterialUiForm = ({ classes, setLoader, next }) => {
   )
 }
 
-export default MaterialUiForm
+export default Form2

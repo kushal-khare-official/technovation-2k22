@@ -7,20 +7,14 @@ import './Layout.css'
 import './Forms.css'
 
 function Layout({
-  classes,
-  main,
-  home,
-  date,
-  registerBtn,
-  tl,
-  tl2,
-  animateMain,
+  polygons1,
+  polygons2,
   children,
 }) {
   return (
     <>
-      <BgLeft timeline={tl} />
-      <BgRight timeline={tl2} />
+      <BgLeft polygons1={polygons1} />
+      <BgRight polygons2={polygons2} />
       <div className="area">
         <ul className="circles">
           <li></li>
@@ -35,33 +29,7 @@ function Layout({
           <li></li>
         </ul>
       </div>
-      <main ref={main}>
-        <header>
-          <h1>Technovation</h1>
-          <h4 ref={date}>27th-30th April, 2K22</h4>
-        </header>
-        <Button
-          style={{
-            position: 'absolute',
-            top: '45vh',
-            height: '200px',
-            left: '50%',
-            transform: 'translateX(-50%)',
-          }}
-          ref={registerBtn}
-          onClick={animateMain}
-          onTouchEnd={animateMain}
-        >
-          <div className="indicator">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </Button>
-        <Box className={classes.root} ref={home}>
-          {children}
-        </Box>
-      </main>
+      {children}
     </>
   )
 }

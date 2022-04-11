@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import gsap, { Elastic } from 'gsap'
 import { makeStyles } from '@mui/styles'
@@ -10,6 +10,8 @@ import Events from './components/Events'
 import './App.css'
 
 function App() {
+  const polygons1 = useRef()
+  const polygons2 = useRef()
   const main = useRef()
   const registerBtn = useRef()
   const home = useRef()
@@ -156,37 +158,70 @@ function App() {
 
   const classes = useStyles()
 
+  useEffect(() => {
+    tl.staggerFromTo(
+      polygons1.current.children,
+      0.7,
+      {
+        opacity: 0,
+        scale: 0,
+        transformOrigin: 'center center',
+        force3D: true,
+      },
+      {
+        opacity: 1,
+        scale: 1,
+        ease: Elastic.easeInOut,
+        force3D: true,
+      },
+      0.009
+    )
+    tl2.staggerFromTo(
+      polygons2.current.children,
+      0.7,
+      {
+        opacity: 0,
+        scale: 0,
+        transformOrigin: 'center center',
+        force3D: true,
+      },
+      {
+        opacity: 1,
+        scale: 1,
+        ease: Elastic.easeInOut,
+        force3D: true,
+      },
+      0.009
+    )
+  }, [tl, tl2])
+
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route
-            path="*"
-            element={
-              <Layout
-                classes={classes}
-                main={main}
-                home={home}
-                date={date}
-                registerBtn={registerBtn}
-                tl={tl}
-                tl2={tl2}
-                animateMain={animateMain}
-              >
-                <Routes>
-                  <Route
-                    exact
-                    path="/dashboard"
-                    element={<Dashboard classes={classes} />}
-                  />
-                  <Route exact path="/" element={<Home classes={classes} />} />
-                </Routes>
-              </Layout>
-            }
-          />
-          <Route exact path="/events" element={<Events classes={classes} />} />
-        </Routes>
-      </Router>
+      <Layout polygons1={polygons1} polygons2={polygons2}>
+        <Router>
+          <Routes>
+            <Route
+              exact
+              path="/"
+              element={
+                <Home
+                  classes={classes}
+                  main={main}
+                  home={home}
+                  date={date}
+                  registerBtn={registerBtn}
+                  animateMain={animateMain}
+                />
+              }
+            />
+            <Route
+              exact
+              path="/events"
+              element={<Events classes={classes} />}
+            />
+          </Routes>
+        </Router>
+      </Layout>
     </div>
   )
 }

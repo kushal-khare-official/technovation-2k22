@@ -41,7 +41,7 @@ import { auth, db } from '../firebase.js'
 //   return errors
 // }
 
-const MaterialUiForm = ({ classes, setLoader, prev, next }) => {
+const Form = ({ classes, setLoader, prev, next }) => {
   const [user, loading, error] = useAuthState(auth)
 
   const [collegeName, setCollegeName] = useState('')
@@ -53,7 +53,7 @@ const MaterialUiForm = ({ classes, setLoader, prev, next }) => {
   useEffect(() => {
     if (loading) return
     if (error) return
-    if (!user) return prev()
+    if (!user) prev()
   }, [user, error, loading, prev])
 
   const onSubmitHandler = async () => {
@@ -190,4 +190,4 @@ const MaterialUiForm = ({ classes, setLoader, prev, next }) => {
   )
 }
 
-export default MaterialUiForm
+export default Form

@@ -20,7 +20,7 @@ function Dashboard({ classes, home }) {
   const [loader, setLoader] = useState(false)
   const [name, setName] = useState('')
   const [photoURL, setPhotoURL] = useState('')
-  const [activeStep, setActiveStep] = React.useState(3)
+  const [activeStep, setActiveStep] = React.useState(0)
   const [activeScreen, setActiveScreen] = React.useState(0)
 
   useEffect(() => {

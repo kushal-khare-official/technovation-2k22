@@ -1,29 +1,6 @@
-import React, { useEffect, useRef } from 'react'
-import { Elastic } from 'gsap'
+import React from 'react'
 
-function BgRight({ timeline }) {
-  const polygons2 = useRef()
-
-  useEffect(() => {
-    timeline.staggerFromTo(
-      polygons2.current.children,
-      0.7,
-      {
-        opacity: 0,
-        scale: 0,
-        transformOrigin: 'center center',
-        force3D: true,
-      },
-      {
-        opacity: 1,
-        scale: 1,
-        ease: Elastic.easeInOut,
-        force3D: true,
-      },
-      0.009
-    )
-  }, [timeline])
-
+function BgRight({ polygons2 }) {
   return (
     <div className="BgRight">
       <svg
