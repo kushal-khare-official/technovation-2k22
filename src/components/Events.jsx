@@ -1042,7 +1042,7 @@ const events = [
     description:
       'It is a unique drawing, sketching, painting, and art competition designed to encourage creative expression. These are the bast avenues to show your masterpieces, through which you can finally break the ice and gain the exposure.',
     image:
-      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/11057_HTIye4v2L.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649248204673',
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/paint_jTIu5ECqN.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649698422453',
     coordinators: [
       {
         name: 'Nidhi Gupta',
@@ -1061,8 +1061,8 @@ const events = [
       'Time duration to be given to participants: 1.30 hrs. ',
     ],
     category: 'Non Technical',
-    color1: '#F64858',
-    color2: '#1C3752',
+    color1: '#0881AA',
+    color2: '#DD433E',
   },
   {
     eventId: 14,
@@ -1106,7 +1106,8 @@ const events = [
     teamType: 'Solo/Duo',
     description:
       "Sometime It's best to put makeup on your phone covers rather than just face. In cover design, decorate the cover using materials.",
-    image: '',
+    image:
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/WeGotItCovered_LbRC6ri7H.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649698416141',
     coordinators: [
       {
         name: 'Deeksha Maurya',
@@ -1137,7 +1138,7 @@ const events = [
     description:
       'The robot must follow the black and white line specified by organisers. The robot will go through different obstacles During competition on the track like different joints, zig-zag lines, curve lines, intersecting lines, and even interruptions.',
     image:
-      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/27429944__1__mMfFPi3VU.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649521608808',
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/decor-car-following-right-route_Wb6awpu8P.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649700498818',
     coordinators: [
       {
         name: 'Ashish Kumar Patel ',
@@ -1203,7 +1204,7 @@ const events = [
     description:
       'This is a technical kit based quest event. Where you have to identify and name the given pictures, also describe them (if needed).',
     image:
-      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/27719453__1__8JlS9Z2of7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649521863314',
+      'https://github.com/kushal-khare-official/technovation-events/blob/master/IdentoKit.jpg',
     coordinators: [
       {
         name: 'Mohammad Talha',
@@ -1263,8 +1264,8 @@ const events = [
       'Path Design: - Track design. ',
       'Extra Time: - To do the changes in the programming & hardware of the robot 15 minutes will be provided before the competition.',
     ],
-    color1: '#566D80',
-    color2: '#B65E5C',
+    color1: '#EBD57B',
+    color2: '#579E9B',
   },
   {
     eventId: 8,
@@ -1274,7 +1275,7 @@ const events = [
     description:
       'Photography Event in which Individual have to click the image of diffrent and iconic moments into either smartphone or professional camera.',
     image:
-      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/42379_nZKDzcSYn.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649248200327',
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/JuJuly15_3KsgxyNJm.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649702730756',
     coordinators: [
       {
         name: 'Yash Shekhar',
@@ -1293,8 +1294,238 @@ const events = [
       'Your picture should be raw.',
       'There are no TM or watermark pictures.',
     ],
-    color1: '#566D80',
-    color2: '#B65E5C',
+    color1: '#81021F',
+    color2: '#034A2B',
+  },
+  {
+    eventId: 18,
+    name: 'Bob-the-builder',
+    teamType: 'team(2/3/4)',
+    category: 'technical',
+    description:
+      'Working Model Exhibition is a competition where contestants present their working projects/models that they have created. It allows students to compete in today’s challenging technologies. Its motive is to implement its theoretical knowledge into practice by conducting a range of experiments. So that the questions or tasks spark a true interest in the student, they should be able to have an interesting, eye-catching project. It also provides a mechanism for students with an intense interest in projects to be paired with students/mentors from nearby colleges. ',
+    image:
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/28406255__1__zdGzsXoZR.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649522451577',
+    coordinators: [
+      {
+        name: 'Sumit Yadav ',
+        mobile: 9918980883,
+        email: 'Ysumit7388@gmail.com  ',
+      },
+      {
+        name: 'Amit Kumar ',
+        mobile: 7050931262,
+        email: 'Amitrock197@gmail.com  ',
+      },
+    ],
+    rules: [
+      'Important points has been marked by “*” 2. ',
+      'Only working models are eligible for the exhibition.',
+      'Winner will be declared by Judges for both the categories(Individual as well as Team-up). ',
+      'In working model every participant have to model your project related to given topics. ',
+      'The topic Should be released some week before on our Technovation platform. ',
+      'It is modelled by yourself only(participant). If it is found that model is copied then that participant will be disqualified. ',
+      'Participants should be awarded after the results of the Exhibition. ',
+      'Participants have to maintain discipline, be fair, positive and consistent with everybody. ',
+      'Due to any misbehavioural can lead participants to out of all event i.e disqualified.',
+    ],
+    color1: '#505555',
+    color2: '#79B161',
+  },
+  {
+    eventId: 19,
+    name: 'Dimensions',
+    teamType: 'solo',
+    category: 'technical',
+    description:
+      'This event is done with the help of AutoCAD software. Every participant has to create a specific given object, etc. And the result criteria depend upon the judgment.',
+    image:
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/27271776__1__JDbaoSBGU.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649523133791',
+    coordinators: [
+      {
+        name: 'Shubhankar Dubey ',
+        mobile: 6396903004,
+        email: 'Shubhankardubey7777@gmail.com  ',
+      },
+      {
+        name: 'Raghvendra Singh Parmar ',
+        mobile: 7007811936,
+        email: 'Photosbyraghav@gmail.com',
+      },
+    ],
+    rules: [
+      'All the participants have to come in CAD lab .',
+      'The participants should be provided system with installed AutoCAD software. ',
+      'Participants should be awarded as per complication of given project in given limited time. ',
+    ],
+    color1: '#FFD15B',
+    color2: '#7C443E',
+  },
+  {
+    eventId: 20,
+    name: 'Best from waste',
+    teamType: 'team(max: 3)',
+    category: 'technical',
+    description:
+      'This is an event based on 3R’s i.e Reduce,Reuse,Recycle. In this event, participants will have to make innovative things from waste.',
+    image:
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/robo_war_CgMM8HBBQ.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649352606988',
+    coordinators: [
+      {
+        name: 'Abhishek Saini  ',
+        mobile: 9682802673,
+        email: 'abhisaini2507@gmail.com ',
+      },
+      {
+        name: 'Neha Singh  ',
+        mobile: 9616689299,
+        email: 'nehasingh09rkt@gmail.com ',
+      },
+    ],
+    rules: [
+      'In this event, participants will have to come with waste materials.  ',
+      'All participants will have to assemble waste material in the event area only. ',
+      '40 min will be given to assembling things. ',
+      'Things which take time like painting the waste material should be done beforehand.',
+    ],
+    color1: '#FFD15B',
+    color2: '#7C443E',
+  },
+  {
+    eventId: 9,
+    name: 'Twinkle Toes',
+    teamType: 'Solo',
+    category: 'Non Technical',
+    description:
+      'Nail art is a creative way to paint, decorate, enhance, and embellish nails.',
+    image:
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/l-intro-1611155720_ixdbWcV4a.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649702160270',
+    coordinators: [
+      {
+        name: 'Shweta Rai',
+        mobile: 8303258670,
+        email: 'shwetarai111001@gmail.com',
+      },
+      {
+        name: 'Priyanshi Sagar',
+        mobile: 9368918518,
+        email: 'priyanshisagar30@gmail.com',
+      },
+    ],
+    rules: [
+      'Team event(two members- the participant who will paint and the model on whom the nail art will be done.',
+      'Time–1hour. ',
+      "No polishes or base coats are allowed on the model's nails before the competition.",
+      "Models' nails must be ready for polish application. ",
+      'No additional people may help. ',
+      'A full set of 2hands must be completed and all the work must be finished in the time allotted. ',
+      'NO acrylic paint.',
+    ],
+    color1: '#FDCA17',
+    color2: '#FD4B67',
+  },
+  {
+    eventId: 10,
+    name: 'Face Painting',
+    teamType: 'Team(3)',
+    category: 'Non Technical',
+    description:
+      'The expression of ideas and emotions, with the creation of certain aesthetic qualities, in a two-dimensional visual language.',
+    image:
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/beautiful-abstract-face-wallpaper-preview_nAH9UFBOP.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649701615583',
+    coordinators: [
+      {
+        name: 'Surbhi Thakur',
+        mobile: 7607003381,
+        email: 'surabhithakur.33@gmail.com',
+      },
+      {
+        name: 'Sweety Singh',
+        mobile: 8318529917,
+        email: 'ss0605180@gmail.com',
+      },
+      {
+        name: 'Rahul Gatam',
+        mobile: 9005286625,
+        email: 'r ahulgautam8933@gmail.com',
+      },
+    ],
+    rules: [
+      'It is a team event. There can be only 2 participants in a team. ',
+      'Participants should bring their colors, brushes, etc. ',
+      'Only organic color should be used. ',
+      'The time limit is 60 minutes. ',
+      'The topic will be given on the spot. ',
+      'Participants will be judged based on creativity, innovation, and design. ',
+      'The decision of the judges will be final and binding.',
+    ],
+    color1: '#A40FDA',
+    color2: '#E01E81',
+  },
+  {
+    eventId: 11,
+    name: 'Grafitti',
+    teamType: 'Team(4-6)',
+    category: 'Non Technical',
+    description:
+      'It is a painting event where you will have to show your creativity in walls, (spread your colors and create something innovative).',
+    image:
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/How-to-choose-the-right-home-paint-colour-for-you-1024x607_HYMH1bT0V.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649698418379',
+    coordinators: [
+      {
+        name: 'Ritika Verma',
+        mobile: 8765073545,
+        email: 'ritiver04@gmail.com',
+      },
+      {
+        name: 'Shivaji Singh',
+        mobile: 6388643755,
+        email: 'shivasingh18734@gmail.com',
+      },
+    ],
+    rules: [
+      'No portion. ',
+      'You have to bring your paints, brushes, and other tools you will use. ',
+      'At the time of the event, you will be given a clean wall, where you have to present your creativity. ',
+      'You will be given 2hrs to complete your painting (time extending more than the given period will lead you to be disqualified).',
+    ],
+    color1: '#3E3B43',
+    color2: '#E68036',
+  },
+  {
+    eventId: 13,
+    name: 'Sharktank',
+    teamType: 'Solo',
+    category: 'Non Technical',
+    description:
+      'To promote business idea. To provide exposure of project presentation',
+    image:
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/1200x627-Q80_2963067ff0838d07b38d33d436e87225_q4EJq6Tqz.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649700497664',
+    coordinators: [
+      {
+        name: 'Abhishek Saini',
+        mobile: 902680722,
+        email: 'abhisaini2507@gmail.com',
+      },
+      {
+        name: 'Rachit Soni',
+        mobile: 7652028120,
+        email: 'neptuneson2001@gmail.com',
+      },
+      {
+        name: 'Siddhi Mishra',
+        mobile: 8601313792,
+        email: 'Sidhimishra706@gmail.com',
+      },
+      {
+        name: 'Karan Singh',
+        mobile: 8601313792,
+        email: 'test@test.test',
+      },
+    ],
+    rules: [],
+    color1: '#26403C',
+    color2: '#8B8060',
   },
 ]
 
