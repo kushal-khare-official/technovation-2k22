@@ -28,6 +28,10 @@
   perspective-origin: 0 50%;
 }
 
+.cs-style-4 {
+  overflow: auto;
+  height: 100vh;
+}
 .cs-style-4 figure {
   margin: 0;
   position: relative;
@@ -104,12 +108,12 @@
 .eventCont figure figcaption h3,
 p {
   color: white;
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
 }
 .eventCont figure figcaption p {
   margin-top: 10px;
   color: #27d2db;
-  font-family: 'Raleway';
+  font-family: "Raleway";
 }
 .eventCont figure figcaption h5 {
   margin-top: 50px;
@@ -147,7 +151,7 @@ p {
   right: 5px;
   height: 40px;
   width: 40px;
-  background: url('../assets/images/close.png');
+  background: url("../assets/images/close.png");
   background-size: contain;
   margin: 10px;
   cursor: pointer;
@@ -215,7 +219,7 @@ p {
   margin-top: 60px;
   height: 65%;
   overflow-y: scroll;
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   display: inline-block;
   padding: 50px 50px 100px 50px;
 }
@@ -233,7 +237,7 @@ p {
   padding: 10px;
 }
 .event-leftPane {
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
 }
 .eventImgMobile {
   display: none;
