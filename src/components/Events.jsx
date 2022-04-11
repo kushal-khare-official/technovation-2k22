@@ -939,7 +939,7 @@ const events = [
       },
     ],
     rules: [
-
+      
     ],
     category: 'Gaming',
     color1: '#A11F2E',
@@ -1590,9 +1590,10 @@ function Events({ classes }) {
         {events.map((event, i) => (
           <Grid item xs={12} sm={6} md={4} lg={3} className="eventCont" key={i}>
             <figure>
-              <div className="img">
-                <img src={event.image} alt={event.name} />
-              </div>
+              <div
+                className="img"
+                style={{ backgroundImage: `url(${event.image})` }}
+              ></div>
               <figcaption>
                 <div className="label">
                   <h3 className="heading">{event.name}</h3>

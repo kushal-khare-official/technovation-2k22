@@ -22,7 +22,7 @@ function Home({ classes, main, home, date, animateMain, registerBtn }) {
         }}
         ref={registerBtn}
         onClick={animateMain}
-        onTouchEnd={animateMain}
+        // onTouchEnd={animateMain}
       >
         <div className="indicator">
           <span></span>
