@@ -50,6 +50,7 @@ function Layout({
           }}
           ref={registerBtn}
           onClick={animateMain}
+          onTouchEnd={animateMain}
         >
           <div className="indicator">
             <span></span>

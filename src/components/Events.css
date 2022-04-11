@@ -31,6 +31,7 @@
 .cs-style-4 {
   overflow: auto;
   height: 100vh;
+  margin-left: 60px;
 }
 .cs-style-4 figure {
   margin: 0;
@@ -318,6 +319,10 @@ p {
   }
 }
 @media only screen and (max-width: 768px) {
+  .cs-style-4 {
+    margin-left: 0;
+    margin-bottom: 60px;
+  }
   #eventCont {
     width: 50%;
   }

@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Grid } from '@mui/material'
 import { CancelOutlined } from '@mui/icons-material'
 
+import Nav from './Nav'
 import './Events.css'
 
 const events = [
@@ -1120,14 +1121,12 @@ const events = [
     ],
     category: 'Non Technical',
     rules: [
-
-        "It is an individual event.",
-        "Time limit is 60 min. ",
-        "Topic will be on the spot. ",
-        "Participants will be judged on the basis of creativity, innovation and design.",
-        "Materials - Acrylic paint, crystal stones, sparkle etc. "
+      'It is an individual event.',
+      'Time limit is 60 min. ',
+      'Topic will be on the spot. ',
+      'Participants will be judged on the basis of creativity, innovation and design.',
+      'Materials - Acrylic paint, crystal stones, sparkle etc. ',
     ],
-    category: 'technical',
     color1: '#566D80',
     color2: '#B65E5C',
   },
@@ -1151,21 +1150,20 @@ const events = [
         email: 'kuldeepsingh43169@gmail.com ',
       },
     ],
-    category: 'technical',
     rules: [
-      "Size and Weight Limits Dimensional and weight limits for robots shall be strictly enforced. ",
-      "The size of the robot must not increase by 25 cm in length and 25 cm in width",
-      "Course Time:-Time is measured from the time the robot crosses the starting line until the time it crosses the finish line. A robot is deemed to have crossed the line when the forward most wheel, track, or leg of the robot contacts or crosses over the line.",
-      "A Time Limit:-A maximum of 3 minutes is allowed for a robot to complete the course. A robot That cannot complete the course in the allotted time shall be disqualified. Timekeeping Time shall be measured by an electronic gate system or by a judge with a Stopwatch, based on the availability of equipment. In either case, the recorded time shall be Final.",
-      "Timekeeping:- Time shall be measured by an electronic gate system or by a judge with a stopwatch, based on the availability of equipment. In either case, the recorded time shall be final.",
-      "Autonomous Control:- Once a robot has crossed the starting line it must remain fully Autonomous, or it will be disqualified.",
-      "Course Rules:-Every line follower robot must pass the course at least 1 time and at most 3 times. The referee must choose the best result. A robot that wanders off of the arena surface will lose one Attempt. A robot shall be deemed to have left the arena when any wheel, leg, or track has Moved completely off the arena surface.",
-      "Losing the Line :-Any robot that loses the line course (but not wanders off of the arena Surface) must reacquire the line at the point where it was lost, or at any earlier (e.g. already Traversed) point (autonomous). Otherwise, the robot will lose one attempt.",
-      "Course Specifications:-The line following the course shall traverse a black paper rectangle, 180 Cm wide and 275 cm long. The line shall be white and 1.5-2.5 cm wide."
-  ],
-  category: 'technical',
-  color1: '#566D80',
-  color2: '#B65E5C',
+      'Size and Weight Limits Dimensional and weight limits for robots shall be strictly enforced. ',
+      'The size of the robot must not increase by 25 cm in length and 25 cm in width',
+      'Course Time:-Time is measured from the time the robot crosses the starting line until the time it crosses the finish line. A robot is deemed to have crossed the line when the forward most wheel, track, or leg of the robot contacts or crosses over the line.',
+      'A Time Limit:-A maximum of 3 minutes is allowed for a robot to complete the course. A robot That cannot complete the course in the allotted time shall be disqualified. Timekeeping Time shall be measured by an electronic gate system or by a judge with a Stopwatch, based on the availability of equipment. In either case, the recorded time shall be Final.',
+      'Timekeeping:- Time shall be measured by an electronic gate system or by a judge with a stopwatch, based on the availability of equipment. In either case, the recorded time shall be final.',
+      'Autonomous Control:- Once a robot has crossed the starting line it must remain fully Autonomous, or it will be disqualified.',
+      'Course Rules:-Every line follower robot must pass the course at least 1 time and at most 3 times. The referee must choose the best result. A robot that wanders off of the arena surface will lose one Attempt. A robot shall be deemed to have left the arena when any wheel, leg, or track has Moved completely off the arena surface.',
+      'Losing the Line :-Any robot that loses the line course (but not wanders off of the arena Surface) must reacquire the line at the point where it was lost, or at any earlier (e.g. already Traversed) point (autonomous). Otherwise, the robot will lose one attempt.',
+      'Course Specifications:-The line following the course shall traverse a black paper rectangle, 180 Cm wide and 275 cm long. The line shall be white and 1.5-2.5 cm wide.',
+    ],
+    category: 'technical',
+    color1: '#566D80',
+    color2: '#B65E5C',
   },
   {
     eventId: 7,
@@ -1187,18 +1185,16 @@ const events = [
         email: 'guptaarpita159@gmail.com',
       },
     ],
-    rules:[
-
-      "Entries should be done within the prescribed time period, no late entries would be allowed. ",
-      "Rangoli art should be of 3ft×3ft.",
-      "Theme of rangoli should be your choice.",
-      "Time limit should be 1 hr.",
-      "Any act of indiscipline by participant calls for cancellation of registration."
+    rules: [
+      'Entries should be done within the prescribed time period, no late entries would be allowed. ',
+      'Rangoli art should be of 3ft×3ft.',
+      'Theme of rangoli should be your choice.',
+      'Time limit should be 1 hr.',
+      'Any act of indiscipline by participant calls for cancellation of registration.',
     ],
     category: 'Non Technical',
     color1: '#272425',
     color2: '#F8066D',
-    
   },
   {
     eventId: 16,
@@ -1226,11 +1222,11 @@ const events = [
       },
     ],
     category: 'technical',
-    rules:[
-      "There will be a time limit, after which no answers will be accepted.",
-      "To win the event, contestants will have to pass both the levels",
-      "Instead of time limit, your submitting time will also matter(how fast you are submitting).",
-      "In case of tie, you will be given one extra quest, which will be time based plus accuracy"
+    rules: [
+      'There will be a time limit, after which no answers will be accepted.',
+      'To win the event, contestants will have to pass both the levels',
+      'Instead of time limit, your submitting time will also matter(how fast you are submitting).',
+      'In case of tie, you will be given one extra quest, which will be time based plus accuracy',
     ],
     color1: '#566D80',
     color2: '#B65E5C',
@@ -1256,15 +1252,16 @@ const events = [
         email: 'talhaatiqurrahman123@gmail.com  ',
       },
     ],
-      rules:[
-        "Size & Weight Limits: Robo-car of dimensions under 30cm X 20cm are allowed. ",
-        "Course Time: - Time is measured from the robot crossing the start line until the time it crosses the finish line. Only one chance will be provided to perform your task. ",
-        "Time Limit: - A maximum of 5 minutes is allowed for a robot to complete a course. ",
-        "Losing the Line: - Any robot that loses the line course must reacquire the line at the point where it was lost, or at an earlier point. ",
-        "Chance for touching: - Maximum of three chances is provided to touch a robot while following the path. ","Every touch to a robot will carry an additional 5 sec which will be added to the total time. ",
-        "Measurement of Time: - Time will be measured by stopwatch. ",
-        "Path Design: - Track design. ",
-        "Extra Time: - To do the changes in the programming & hardware of the robot 15 minutes will be provided before the competition."
+    rules: [
+      'Size & Weight Limits: Robo-car of dimensions under 30cm X 20cm are allowed. ',
+      'Course Time: - Time is measured from the robot crossing the start line until the time it crosses the finish line. Only one chance will be provided to perform your task. ',
+      'Time Limit: - A maximum of 5 minutes is allowed for a robot to complete a course. ',
+      'Losing the Line: - Any robot that loses the line course must reacquire the line at the point where it was lost, or at an earlier point. ',
+      'Chance for touching: - Maximum of three chances is provided to touch a robot while following the path. ',
+      'Every touch to a robot will carry an additional 5 sec which will be added to the total time. ',
+      'Measurement of Time: - Time will be measured by stopwatch. ',
+      'Path Design: - Track design. ',
+      'Extra Time: - To do the changes in the programming & hardware of the robot 15 minutes will be provided before the competition.',
     ],
     color1: '#566D80',
     color2: '#B65E5C',
@@ -1290,11 +1287,11 @@ const events = [
         email: 'akhileshtiwari035@gmail.com',
       },
     ],
-    rules:[
-        "The photo should be from the college events only (Technovation).",
-        "The picture should be captured by camera/ mobile phones only.",
-        "Your picture should be raw.",
-        "There are no TM or watermark pictures."
+    rules: [
+      'The photo should be from the college events only (Technovation).',
+      'The picture should be captured by camera/ mobile phones only.',
+      'Your picture should be raw.',
+      'There are no TM or watermark pictures.',
     ],
     color1: '#566D80',
     color2: '#B65E5C',
@@ -1316,11 +1313,12 @@ function Events({ classes }) {
 
   return (
     <>
+      <Nav />
       <Grid container spacing={0} className="grid cs-style-4">
         {events.map((event, i) => (
           <Grid item xs={12} sm={6} md={4} lg={3} className="eventCont" key={i}>
             <figure>
-              <div className="img" onClick={() => triggerEventDetails(i)}>
+              <div className="img">
                 <img src={event.image} alt={event.name} />
               </div>
               <figcaption>

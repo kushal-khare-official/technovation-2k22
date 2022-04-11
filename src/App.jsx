@@ -47,7 +47,7 @@ function App() {
       home.current,
       2,
       {
-        y: '40vh',
+        y: '55vh',
         transformOrigin: 'center center',
         force3D: true,
       },
@@ -82,7 +82,7 @@ function App() {
       color: 'white',
       padding: '30px',
       margin: 'auto',
-      transform: 'translateY(40vh)',
+      transform: 'translateY(55vh)',
       overflow: 'auto',
       height: '75vh',
     },
