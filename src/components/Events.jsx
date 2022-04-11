@@ -1041,7 +1041,7 @@ const events = [
     description:
       "It is a unique drawing, sketching, painting, and art competition designed to encourage creative expression. These are the bast avenues to show your masterpieces, through which you can finally break the ice and gain the exposure.",
     image:
-      "https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/11057_HTIye4v2L.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649248204673",
+      "https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/paint_jTIu5ECqN.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649698422453",
     coordinators: [
       {
         name: "Nidhi Gupta",
@@ -1060,8 +1060,8 @@ const events = [
       "Time duration to be given to participants: 1.30 hrs. ",
     ],
     category: "Non Technical",
-    color1: "#F64858",
-    color2: "#1C3752",
+    color1: "#0881AA",
+    color2: "#DD433E",
   },
   {
     eventId: 14,
@@ -1105,7 +1105,7 @@ const events = [
     teamType: "Solo/Duo",
     description:
       "Sometime It's best to put makeup on your phone covers rather than just face. In cover design, decorate the cover using materials.",
-    image: "",
+    image: "https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/WeGotItCovered_LbRC6ri7H.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649698416141",
     coordinators: [
       {
         name: "Deeksha Maurya",
@@ -1127,8 +1127,8 @@ const events = [
       "Materials - Acrylic paint, crystal stones, sparkle etc. ",
     ],
     category: "technical",
-    color1: "#566D80",
-    color2: "#B65E5C",
+    color1: "#4489CA",
+    color2: "#61CAE4",
   },
   {
     eventId: 15,
@@ -1137,7 +1137,7 @@ const events = [
     description:
       "The robot must follow the black and white line specified by organisers. The robot will go through different obstacles During competition on the track like different joints, zig-zag lines, curve lines, intersecting lines, and even interruptions.",
     image:
-      "https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/27429944__1__mMfFPi3VU.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649521608808",
+      "https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/decor-car-following-right-route_Wb6awpu8P.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649700498818",
     coordinators: [
       {
         name: "Ashish Kumar Patel ",
@@ -1204,7 +1204,7 @@ const events = [
     description:
       "This is a technical kit based quest event. Where you have to identify and name the given pictures, also describe them (if needed).",
     image:
-      "https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/27719453__1__8JlS9Z2of7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649521863314",
+      "https://github.com/kushal-khare-official/technovation-events/blob/master/IdentoKit.jpg",
     coordinators: [
       {
         name: "Mohammad Talha",
@@ -1275,7 +1275,7 @@ const events = [
     description:
       "Photography Event in which Individual have to click the image of diffrent and iconic moments into either smartphone or professional camera.",
     image:
-      "https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/42379_nZKDzcSYn.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649248200327",
+      "https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/JuJuly15_3KsgxyNJm.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649702730756",
     coordinators: [
       {
         name: "Yash Shekhar",
@@ -1294,8 +1294,8 @@ const events = [
       "Your picture should be raw.",
       "There are no TM or watermark pictures.",
     ],
-    color1: "#FFD15B",
-    color2: "#7C443E",
+    color1: "#81021F",
+    color2: "#034A2B",
   },
   {
     eventId: 18,
@@ -1330,8 +1330,8 @@ const events = [
  "Participants have to maintain discipline, be fair, positive and consistent with everybody. ",
  "Due to any misbehavioural can lead participants to out of all event i.e disqualified."
     ],
-    color1: "#FFD15B",
-    color2: "#7C443E",
+    color1: "#505555",
+    color2: "#79B161",
   },
   {
     eventId: 19,
@@ -1401,7 +1401,7 @@ const events = [
     description:
       "Nail art is a creative way to paint, decorate, enhance, and embellish nails.",
     image:
-      "https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/nail_-MPaRoAJw.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649522415993",
+      "https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/l-intro-1611155720_ixdbWcV4a.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649702160270",
     coordinators: [
       {
         name: "Shweta Rai",
@@ -1424,8 +1424,8 @@ const events = [
   "A full set of 2hands must be completed and all the work must be finished in the time allotted. ",
   "NO acrylic paint."
     ],
-    color1: "#FFD15B",
-    color2: "#7C443E",
+    color1: "#FDCA17",
+    color2: "#FD4B67",
   },
   {
     eventId: 10,
@@ -1435,7 +1435,7 @@ const events = [
     description:
       "The expression of ideas and emotions, with the creation of certain aesthetic qualities, in a two-dimensional visual language.",
     image:
-      "https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/fp_ZRERD5DQM.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649519005768",
+      "https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/beautiful-abstract-face-wallpaper-preview_nAH9UFBOP.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649701615583",
     coordinators: [
       {
         name: "Surbhi Thakur",
@@ -1462,8 +1462,8 @@ const events = [
 "Participants will be judged based on creativity, innovation, and design. ",
 "The decision of the judges will be final and binding."
     ],
-    color1: "#FFD15B",
-    color2: "#7C443E",
+    color1: "#A40FDA",
+    color2: "#E01E81",
   },
   {
     eventId: 11,
@@ -1473,7 +1473,7 @@ const events = [
     description:
       "It is a painting event where you will have to show your creativity in walls, (spread your colors and create something innovative).",
     image:
-      "https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/10144_nNQo-LwlS.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649267562666",
+      "https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/How-to-choose-the-right-home-paint-colour-for-you-1024x607_HYMH1bT0V.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649698418379",
     coordinators: [
       {
         name: "Ritika Verma",
@@ -1492,8 +1492,8 @@ const events = [
 "At the time of the event, you will be given a clean wall, where you have to present your creativity. ",
 "You will be given 2hrs to complete your painting (time extending more than the given period will lead you to be disqualified)."
     ],
-    color1: "#FFD15B",
-    color2: "#7C443E",
+    color1: "#3E3B43",
+    color2: "#E68036",
   },
   {
     eventId: 13,
@@ -1503,7 +1503,7 @@ const events = [
     description:
       "To promote business idea. To provide exposure of project presentation",
     image:
-      "https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/24421_OYATasjYa.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649248205642",
+      "https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/1200x627-Q80_2963067ff0838d07b38d33d436e87225_q4EJq6Tqz.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649700497664",
     coordinators: [
       {
         name: "Abhishek Saini",
@@ -1527,10 +1527,10 @@ const events = [
       },
     ],
     rules:[
-        
+
     ],
-    color1: "#FFD15B",
-    color2: "#7C443E",
+    color1: "#26403C",
+    color2: "#8B8060",
   },
 ];
 
