@@ -591,7 +591,7 @@ const events = [
     description:
       'It is a short version of Soccer the only difference is that it restricts the height play with the ball on a small playground.',
     image:
-      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/Futsal_LldIBKmas.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649438623993',
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/40853674__1__u_sTBcros.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649707897782',
     coordinators: [
       {
         name: 'Anirudh Kumar ',
@@ -619,8 +619,8 @@ const events = [
       'There will be no warmup time given, the tournament match will be started as per the time mentioned in schedule which will be provided later.',
     ],
     category: 'Gaming',
-    color1: '#E16A47',
-    color2: '#EDDDBE',
+    color1: '#299678',
+    color2: '#E9C99D',
   },
   {
     eventId: 60,
@@ -629,7 +629,7 @@ const events = [
     description:
       'As you know Cricket is a Gentlemen’s game which even brings Enemies together. Most of us are crazy about IPL now a days… so here we bring a smaller, similar and joyful version of IPL which makes us crazy ... In this version of cricket, we bring both boys and girls together as a team which makes playing this game even more cheerful and thrilling… Let’s come together and be a part of our jubilant event… ',
     image:
-      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/mix_cricket_0TH_c5MYa.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649440948595',
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/5492_7k6rIZ0Px.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649708606766',
     coordinators: [
       {
         name: 'Garima Singh',
@@ -903,6 +903,47 @@ const events = [
     category: 'Gaming',
     color1: '#F64858',
     color2: '#1C3752',
+  },
+  {
+    eventId: 57,
+    name: 'Money Hiest',
+    teamType: 'Team',
+    description: 'What is it you have to answer? But to answer you have to ask? And to ask you have to speak?And to speak you have to know!',
+    image:
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/wp2358444-la-casa-de-papel-money-heist-wallpapers_lZ1DweEvr.png?ik-sdk-version=javascript-1.4.3&updatedAt=1649676694393',
+    coordinators: [
+      {
+        name: 'Rashi Pathak ',
+        mobile: 9517076064,
+        email: 'raship9119@gmail.com',
+      },
+      {
+        name: 'Rohit Kumar',
+        mobile: 6387540764,
+        email: 'rkflash22@gmail.com',
+      },
+      {
+        name: 'Kushal Khare',
+        mobile: 9554409188,
+        email: 'kushalkhare.offcial@gmail.com',
+      },
+      {
+        name: 'Nishkarsh chandra',
+        mobile: 8081526990,
+        email: 'nishkarsh2105@gmail.com',
+      },
+      {
+        name: 'Aviral yadav',
+        mobile: 9120376367,
+        email: 'test@test.test',
+      },
+    ],
+    rules: [
+
+    ],
+    category: 'Gaming',
+    color1: '#A11F2E',
+    color2: '#000000',
   },
   {
     eventId: 48,
@@ -1204,7 +1245,7 @@ const events = [
     description:
       'This is a technical kit based quest event. Where you have to identify and name the given pictures, also describe them (if needed).',
     image:
-      'https://github.com/kushal-khare-official/technovation-events/blob/master/IdentoKit.jpg',
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/https___d1e00ek4ebabms.cloudfront.net_production_c80ba484-5d01-4f2e-8739-cc645a87c6cd_tl5y_Xay-.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649703929385',
     coordinators: [
       {
         name: 'Mohammad Talha',
@@ -1229,8 +1270,8 @@ const events = [
       'Instead of time limit, your submitting time will also matter(how fast you are submitting).',
       'In case of tie, you will be given one extra quest, which will be time based plus accuracy',
     ],
-    color1: '#566D80',
-    color2: '#B65E5C',
+    color1: '#303030',
+    color2: '#E41512',
   },
   {
     eventId: 17,
@@ -1305,7 +1346,7 @@ const events = [
     description:
       'Working Model Exhibition is a competition where contestants present their working projects/models that they have created. It allows students to compete in today’s challenging technologies. Its motive is to implement its theoretical knowledge into practice by conducting a range of experiments. So that the questions or tasks spark a true interest in the student, they should be able to have an interesting, eye-catching project. It also provides a mechanism for students with an intense interest in projects to be paired with students/mentors from nearby colleges. ',
     image:
-      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/28406255__1__zdGzsXoZR.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649522451577',
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/Infra_bg_PXSTIAuQu.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649705600012',
     coordinators: [
       {
         name: 'Sumit Yadav ',
@@ -1329,8 +1370,8 @@ const events = [
       'Participants have to maintain discipline, be fair, positive and consistent with everybody. ',
       'Due to any misbehavioural can lead participants to out of all event i.e disqualified.',
     ],
-    color1: '#505555',
-    color2: '#79B161',
+    color1: '#33767D',
+    color2: '#F37B41',
   },
   {
     eventId: 19,
@@ -1369,7 +1410,7 @@ const events = [
     description:
       'This is an event based on 3R’s i.e Reduce,Reuse,Recycle. In this event, participants will have to make innovative things from waste.',
     image:
-      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/robo_war_CgMM8HBBQ.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649352606988',
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/top-view-of-different-garbage-materials-with-recycling-symbol-on-white-wooden-table-background-recycle-world-environment-day-and-eco-concept-W9HH6D__1__d9bsJVq3x.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649705340243',
     coordinators: [
       {
         name: 'Abhishek Saini  ',
@@ -1388,8 +1429,8 @@ const events = [
       '40 min will be given to assembling things. ',
       'Things which take time like painting the waste material should be done beforehand.',
     ],
-    color1: '#FFD15B',
-    color2: '#7C443E',
+    color1: '#017E06',
+    color2: '#803808',
   },
   {
     eventId: 9,
