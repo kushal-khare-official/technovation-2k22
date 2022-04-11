@@ -141,7 +141,8 @@ p {
   display: inline-block;
 }
 .eventInfoTab .event-leftPane img {
-  height: 200px;
+  width: 100%;
+  min-height: 220px;
   margin: auto;
   display: block;
 }
@@ -151,7 +152,6 @@ p {
   right: 5px;
   height: 40px;
   width: 40px;
-  background: url('../assets/images/close.png');
   background-size: contain;
   margin: 10px;
   cursor: pointer;
@@ -217,11 +217,9 @@ p {
 
 .event-rules {
   margin-top: 60px;
-  height: 65%;
-  overflow-y: scroll;
   font-family: 'Quicksand';
   display: inline-block;
-  padding: 50px 50px 100px 50px;
+  padding: 0 50px 0 50px;
 }
 .event-rules ul {
   list-style-type: square;
@@ -290,10 +288,6 @@ p {
   }
   #eventHeading {
     position: relative;
-  }
-  #event-rules {
-    height: 70%;
-    padding-bottom: 100px;
   }
 }
 @media only screen and (max-width: 1050px) {
