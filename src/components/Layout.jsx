@@ -45,7 +45,7 @@ function Layout({
             position: 'absolute',
             top: '45vh',
             height: '200px',
-            marginLeft: '50%',
+            left: '50%',
             transform: 'translateX(-50%)',
           }}
           ref={registerBtn}

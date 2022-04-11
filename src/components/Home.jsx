@@ -9,54 +9,38 @@ function Home({ classes, home }) {
     <Grid container spacing={2}>
       <Grid item xs={11} md={6}>
         <div className="home-box">
-          <h3>
-            <Link
-              to="/dashboard"
-              style={{ textDecoration: 'none', color: 'white' }}
-            >
-              DASHBOARD
-            </Link>
-          </h3>
+          <Link
+            to="/dashboard"
+            style={{ textDecoration: 'none', color: 'white' }}
+          >
+            <h3>DASHBOARD</h3>
+          </Link>
         </div>
         <div className="home-box">
-          <h3>
-            <Link
-              to="/about"
-              style={{ textDecoration: 'none', color: 'white' }}
-            >
-              ABOUT US
-            </Link>
-          </h3>
+          <Link to="/about" style={{ textDecoration: 'none', color: 'white' }}>
+            <h3>ABOUT US</h3>
+          </Link>
         </div>
         <div className="home-box">
-          <h3>
-            <Link
-              to="/events"
-              style={{ textDecoration: 'none', color: 'white' }}
-            >
-              EVENTS
-            </Link>
-          </h3>
+          <Link to="/events" style={{ textDecoration: 'none', color: 'white' }}>
+            <h3>EVENTS</h3>
+          </Link>
         </div>
         <div className="home-box">
-          <h3>
-            <Link
-              to="/schedule"
-              style={{ textDecoration: 'none', color: 'white' }}
-            >
-              SCHEDULE
-            </Link>
-          </h3>
+          <Link
+            to="/schedule"
+            style={{ textDecoration: 'none', color: 'white' }}
+          >
+            <h3>SCHEDULE</h3>
+          </Link>
         </div>
         <div className="home-box">
-          <h3>
-            <Link
-              to="/contact"
-              style={{ textDecoration: 'none', color: 'white' }}
-            >
-              CONTACT
-            </Link>
-          </h3>
+          <Link
+            to="/contact"
+            style={{ textDecoration: 'none', color: 'white' }}
+          >
+            <h3>CONTACT</h3>
+          </Link>
         </div>
       </Grid>
       <Grid item xs={11} md={6}>
