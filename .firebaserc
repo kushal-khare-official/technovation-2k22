@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "tech-novation"
-  }
+    "default": "tech-novation",
+    "dev": "tech-novation",
+    "prod": "tech-novation"
+  },
+  "targets": {}
 }

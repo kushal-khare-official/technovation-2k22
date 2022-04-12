@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
-import { query, collection, getDocs, where } from 'firebase/firestore'
 import { Avatar, Box, Stepper, Step, StepLabel } from '@mui/material'
 import LogoutIcon from '@mui/icons-material/Logout'
 
-import { auth, db, logout } from '../firebase.js'
+import { auth, logout } from '../firebase.js'
 import Login from './login'
 import Form from './Form'
 import Form2 from './Form2'
@@ -27,9 +26,23 @@ function Dashboard({ classes, home }) {
     const fetchUserName = async () => {
       try {
         setLoader(true)
-        const q = query(collection(db, 'users'), where('uid', '==', user?.uid))
-        const doc = await getDocs(q)
-        const data = doc.docs[0].data()
+        const response = await fetch(process.env.REACT_APP_BACKEND_URL + '/users', {
+          method: 'GET',
+          headers: {
+            rid: user.uid,
+          },
+        })
+        const data = await response.json()
+
+        let newStep = 0
+        
+        if (!data.error) newStep++
+
+        if (data.mobile_number !== 1000000000) newStep++
+        
+        if (data.kitTxnId) newStep++
+        
+        setActiveStep(newStep)
         setName(data.name)
         setPhotoURL(user.providerData[0].photoURL)
         setLoader(false)

@@ -1,8 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import React, { useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
-import { query, collection, getDocs, where } from 'firebase/firestore'
-
 import {
   TextField,
   Radio,
@@ -16,7 +13,8 @@ import {
   FormControl,
   InputLabel,
 } from '@mui/material'
-import { auth, db } from '../firebase.js'
+
+import { auth } from '../firebase.js'
 
 // const validate = (values) => {
 //   const errors = {}
@@ -42,7 +40,7 @@ import { auth, db } from '../firebase.js'
 // }
 
 const Form = ({ classes, setLoader, prev, next }) => {
-  const [user, loading, error] = useAuthState(auth)
+  const [user] = useAuthState(auth)
 
   const [collegeName, setCollegeName] = useState('')
   const [collegeType, setCollegeType] = useState('school')
@@ -50,31 +48,24 @@ const Form = ({ classes, setLoader, prev, next }) => {
   const [branch, setBranch] = useState('')
   const [year, setYear] = useState('')
 
-  useEffect(() => {
-    if (loading) return
-    if (error) return
-    if (!user) prev()
-  }, [user, error, loading, prev])
-
   const onSubmitHandler = async () => {
     try {
       setLoader(true)
-      const q = query(collection(db, 'users'), where('uid', '==', user?.uid))
-      const doc = await getDocs(q)
-      const data = doc.docs[0].data()
-
       const userData = {
         uid: user?.uid,
-        name: data.name,
-        email: user?.email,
-        userType: 'participant',
         collegeType: collegeType,
         college: collegeName,
         branch: branch,
         year: year,
         mobile_number: phoneNumber,
       }
-      await axios.post(process.env.REACT_APP_BACKEND_URL + '/users', userData)
+      await fetch(process.env.REACT_APP_BACKEND_URL + '/users/form', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+      })
       next()
       setLoader(false)
     } catch (e) {

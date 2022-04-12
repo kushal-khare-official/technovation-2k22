@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import axios from 'axios'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { auth } from '../firebase.js'
 import {
@@ -58,11 +57,16 @@ const Form2 = ({ classes, setLoader, next }) => {
         kitTxnStatus: 'pending',
         tshirtSize: tSize,
       }
-      const res = await axios.put(
-        process.env.REACT_APP_BACKEND_URL + '/users',
-        userData
+      await fetch(
+        process.env.REACT_APP_BACKEND_URL + '/users/form2',
+        {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(userData),
+        }
       )
-      console.log(res)
       next()
       setLoader(false)
     } catch (e) {
