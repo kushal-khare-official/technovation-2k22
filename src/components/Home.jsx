@@ -5,10 +5,30 @@ import { Box, Button, Grid } from '@mui/material'
 import Dashboard from './Dashboard'
 import './Home.css'
 
-function Home({ classes, main, home, date, animateMain, registerBtn }) {
+function Home({
+  classes,
+  main,
+  ea,
+  pres,
+  home,
+  date,
+  animateMain,
+  registerBtn,
+}) {
   return (
     <main ref={main}>
       <header>
+        <img
+          src="https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/EA_F56B6FVVp.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649745490501"
+          ref={ea}
+          alt="Engineer\'s Academy"
+          style={{
+            width: '400px',
+            marginLeft: '50%',
+            transform: 'translateX(-50%)',
+          }}
+        />
+        <h4 ref={pres}>Presents</h4>
         <h1>Technovation</h1>
         <h4 ref={date}>27th-30th April, 2K22</h4>
       </header>

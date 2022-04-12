@@ -12,6 +12,8 @@ function App() {
   const polygons1 = useRef()
   const polygons2 = useRef()
   const main = useRef()
+  const ea = useRef()
+  const pres = useRef()
   const registerBtn = useRef()
   const home = useRef()
   const date = useRef()
@@ -22,27 +24,22 @@ function App() {
 
   const animateMain = () => {
     tl.staggerFromTo(
-      [registerBtn.current, date.current],
+      [registerBtn.current, date.current, ea.current, pres.current],
       1,
       {
         opacity: 1,
         scale: 1,
-        position: 'absolute',
-        left: '50%',
-        transform: 'translateX(-50%)',
         transformOrigin: 'center center',
         force3D: true,
       },
       {
         opacity: 0,
         scale: 0,
-        position: 'absolute',
-        left: '50%',
-        transform: 'translateX(-50%)',
+        height: 0,
         ease: Elastic.easeInOut,
         force3D: true,
       },
-      0.09
+      0
     )
     tl3.staggerFromTo(
       home.current,
@@ -206,6 +203,8 @@ function App() {
                 <Home
                   classes={classes}
                   main={main}
+                  ea={ea}
+                  pres={pres}
                   home={home}
                   date={date}
                   registerBtn={registerBtn}

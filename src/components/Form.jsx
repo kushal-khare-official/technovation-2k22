@@ -152,7 +152,7 @@ const Form = ({ classes, setLoader, prev, next }) => {
             >
               <MenuItem value={1}>First</MenuItem>
               <MenuItem value={2}>Second</MenuItem>
-              <MenuItem value={3}>Thrid</MenuItem>
+              <MenuItem value={3}>Third</MenuItem>
               <MenuItem value={4}>Fourth</MenuItem>
             </Select>
           </FormControl>
