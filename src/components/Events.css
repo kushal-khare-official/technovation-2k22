@@ -33,6 +33,7 @@
   height: 100vh;
   margin-left: 60px;
   width: calc(100% - 60px) !important;
+  overflow-x: hidden;
 }
 .cs-style-4 figure {
   margin: 0;
@@ -325,6 +326,9 @@ p {
   .cs-style-4 {
     margin-left: 0;
     margin-bottom: 60px;
+    width: 100% !important;
+    height: calc(100% - 60px) !important;
+    overflow-y: auto;
   }
   #eventCont {
     width: 50%;
