@@ -4,7 +4,6 @@ import gsap, { Elastic } from 'gsap'
 import { makeStyles } from '@mui/styles'
 
 import Layout from './components/Layout'
-import Dashboard from './components/Dashboard'
 import Home from './components/Home'
 import Events from './components/Events'
 import './App.css'
