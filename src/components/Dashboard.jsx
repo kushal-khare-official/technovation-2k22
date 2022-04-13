@@ -26,22 +26,25 @@ function Dashboard({ classes, home }) {
     const fetchUserName = async () => {
       try {
         setLoader(true)
-        const response = await fetch(process.env.REACT_APP_BACKEND_URL + '/users', {
-          method: 'GET',
-          headers: {
-            rid: user.uid,
-          },
-        })
+        const response = await fetch(
+          process.env.REACT_APP_BACKEND_URL + '/users',
+          {
+            method: 'GET',
+            headers: {
+              rid: user.uid,
+            },
+          }
+        )
         const data = await response.json()
 
         let newStep = 0
-        
+
         if (!data.error) newStep++
 
         if (data.mobile_number !== 1000000000) newStep++
-        
+
         if (data.kitTxnId) newStep++
-        
+
         setActiveStep(newStep)
         setName(data.name)
         setPhotoURL(user.providerData[0].photoURL)
@@ -55,10 +58,7 @@ function Dashboard({ classes, home }) {
 
     if (loading) return
     if (error) return
-    if (user) {
-      fetchUserName()
-      setActiveStep(1)
-    }
+    if (user) fetchUserName()
   }, [user, error, loading])
 
   return (

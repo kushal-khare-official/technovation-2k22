@@ -629,7 +629,7 @@ const events = [
     description:
       'As you know Cricket is a Gentlemen’s game which even brings Enemies together. Most of us are crazy about IPL now a days… so here we bring a smaller, similar and joyful version of IPL which makes us crazy ... In this version of cricket, we bring both boys and girls together as a team which makes playing this game even more cheerful and thrilling… Let’s come together and be a part of our jubilant event… ',
     image:
-      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/5492_7k6rIZ0Px.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649708606766',
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/5492__1__xk6F5pW3u-min_LBenS4NWO.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649844320385',
     coordinators: [
       {
         name: 'Garima Singh',
@@ -1016,7 +1016,7 @@ const events = [
     description:
       'Mono act is a short solo play where only one person(male/female) performs in a single character or multiple characters.',
     image:
-      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/close-up-hand-holding-clapperboard-front-male-mime_72UftH_BY.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649663045105',
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/close-up-hand-holding-clapperboard-front-male-mime_72UftH_BY-min_yNvxfE_7k.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649844624549',
     coordinators: [
       {
         name: 'Pawan Prajapati',
@@ -1178,7 +1178,7 @@ const events = [
     description:
       'The robot must follow the black and white line specified by organisers. The robot will go through different obstacles During competition on the track like different joints, zig-zag lines, curve lines, intersecting lines, and even interruptions.',
     image:
-      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/decor-car-following-right-route_Wb6awpu8P.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649700498818',
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/decor-car-following-right-route_Wb6awpu8P-min_Gc6eTB9kt.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649845942450',
     coordinators: [
       {
         name: 'Ashish Kumar Patel ',
@@ -1845,7 +1845,7 @@ const events = [
     description:
       'This contest is for all the Video creators who depict a message through their creative videos on the Instagram platform. ',
     image:
-      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/3559657_C92ydyHD4.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649663044903',
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/3559657_C92ydyHD4-min_GbH5R85tz.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649845236410',
     coordinators: [
       {
         name: 'Priya Yadav',
