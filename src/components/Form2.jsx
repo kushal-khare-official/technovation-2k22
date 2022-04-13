@@ -97,6 +97,7 @@ const Form2 = ({ classes, setLoader, next }) => {
         <li>A Tecnovation Themed T-Shirt</li>
         <li>Fest ID Card</li>
         <li>A few free event passes</li>
+        <li>Cost: ₹300/-</li>
       </ul>
       <FormGroup>
         <FormControl sx={{ m: 1, minWidth: 120 }}>
