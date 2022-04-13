@@ -23,11 +23,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "build:dev": "env-cmd -f ./.env.development npm run build",
-    "build:prod": "env-cmd -f ./.env.production npm run build",
-    "deploy:dev": "env-cmd -f ./.env.development npm run build && firebase deploy -P dev",
-    "deploy:prod": "env-cmd -f ./.env.production npm run build && firebase deploy -P prod",
+    "build": "env-cmd -f .env react-scripts build",
+    "build:dev": "env-cmd -f .env.development npm run build && firebase deploy -P dev",
+    "build:prod": "env-cmd -f .env.production npm run build && firebase deploy -P prod",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
