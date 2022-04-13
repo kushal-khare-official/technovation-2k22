@@ -111,23 +111,11 @@ function Dashboard({ classes, home }) {
           {activeStep === 0 ? (
             <>
               {activeScreen === 0 ? (
-                <Login
-                  classes={classes}
-                  next={() => setActiveStep(1)}
-                  setActiveScreen={setActiveScreen}
-                />
+                <Login classes={classes} setActiveScreen={setActiveScreen} />
               ) : activeScreen === 1 ? (
-                <Register
-                  classes={classes}
-                  next={() => setActiveStep(1)}
-                  setActiveScreen={setActiveScreen}
-                />
+                <Register classes={classes} setActiveScreen={setActiveScreen} />
               ) : (
-                <Reset
-                  classes={classes}
-                  next={() => setActiveStep(0)}
-                  setActiveScreen={setActiveScreen}
-                />
+                <Reset classes={classes} setActiveScreen={setActiveScreen} />
               )}
             </>
           ) : null}

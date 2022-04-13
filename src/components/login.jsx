@@ -1,24 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { TextField, Button, FormGroup, Box } from '@mui/material'
 import GoogleButton from 'react-google-button'
-import { useAuthState } from 'react-firebase-hooks/auth'
 
 import {
-  auth,
   logInWithEmailAndPassword,
   signInWithGoogle,
 } from '../firebase.js'
 
-function Login({ classes, next, setActiveScreen }) {
+function Login({ classes, setActiveScreen }) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [user, loading, error] = useAuthState(auth)
-
-  useEffect(() => {
-    if (loading) return
-    if (error) return
-    if (user) next()
-  }, [user, loading, error, next])
 
   return (
     <FormGroup className={classes.FormGroup}>
@@ -48,7 +39,7 @@ function Login({ classes, next, setActiveScreen }) {
         }}
         id="submitBtn"
         variant="filled"
-        onClick={() => logInWithEmailAndPassword(email, password, next)}
+        onClick={() => logInWithEmailAndPassword(email, password)}
       >
         <span></span>
         <span></span>
@@ -57,7 +48,7 @@ function Login({ classes, next, setActiveScreen }) {
         Submit
       </Button>
       <GoogleButton
-        onClick={() => signInWithGoogle(next)}
+        onClick={() => signInWithGoogle()}
         style={{ margin: 'auto', marginTop: '40px' }}
       >
         Login with Google

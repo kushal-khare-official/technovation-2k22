@@ -1,30 +1,21 @@
-import React, { useEffect, useState } from 'react'
-import { useAuthState } from 'react-firebase-hooks/auth'
+import React, { useState } from 'react'
 import GoogleButton from 'react-google-button'
 import { TextField, Button, FormGroup } from '@mui/material'
 
 import {
-  auth,
   registerWithEmailAndPassword,
   signInWithGoogle,
 } from '../firebase'
 
-function Register({ classes, next, setActiveScreen }) {
+function Register({ classes, setActiveScreen }) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [name, setName] = useState('')
-  const [user, loading, error] = useAuthState(auth)
 
   const register = () => {
     if (!name) alert('Please enter name')
     registerWithEmailAndPassword(name, email, password)
   }
-
-  useEffect(() => {
-    if (loading) return
-    if (error) return
-    if (user) next()
-  }, [user, loading, error, next])
 
   return (
     <>
@@ -63,7 +54,7 @@ function Register({ classes, next, setActiveScreen }) {
           Register
         </Button>
         <GoogleButton
-          onClick={() => signInWithGoogle(next)}
+          onClick={() => signInWithGoogle()}
           style={{ margin: 'auto', marginTop: '40px' }}
         >
           Register with Google

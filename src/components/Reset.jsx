@@ -1,19 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import { useAuthState } from 'react-firebase-hooks/auth'
+import React, { useState } from 'react'
 import { TextField, Box, Button, FormGroup } from '@mui/material'
-import { auth, sendPasswordReset } from '../firebase'
+import { sendPasswordReset } from '../firebase'
 
-// import './Reset.css'
-
-function Reset({ classes, next, setActiveScreen }) {
+function Reset({ classes, setActiveScreen }) {
   const [email, setEmail] = useState('')
-  const [user, loading, error] = useAuthState(auth)
-
-  useEffect(() => {
-    if (loading) return
-    if (error) return
-    if (user) next()
-  }, [user, loading, error, next])
 
   return (
     <>
