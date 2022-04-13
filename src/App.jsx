@@ -33,6 +33,7 @@ function App() {
         force3D: true,
       },
       {
+        marginTop: 0,
         opacity: 0,
         scale: 0,
         height: 0,
@@ -60,7 +61,7 @@ function App() {
       main.current,
       2,
       {
-        y: '35vh',
+        y: '15vh',
         transformOrigin: 'center center',
         force3D: true,
       },

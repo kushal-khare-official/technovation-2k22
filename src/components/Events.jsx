@@ -908,7 +908,8 @@ const events = [
     eventId: 57,
     name: 'Money Hiest',
     teamType: 'Team',
-    description: 'What is it you have to answer? But to answer you have to ask? And to ask you have to speak?And to speak you have to know!',
+    description:
+      'What is it you have to answer? But to answer you have to ask? And to ask you have to speak?And to speak you have to know!',
     image:
       'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/wp2358444-la-casa-de-papel-money-heist-wallpapers_lZ1DweEvr.png?ik-sdk-version=javascript-1.4.3&updatedAt=1649676694393',
     coordinators: [
@@ -938,9 +939,7 @@ const events = [
         email: 'test@test.test',
       },
     ],
-    rules: [
-      
-    ],
+    rules: [],
     category: 'Gaming',
     color1: '#A11F2E',
     color2: '#000000',
@@ -1204,8 +1203,8 @@ const events = [
       'Course Specifications:-The line following the course shall traverse a black paper rectangle, 180 Cm wide and 275 cm long. The line shall be white and 1.5-2.5 cm wide.',
     ],
     category: 'technical',
-    color1: '#566D80',
-    color2: '#B65E5C',
+    color1: '#FEC600',
+    color2: '#B1353F',
   },
   {
     eventId: 7,
@@ -1399,8 +1398,8 @@ const events = [
       'The participants should be provided system with installed AutoCAD software. ',
       'Participants should be awarded as per complication of given project in given limited time. ',
     ],
-    color1: '#FFD15B',
-    color2: '#7C443E',
+    color1: '#010D17',
+    color2: '#0176BC',
   },
   {
     eventId: 20,
@@ -1567,6 +1566,331 @@ const events = [
     rules: [],
     color1: '#26403C',
     color2: '#8B8060',
+  },
+  {
+    eventId: 41,
+    name: 'Timeline',
+    teamType: 'Solo',
+    category: 'Cybernated',
+    description:
+      'Timeline is an event in which you have to make a video by mixing many short videos simply say video editing .',
+    image:
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/thimiline_4QKjvcGfw.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1649672894208',
+    coordinators: [
+      {
+        name: 'Madhavi Tripathi',
+        mobile: 9415212679,
+        email: 'cutiechoti16@gmail.com',
+      },
+      {
+        name: 'Suryansh Pandey',
+        mobile: 8948480037,
+        email: 'suryanshpandeykv@gmail.com',
+      },
+    ],
+    rules: [
+      'Pictorial presentation of technovation in video form covering all the events',
+      'Time limit- should not exceed 3min',
+      'Software- filmora , kinemaster or any other',
+      'Its a team event, so only two members are allowed.',
+      'you all have to cover all the events and make a video.',
+      'As time is limited to 3 minutes only so you have to include',
+      'events in your video smartly so that video is more appealing.',
+      'Its a sum up of all events that will be conducted in technovation',
+      'through video by adding some transitions/effects.',
+    ],
+    color1: '#3E3B43',
+    color2: '#E68036',
+  },
+  {
+    eventId: 40,
+    name: 'Ad-sense',
+    teamType: 'Duo',
+    category: 'Cybernated',
+    description:
+      'An advertisement (often shortened to advert or ad) is the promotion of a product, brand or service to a viewership in order to attract interest, engagement and sales. Advertisements come in many forms, from copy to interactive video, and have evolved to become a crucial feature of the app marketplace.',
+    image:
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/2011.i211.029_loudspeaker_megaphone_lightnings_realistic_wNfy2jj2u.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649676491638',
+    coordinators: [
+      {
+        name: 'Yash Shekhar',
+        mobile: 8960576910,
+        email: 'shekhar.yash01@gmail.com',
+      },
+      {
+        name: 'Himanshu Singh',
+        mobile: 8417883678,
+        email: 'himanshu4168@gmail.com',
+      },
+      {
+        name: 'Akhilesh Kr. Tiwari',
+        mobile: 6388401031,
+        email: 'tiwariakhil678@gmail.com',
+      },
+    ],
+    rules: [
+      'Your advertisement should be strictly related to the given subject.',
+      '15 minutes time will be allotted for preparation of advertisement after declaration of subject.',
+      'Maximum number of participants should be 4.',
+      'Maximum time limit for advertisement performance should be 2 minutes.',
+      "Presentation shouldn't be vulgar or hurtful to any community.",
+      'Any person creating nuisance will be disqualified immediately.',
+    ],
+    color1: '#3E3B43',
+    color2: '#E68036',
+  },
+  {
+    eventId: 39,
+    name: 'Selfievation',
+    teamType: 'Solo',
+    category: 'Cybernated',
+    description:
+      'This is an online selfie contest, where you have to give the best selfie of your which will be posted on social media and you have to gain your maximum likes to win the contest',
+    image:
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/22845728__1__uEnA1ScsH.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649675076666',
+    coordinators: [
+      {
+        name: 'Ritika Verma',
+        mobile: 8765073545,
+        email: 'ritiver04@gmail.com',
+      },
+      {
+        name: 'Yash Shekhar',
+        mobile: 8960576910,
+        email: 'shekhar.yash01@gmail.com',
+      },
+    ],
+    rules: [
+      "You can send only one photo of your's.",
+      'Photo you will send should only be selfie clicked by you (no timer selfie, no back camera photo clicked by others).',
+      'Liks you gain should not be fake.',
+      'If any of the contestent caught with the fake likes in his/her photo, will be disqualified immediately.',
+      'Procedure-',
+      "Firstly, you will have to send one selfie of your's along with your name, branch, year and one line quotation ( that describe your selfie).",
+      'Those selfie will then posted on social media and then you can approach to gain your likes.',
+    ],
+    color1: '#3E3B43',
+    color2: '#E68036',
+  },
+  {
+    eventId: 32,
+    name: 'Web Dextro',
+    teamType: 'Duo',
+    category: 'Cybernated',
+    description:
+      'Web Dextro(Web design) encompasses many different skills and disciplines in the production and maintenance of websites. ',
+    image:
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/Front-end-Web-Development-Tools_PZpjbd-92.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649675901918',
+    coordinators: [
+      {
+        name: 'Shubham Jain',
+        mobile: 8006162821,
+        email: 'jshubham94110@gmail.com',
+      },
+      {
+        name: 'Nishkarsh Chandra',
+        mobile: 8081526990,
+        email: 'nishkarsh2105@gmail.com',
+      },
+    ],
+    rules: [
+      'Each team will be of two participant.',
+      ' Participants will be given a set of tasks to complete within the given time frame.',
+      'The following files/data will be provided to each participant-',
+      'Libraries:',
+      ' Jquery',
+      ' Animate.css',
+      ' Bootstrap',
+      'Others:',
+      ' Data (as per the requirement)',
+      ' Icon Packs',
+      ' Color Palette',
+      'Completion of the tasks must be purely code-based. The use of designing and animation libraries will be entertained. However, NO web designing software will be provided to the participants.',
+      'The text editor, Visual Studio Code will be installed on the system given to the participants to work on.',
+      'Criteria of Judgement will be mentioned along with the given task.',
+      'The duration of the event is 2 hour.',
+    ],
+    color1: '#3E3B43',
+    color2: '#E68036',
+  },
+  {
+    eventId: 33,
+    name: 'Bug-d-code',
+    teamType: 'Duo',
+    category: 'Cybernated',
+    description:
+      'Debugging means to run your code step by step in a debugging tool like Visual Studio, to find the exact point where you made a programming mistake. You then understand what corrections you need to make in your code, and debugging tools often allow you to make temporary changes so you can continue running the program.',
+    image:
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/24421_OYATasjYa.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649248205642',
+    coordinators: [
+      {
+        name: 'Abhishek Maurya',
+        mobile: 7084459038,
+        email: 'abhishekmaurya.official@gmail.com',
+      },
+      {
+        name: 'Khushvinder Singh',
+        mobile: 6391511267,
+        email: 'ksr19101999@gmail.com',
+      },
+    ],
+    rules: [
+      'Each team will be of two participants.',
+      'All codes in the question will be in JAVA or in C++.( Participants can choose their prefered language. )',
+      'The questions mentioned will be of the following types-',
+      '   Error rectification: The participants will have to rectify the errors in the program so as to get the desired output.',
+      '   Hidden code: Participants are to fill the missing code so as to get the desired output.',
+      '   Rearrangement: Participants are to rearrange the disordered parts in correct order to get the desired output.',
+      '   Predict the Output: Participants are to predict the desired output.',
+      'The duration of this event is 1 hour.',
+    ],
+    color1: '#3E3B43',
+    color2: '#E68036',
+  },
+  {
+    eventId: 34,
+    name: 'Codervation',
+    teamType: 'Duo',
+    category: 'Cybernated',
+    description:
+      'Codervation (Competitive programming) is a mind sport usually held over   the Internet or a local network, involving participants trying to program according to provided specifications.',
+    image:
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/CodeALine_c3HP3VBtW.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649788016852',
+    coordinators: [
+      {
+        name: 'Rohit Kumar',
+        mobile: 6387540764,
+        email: 'rk22012001@gmail.com',
+      },
+      {
+        name: 'Khushvinder Singh',
+        mobile: 6391511267,
+        email: 'ksr19101999@gmail.com',
+      },
+    ],
+    rules: [
+      'Each team will be of two participants.',
+      'The participants will have to write a program for a given set of problems.',
+      'Participants can choose their prefered language.',
+      'This will be a two-round event. Top 6 teams will be selected for final round based on their performance in the first round.',
+      'The duration for both the rounds will be 1 hour.',
+    ],
+    color1: '#3E3B43',
+    color2: '#E68036',
+  },
+  {
+    eventId: 35,
+    name: 'Capture the flag',
+    teamType: 'Duo',
+    category: 'Cybernated',
+    description:
+      'Capture the flag is an exercise in computer security in which “flags” are hidden in purposefully vulnerable websites. Competitors find the flags using the attack/defense style of web security.',
+    image:
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/icons_ctf_1_PtVWtV2e0.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649676491167',
+    coordinators: [
+      {
+        name: 'Kushal Khare',
+        mobile: 9554409188,
+        email: 'kushalkhareofficial@gmail.com',
+      },
+      {
+        name: 'Abhishek Maurya',
+        mobile: 7084459038,
+        email: 'abhishekmaurya.official@gmail.com',
+      },
+    ],
+    rules: [
+      'Each team will be of two participants.',
+      'An IP address is to be provided to each competitor (IP will redirect you to a website).',
+      'Find Flags hidden in a given website or any ip you may find on the website.',
+      'Participants may have to use some basic commands used to test websites.',
+    ],
+    color1: '#3E3B43',
+    color2: '#E68036',
+  },
+  {
+    eventId: 37,
+    name: ' Pic-a-Thon',
+    teamType: 'Solo',
+    category: 'Cybernated',
+    description: 'Photo editing, Online Event',
+    image:
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/Apps-for-Image-Editing-StartupTalky_DWHLN09d4.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649789026542',
+    coordinators: [
+      {
+        name: 'Aanchal Sharma',
+        mobile: 8303256624,
+        email: 'aanchalsharma880835@gmail.com',
+      },
+      {
+        name: 'Raghavendra Singh Parmar',
+        mobile: 7007811936,
+        email: 'photosbyraghav@gmail.com',
+      },
+    ],
+    rules: [
+      'Time limit : 45 min',
+      'Edit a sample photo provided by us by any editing app',
+      'Single round event',
+      'Judges will decide the best edited image',
+    ],
+    color1: '#3E3B43',
+    color2: '#E68036',
+  },
+  {
+    eventId: 38,
+    name: ' Reels-Camera-Action',
+    teamType: 'Solo',
+    category: 'Cybernated',
+    description:
+      'This contest is for all the Video creators who depict a message through their creative videos on the Instagram platform. ',
+    image:
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/3559657_C92ydyHD4.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649663044903',
+    coordinators: [
+      {
+        name: 'Priya Yadav',
+        mobile: 8077627210,
+        email: 'priyayadavsird@gmail.com',
+      },
+      {
+        name: 'Piyush Singh',
+        mobile: 9936513754,
+        email: 'savitry8335691@gmail.com',
+      },
+    ],
+    rules: [
+      'The participants have to prepare a short video of 1 min (max) depicting any social message creatively.',
+      'The video will be posted on the Instagram handle of Technovation_iert. ',
+      'The video with maximum likes and a meaningful message to society would be selected as winner. ',
+      'Fake-liker applications is strictly prohibited and its use can lead to disqualification of the video and no second chance will be given.',
+    ],
+    color1: '#3E3B43',
+    color2: '#E68036',
+  },
+  {
+    eventId: 36,
+    name: ' Hackathon',
+    teamType: 'team',
+    category: 'Cybernated',
+    description:
+      'A hackathon, also known as a codefest, is a social coding event that brings computer programmers and other interested people together to improve upon or build a new software program. The word hackathon is a portmanteau of the words hacker, which means clever programmer, and marathon, an event marked by endurance. ',
+    image:
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/hackathon_-ve9U_2bJ.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649676528871',
+    coordinators: [
+      {
+        name: 'Kushal Khare',
+        mobile: 9554409188,
+        email: 'kushalkhareofficial@gmail.com',
+      },
+      {
+        name: 'Shubham Jain',
+        mobile: 8006162821,
+        email: 'jshubham94110@gmail.com',
+      },
+    ],
+    rules: [],
+    color1: '#3E3B43',
+    color2: '#E68036',
   },
 ]
 

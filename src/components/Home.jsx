@@ -18,8 +18,13 @@ function Home({
   return (
     <main ref={main}>
       <header>
+        <h1>Technovation</h1>
+        <h4 ref={date}>29th April - 1st May 2022</h4>
+        <h4 ref={pres} style={{ marginTop: '50px' }}>
+          Presented By
+        </h4>
         <img
-          src="https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/EA_F56B6FVVp.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649745490501"
+          src="https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/EA-min_4dmeT-U5H.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649839137093"
           ref={ea}
           alt="Engineer\'s Academy"
           style={{
@@ -28,14 +33,11 @@ function Home({
             transform: 'translateX(-50%)',
           }}
         />
-        <h4 ref={pres}>Presents</h4>
-        <h1>Technovation</h1>
-        <h4 ref={date}>27th-30th April, 2K22</h4>
       </header>
       <Button
         style={{
           position: 'absolute',
-          top: '45vh',
+          top: '65vh',
           height: '200px',
           left: '50%',
           transform: 'translateX(-50%)',

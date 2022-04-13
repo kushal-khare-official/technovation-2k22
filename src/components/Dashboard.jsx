@@ -125,7 +125,7 @@ function Dashboard({ classes, home }) {
               ) : (
                 <Reset
                   classes={classes}
-                  next={() => setActiveStep(1)}
+                  next={() => setActiveStep(0)}
                   setActiveScreen={setActiveScreen}
                 />
               )}
