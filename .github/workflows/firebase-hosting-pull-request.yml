@@ -10,9 +10,9 @@ jobs:
     steps:
       - name: Create env file
         run: |
-          touch .env
-          echo REACT_APP_BACKEND_URL=${{ secrets.REACT_APP_BACKEND_URL }} >> .env
-          cat .env
+          touch .env.production
+          echo REACT_APP_BACKEND_URL=${{ secrets.REACT_APP_BACKEND_URL }} >> .env.production
+          cat .env.production
       - uses: actions/checkout@v2
       - run: npm ci && npm run build:prod
       - uses: FirebaseExtended/action-hosting-deploy@v0
