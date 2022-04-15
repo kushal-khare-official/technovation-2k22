@@ -19,6 +19,7 @@ function Dashboard({ classes, home }) {
   const [loader, setLoader] = useState(false)
   const [name, setName] = useState('')
   const [photoURL, setPhotoURL] = useState('')
+  const [paymentStatus, setPaymentStatus] = useState('')
   const [activeStep, setActiveStep] = React.useState(0)
   const [activeScreen, setActiveScreen] = React.useState(0)
 
@@ -43,7 +44,10 @@ function Dashboard({ classes, home }) {
 
         if (data.mobile_number !== 1000000000) newStep++
 
-        if (data.kitTxnId) newStep++
+        if (data.kitTxnId) {
+          setPaymentStatus(data.kitTxnStatus)
+          newStep++
+        }
 
         setActiveStep(newStep)
         setName(data.name)
@@ -134,6 +138,7 @@ function Dashboard({ classes, home }) {
               next={() => setActiveStep(3)}
             />
           ) : null}
+          {activeStep === 3 ? <div>Payment Status: {paymentStatus}</div> : null}
         </>
       )}
     </div>

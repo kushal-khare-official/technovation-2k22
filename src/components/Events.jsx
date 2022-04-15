@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { Grid } from '@mui/material'
 import { CancelOutlined } from '@mui/icons-material'
 
@@ -1897,7 +1898,9 @@ const events = [
 function Events({ classes }) {
   const eventRef = useRef()
 
-  const [currentEvent, setCurrentEvent] = useState()
+  const [searchParams] = useSearchParams()
+
+  const [currentEvent, setCurrentEvent] = useState(events[searchParams.get('eventId')])
 
   const triggerEventDetails = (i) => {
     if (i >= 0) {

@@ -12,7 +12,6 @@ function Home({
   pres,
   home,
   date,
-  animateMain,
   registerBtn,
 }) {
   return (
@@ -43,8 +42,6 @@ function Home({
           transform: 'translateX(-50%)',
         }}
         ref={registerBtn}
-        onClick={animateMain}
-        // onTouchEnd={animateMain}
       >
         <div className="indicator">
           <span></span>

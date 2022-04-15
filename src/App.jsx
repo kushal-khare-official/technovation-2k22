@@ -21,58 +21,8 @@ function App() {
   const [tl] = useState(() => gsap.timeline())
   const [tl2] = useState(() => gsap.timeline())
   const [tl3] = useState(() => gsap.timeline())
-
-  const animateMain = () => {
-    tl.staggerFromTo(
-      [registerBtn.current, date.current, ea.current, pres.current],
-      1,
-      {
-        opacity: 1,
-        scale: 1,
-        transformOrigin: 'center center',
-        force3D: true,
-      },
-      {
-        marginTop: 0,
-        opacity: 0,
-        scale: 0,
-        height: 0,
-        ease: Elastic.easeInOut,
-        force3D: true,
-      },
-      0
-    )
-    tl3.staggerFromTo(
-      home.current,
-      2,
-      {
-        y: '55vh',
-        transformOrigin: 'center center',
-        force3D: true,
-      },
-      {
-        y: '0',
-        ease: Elastic.easeInOut,
-        force3D: true,
-      },
-      0.1
-    )
-    tl2.staggerFromTo(
-      main.current,
-      2,
-      {
-        y: '15vh',
-        transformOrigin: 'center center',
-        force3D: true,
-      },
-      {
-        y: '0',
-        ease: Elastic.easeInOut,
-        force3D: true,
-      },
-      0.1
-    )
-  }
+  const [tl4] = useState(() => gsap.timeline())
+  const [tl5] = useState(() => gsap.timeline())
 
   const useStyles = makeStyles({
     root: {
@@ -156,9 +106,60 @@ function App() {
   const classes = useStyles()
 
   useEffect(() => {
+    const animateMain = () => {
+      tl3.staggerFromTo(
+        [registerBtn.current, date.current, ea.current, pres.current],
+        1,
+        {
+          opacity: 1,
+          scale: 1,
+          transformOrigin: 'center center',
+          force3D: true,
+        },
+        {
+          marginTop: 0,
+          opacity: 0,
+          scale: 0,
+          height: 0,
+          ease: Elastic.easeInOut,
+          force3D: true,
+        },
+        0
+      )
+      tl4.staggerFromTo(
+        home.current,
+        2,
+        {
+          y: '55vh',
+          transformOrigin: 'center center',
+          force3D: true,
+        },
+        {
+          y: '0',
+          ease: Elastic.easeInOut,
+          force3D: true,
+        },
+        0
+      )
+      tl5.staggerFromTo(
+        main.current,
+        2,
+        {
+          y: '15vh',
+          transformOrigin: 'center center',
+          force3D: true,
+        },
+        {
+          y: '0',
+          ease: Elastic.easeInOut,
+          force3D: true,
+        },
+        0
+      )
+    }
     tl.staggerFromTo(
       polygons1.current.children,
-      0.7,
+      0.5,
       {
         opacity: 0,
         scale: 0,
@@ -173,24 +174,26 @@ function App() {
       },
       0.009
     )
-    tl2.staggerFromTo(
-      polygons2.current.children,
-      0.7,
-      {
-        opacity: 0,
-        scale: 0,
-        transformOrigin: 'center center',
-        force3D: true,
-      },
-      {
-        opacity: 1,
-        scale: 1,
-        ease: Elastic.easeInOut,
-        force3D: true,
-      },
-      0.009
-    )
-  }, [tl, tl2])
+    tl2
+      .staggerFromTo(
+        polygons2.current.children,
+        0.5,
+        {
+          opacity: 0,
+          scale: 0,
+          transformOrigin: 'center center',
+          force3D: true,
+        },
+        {
+          opacity: 1,
+          scale: 1,
+          ease: Elastic.easeInOut,
+          force3D: true,
+        },
+        0.009
+      )
+      .then(animateMain)
+  }, [tl, tl2, tl3, tl4, tl5])
 
   return (
     <div className="App">
@@ -209,7 +212,6 @@ function App() {
                   home={home}
                   date={date}
                   registerBtn={registerBtn}
-                  animateMain={animateMain}
                 />
               }
             />

@@ -22,7 +22,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "env-cmd -f .env.production react-scripts start",
     "build": "react-scripts build",
     "build:dev": "env-cmd -f .env.development npm run build && firebase deploy -P dev",
     "build:prod": "env-cmd -f .env.production npm run build && firebase deploy -P prod",
