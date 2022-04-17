@@ -304,9 +304,9 @@ const eventData = {
           email: 'ss0605180@gmail.com',
         },
         {
-          name: 'Rahul Gatam',
+          name: 'Rahul Gautam',
           mobile: 9005286625,
-          email: 'r ahulgautam8933@gmail.com',
+          email: 'rahulgautam8933@gmail.com',
         },
       ],
       rules: [
