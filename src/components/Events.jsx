@@ -1131,13 +1131,22 @@ const events = [
       },
     ],
     rules: [
-      'The event will be conducted in two rounds: Knockout and Final Round.',
-      'The participants will be divided into a group of 10, and the top performer from each group will be qualified for the final round.',
-      'A total of 5 minutes will be given to each participant.',
-      'The one eating the maximum number will be declared the winner for that round.',
-      'No sipping water in between.',
+      "The robots must fit in a box with dimension: 50CM X 50CM X 50CM at the beginning of a Battle.There are no size constraints once the Battle has begun, the robot can expand its parts after the battle starts.",
+"Nothing can intentionally detach from the robot. Robots will not be immediately penalised if pieces detach as a result of breakage. In the case of repeated breakage, the Referee may invalidate a Battle, request certain remedies be taken, or disqualify the Team",
+"The maximum weight allowed is 40kg excluding batteries. Weight will be measured at the time of inspection before starting the competition.",
+"The robot can be autonomous or manual. It should have an external source of control that is wireless or wired remote control.",
+"Teams have approximately two minute between battles. During this time, they may perform any adjustments they want to perform on their robot, with the explicit exception of altering the software of the robot in any way.",
+"No technical inspections are permitted during this time, teams must not add or remove mechanisms or components except to replace them with identical components.",
+"Teams that are not ready after time elapsed will receive a warning. On further violation of this time limit, the Referee may judge that the violating Team has forfeit the Match.",
+"The only exception to both the time and technical inspection limitations are for readily correctable safety issues, as determined by Staff, for which contestants may be asked to remove or rectify hazardous or broken systems.",
+"Judgement.",
+"If one team’s robo damages the other team’s robo then latter will be disqualified",
+"If the robo crosses the event arena line then he will be penalised with 10 pts.",
+"If the robo malfunction in between the fight, that team will be given 2 minutes for its correction, if correction time limit exceeds, other team will be declared winner.",
+"PROPS-",
+"war arena will be provided"
     ],
-    category: 'technical',
+    category: 'Technical',
     color1: '#566D80',
     color2: '#B65E5C',
   },
@@ -1600,8 +1609,8 @@ const events = [
       'Its a sum up of all events that will be conducted in technovation',
       'through video by adding some transitions/effects.',
     ],
-    color1: '#3E3B43',
-    color2: '#E68036',
+    color1: '#1C5FA3',
+    color2: '#4C4D6F',
   },
   {
     eventId: 40,
@@ -1637,8 +1646,8 @@ const events = [
       "Presentation shouldn't be vulgar or hurtful to any community.",
       'Any person creating nuisance will be disqualified immediately.',
     ],
-    color1: '#3E3B43',
-    color2: '#E68036',
+    color1: '#EB0004',
+    color2: '#F1C140',
   },
   {
     eventId: 39,
@@ -1670,8 +1679,8 @@ const events = [
       "Firstly, you will have to send one selfie of your's along with your name, branch, year and one line quotation ( that describe your selfie).",
       'Those selfie will then posted on social media and then you can approach to gain your likes.',
     ],
-    color1: '#3E3B43',
-    color2: '#E68036',
+    color1: '#F65A58',
+    color2: '#69868A',
   },
   {
     eventId: 32,
@@ -1711,8 +1720,8 @@ const events = [
       'Criteria of Judgement will be mentioned along with the given task.',
       'The duration of the event is 2 hour.',
     ],
-    color1: '#3E3B43',
-    color2: '#E68036',
+    color1: '#2ED2CF',
+    color2: '#0F3554',
   },
   {
     eventId: 33,
@@ -1722,7 +1731,7 @@ const events = [
     description:
       'Debugging means to run your code step by step in a debugging tool like Visual Studio, to find the exact point where you made a programming mistake. You then understand what corrections you need to make in your code, and debugging tools often allow you to make temporary changes so you can continue running the program.',
     image:
-      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/24421_OYATasjYa.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649248205642',
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/computer_bug-100642666-primary.idge__-4iMqc1Vu.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649857981863',
     coordinators: [
       {
         name: 'Abhishek Maurya',
@@ -1745,8 +1754,8 @@ const events = [
       '   Predict the Output: Participants are to predict the desired output.',
       'The duration of this event is 1 hour.',
     ],
-    color1: '#3E3B43',
-    color2: '#E68036',
+    color1: '#03831C',
+    color2: '#EE3E3C',
   },
   {
     eventId: 34,
@@ -1776,8 +1785,8 @@ const events = [
       'This will be a two-round event. Top 6 teams will be selected for final round based on their performance in the first round.',
       'The duration for both the rounds will be 1 hour.',
     ],
-    color1: '#3E3B43',
-    color2: '#E68036',
+    color1: '#000000',
+    color2: '#000000',
   },
   {
     eventId: 35,
@@ -1806,8 +1815,8 @@ const events = [
       'Find Flags hidden in a given website or any ip you may find on the website.',
       'Participants may have to use some basic commands used to test websites.',
     ],
-    color1: '#3E3B43',
-    color2: '#E68036',
+    color1: '#272A30',
+    color2: '#53A92F',
   },
   {
     eventId: 37,
@@ -1835,8 +1844,8 @@ const events = [
       'Single round event',
       'Judges will decide the best edited image',
     ],
-    color1: '#3E3B43',
-    color2: '#E68036',
+    color1: '#0D3759',
+    color2: '#D40863',
   },
   {
     eventId: 38,
@@ -1865,8 +1874,8 @@ const events = [
       'The video with maximum likes and a meaningful message to society would be selected as winner. ',
       'Fake-liker applications is strictly prohibited and its use can lead to disqualification of the video and no second chance will be given.',
     ],
-    color1: '#3E3B43',
-    color2: '#E68036',
+    color1: '#C42C25',
+    color2: '#686870',
   },
   {
     eventId: 36,
@@ -1876,7 +1885,7 @@ const events = [
     description:
       'A hackathon, also known as a codefest, is a social coding event that brings computer programmers and other interested people together to improve upon or build a new software program. The word hackathon is a portmanteau of the words hacker, which means clever programmer, and marathon, an event marked by endurance. ',
     image:
-      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/hackathon_-ve9U_2bJ.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649676528871',
+      'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/34352177__1__9dJPiBfYo.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649859148271',
     coordinators: [
       {
         name: 'Kushal Khare',
@@ -1890,8 +1899,8 @@ const events = [
       },
     ],
     rules: [],
-    color1: '#3E3B43',
-    color2: '#E68036',
+    color1: '#F3792C',
+    color2: '#0FA4C6',
   },
 ]
 
