@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { getAnalytics } from 'firebase/analytics'
+import { getMessaging, getToken, onMessage } from 'firebase/messaging'
 import {
   GoogleAuthProvider,
   getAuth,
@@ -25,6 +26,7 @@ const app = initializeApp(firebaseConfig)
 const analytics = getAnalytics(app)
 const auth = getAuth(app)
 const googleProvider = new GoogleAuthProvider()
+const messaging = getMessaging(app)
 
 const signInWithGoogle = async () => {
   try {
@@ -109,9 +111,39 @@ const logout = (next) => {
   signOut(auth).then(() => next())
 }
 
+const subscribe = () => {
+  Notification.requestPermission().then((permission) => {
+    console.log(permission)
+    if (permission === 'granted') {
+      getToken(messaging, {
+        vapidKey:
+          'BGNIbMxAWVHhGFWyTJcRw5t9JD-WYzfqHc6Dx4518PwOuXTOqkef6cCSF4AVN5KICJIgtn5FQqZOjwrAup3V3r4',
+      })
+        .then((currentToken) => {
+          if (currentToken) {
+            console.log('currentToken: ', currentToken)
+            onMessage(messaging, (payload) => {
+              console.log('Message received. ', payload)
+              alert('Message received. ')
+              return payload
+            })
+          } else {
+            console.log(
+              'No registration token available. Request permission to generate one.'
+            )
+          }
+        })
+        .catch((err) => {
+          console.log('An error occurred while retrieving token. ', err)
+        })
+    }
+  })
+}
+
 export {
   analytics,
   auth,
+  subscribe,
   signInWithGoogle,
   logInWithEmailAndPassword,
   registerWithEmailAndPassword,

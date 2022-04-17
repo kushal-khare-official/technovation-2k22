@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import gsap, { Elastic } from 'gsap'
 import { makeStyles } from '@mui/styles'
 
+import { subscribe } from './firebase'
 import Layout from './components/Layout'
 import Home from './components/Home'
 import Events from './components/Events'
@@ -106,6 +107,7 @@ function App() {
   const classes = useStyles()
 
   useEffect(() => {
+    subscribe()
     const animateMain = () => {
       tl3.staggerFromTo(
         [registerBtn.current, date.current, ea.current, pres.current],
