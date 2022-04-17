@@ -13,6 +13,7 @@ function Home({
   home,
   date,
   registerBtn,
+  animateMain
 }) {
   return (
     <main ref={main}>
@@ -42,6 +43,7 @@ function Home({
           transform: 'translateX(-50%)',
         }}
         ref={registerBtn}
+        onClick={animateMain}
       >
         <div className="indicator">
           <span></span>

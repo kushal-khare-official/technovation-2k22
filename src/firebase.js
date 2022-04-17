@@ -113,7 +113,6 @@ const logout = (next) => {
 
 const subscribe = () => {
   Notification.requestPermission().then((permission) => {
-    console.log(permission)
     if (permission === 'granted') {
       getToken(messaging, {
         vapidKey:

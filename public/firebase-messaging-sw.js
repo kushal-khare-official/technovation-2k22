@@ -19,10 +19,6 @@ firebase.initializeApp(config)
 const messaging = firebase.messaging()
 
 messaging.setBackgroundMessageHandler(function (payload) {
-  console.log(
-    '[firebase-messaging-sw.js] Received background message ',
-    payload
-  )
   return self.registration.showNotification(payload.data.title, {
     body: payload.data.body,
     icon: payload.data.image,
@@ -31,6 +27,5 @@ messaging.setBackgroundMessageHandler(function (payload) {
 })
 
 self.addEventListener('notificationclick', (event) => {
-  console.log(event)
   return event
 })

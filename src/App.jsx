@@ -106,59 +106,60 @@ function App() {
 
   const classes = useStyles()
 
+  const animateMain = () => {
+    tl3.staggerFromTo(
+      [registerBtn.current, date.current, ea.current, pres.current],
+      1,
+      {
+        opacity: 1,
+        scale: 1,
+        transformOrigin: 'center center',
+        force3D: true,
+      },
+      {
+        marginTop: 0,
+        opacity: 0,
+        scale: 0,
+        height: 0,
+        ease: Elastic.easeInOut,
+        force3D: true,
+      },
+      0
+    )
+    tl4.staggerFromTo(
+      home.current,
+      2,
+      {
+        y: '55vh',
+        transformOrigin: 'center center',
+        force3D: true,
+      },
+      {
+        y: '0',
+        ease: Elastic.easeInOut,
+        force3D: true,
+      },
+      0
+    )
+    tl5.staggerFromTo(
+      main.current,
+      2,
+      {
+        y: '15vh',
+        transformOrigin: 'center center',
+        force3D: true,
+      },
+      {
+        y: '0',
+        ease: Elastic.easeInOut,
+        force3D: true,
+      },
+      0
+    )
+  }
+
   useEffect(() => {
     subscribe()
-    const animateMain = () => {
-      tl3.staggerFromTo(
-        [registerBtn.current, date.current, ea.current, pres.current],
-        1,
-        {
-          opacity: 1,
-          scale: 1,
-          transformOrigin: 'center center',
-          force3D: true,
-        },
-        {
-          marginTop: 0,
-          opacity: 0,
-          scale: 0,
-          height: 0,
-          ease: Elastic.easeInOut,
-          force3D: true,
-        },
-        0
-      )
-      tl4.staggerFromTo(
-        home.current,
-        2,
-        {
-          y: '55vh',
-          transformOrigin: 'center center',
-          force3D: true,
-        },
-        {
-          y: '0',
-          ease: Elastic.easeInOut,
-          force3D: true,
-        },
-        0
-      )
-      tl5.staggerFromTo(
-        main.current,
-        2,
-        {
-          y: '15vh',
-          transformOrigin: 'center center',
-          force3D: true,
-        },
-        {
-          y: '0',
-          ease: Elastic.easeInOut,
-          force3D: true,
-        },
-        0
-      )
-    }
     tl.staggerFromTo(
       polygons1.current.children,
       0.5,
@@ -195,7 +196,7 @@ function App() {
         0.009
       )
       .then(animateMain)
-  }, [tl, tl2, tl3, tl4, tl5])
+  }, [tl, tl2, tl3, tl4, tl5, animateMain])
 
   return (
     <div className="App">
@@ -214,12 +215,18 @@ function App() {
                   home={home}
                   date={date}
                   registerBtn={registerBtn}
+                  animateMain={animateMain}
                 />
               }
             />
             <Route
               exact
               path="/events"
+              element={<Events classes={classes} />}
+            />
+            <Route
+              exact
+              path="/events/:category"
               element={<Events classes={classes} />}
             />
           </Routes>

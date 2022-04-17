@@ -1,6 +1,38 @@
-
-export const literaryevents = {
-    "63":{
+const eventData = {
+  category: {
+    1: {
+      category: 'Technical',
+      image:
+        'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/bee_W1IB91p-C.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649626089917',
+      link: 'technical',
+    },
+    2: {
+      category: 'Non Technical',
+      image:
+        'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/bee_W1IB91p-C.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649626089917',
+      link: 'nontechnical',
+    },
+    3: {
+      category: 'Literary',
+      image:
+        'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/bee_W1IB91p-C.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649626089917',
+      link: 'literary',
+    },
+    4: {
+      category: 'Gaming',
+      image:
+        'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/bee_W1IB91p-C.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649626089917',
+      link: 'gaming',
+    },
+    5: {
+      category: 'Cybernated',
+      image:
+        'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/bee_W1IB91p-C.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649626089917',
+      link: 'cybernated',
+    },
+  },
+  literary: {
+    63: {
       eventId: 63,
       name: 'Spell Bee',
       description:
@@ -39,7 +71,7 @@ export const literaryevents = {
       color2: '#FFE5B5',
       color1: '#E64C1E',
     },
-    "64":{
+    64: {
       eventId: 64,
       name: 'Tark-Vitark',
       description:
@@ -82,7 +114,7 @@ export const literaryevents = {
       color1: '#AD5D08',
       color2: '#8CBEB2',
     },
-    "65":{
+    65: {
       eventId: 65,
       name: 'Jam-Ham',
       description:
@@ -119,7 +151,7 @@ export const literaryevents = {
       color2: '#FDC78C',
       color1: '#7B411C',
     },
-    "66":{
+    66: {
       eventId: 66,
       name: "Writer's Saga",
       teamType: 'Solo',
@@ -151,7 +183,7 @@ export const literaryevents = {
       color2: '#C54B3B',
       color1: '#6AC7E7',
     },
-    "68":{
+    68: {
       eventId: 68,
       name: 'Ramayana Quiz',
       teamType: 'Solo',
@@ -182,7 +214,7 @@ export const literaryevents = {
       color2: '#FF6600',
       color1: '#000000',
     },
-    "69":{
+    69: {
       eventId: 69,
       name: 'Kavyanical',
       teamType: 'Solo',
@@ -214,7 +246,7 @@ export const literaryevents = {
       color2: '#6F4EC5',
       color1: '#FF8C85',
     },
-    "70":{
+    70: {
       eventId: 70,
       name: 'Story Teller',
       teamType: 'Solo',
@@ -253,7 +285,7 @@ export const literaryevents = {
       color2: '#90345A',
       color1: '#012A43',
     },
-    "67":{
+    67: {
       eventId: 67,
       name: 'QuillZest',
       description:
@@ -284,10 +316,9 @@ export const literaryevents = {
       color2: '#FF745C',
       color1: '#385B62',
     },
-  
-  }
-export const gamingevents = {
-    "42":{
+  },
+  gaming: {
+    42: {
       eventId: 42,
       name: 'BGMI',
       teamType: 'Solo/Team',
@@ -320,7 +351,7 @@ export const gamingevents = {
       color2: '#1D1C1A',
       color1: '#FE8D1B',
     },
-    "43":{
+    43: {
       eventId: 43,
       name: 'Human Ludo',
       teamType: 'Team',
@@ -346,7 +377,7 @@ export const gamingevents = {
       color2: '#393D4E',
       color1: '#00CFC2',
     },
-    "44":{
+    44: {
       eventId: 44,
       name: 'Call of Duty Mobile',
       teamType: 'Team',
@@ -379,7 +410,7 @@ export const gamingevents = {
       color2: '#222925',
       color1: '#8C9588',
     },
-    "45":{
+    45: {
       eventId: 45,
       name: 'Counter Strike',
       teamType: 'Team',
@@ -410,7 +441,7 @@ export const gamingevents = {
       color2: '#693C00',
       color1: '#03356B',
     },
-    "50":{
+    50: {
       eventId: 50,
       name: 'Dart',
       teamType: 'Solo',
@@ -444,7 +475,7 @@ export const gamingevents = {
       color2: '#BB0101',
       color1: '#000000',
     },
-    "51":{
+    51: {
       eventId: 51,
       name: 'Arm Wresling',
       teamType: 'Solo',
@@ -481,7 +512,7 @@ export const gamingevents = {
       color2: '#423129',
       color1: '#80A24D',
     },
-    "52":{
+    52: {
       eventId: 52,
       name: 'Tekken',
       description:
@@ -511,7 +542,7 @@ export const gamingevents = {
       color2: '#A22A49',
       color1: '#2A307B',
     },
-    "54":{
+    54: {
       eventId: 54,
       name: 'Paper Fold Dance',
       teamType: 'Solo',
@@ -542,7 +573,7 @@ export const gamingevents = {
       color2: '#FEFD06',
       color1: '#090909',
     },
-    "56":{
+    56: {
       eventId: 56,
       name: 'Blind Date',
       teamType: 'Solo',
@@ -581,7 +612,7 @@ export const gamingevents = {
       color2: '#FEFD06',
       color1: '#DBFAC8',
     },
-    "59":{
+    59: {
       eventId: 59,
       name: 'Futsal',
       teamType: 'Team(7)',
@@ -619,7 +650,7 @@ export const gamingevents = {
       color1: '#299678',
       color2: '#E9C99D',
     },
-    "60":{
+    60: {
       eventId: 60,
       name: 'Mix Cricket',
       teamType: 'Team(6B/5G)',
@@ -676,7 +707,7 @@ export const gamingevents = {
       color2: '#E6CB98',
       color1: '#7EC7E1',
     },
-    "61":{
+    61: {
       eventId: 61,
       name: 'Rubix Cube',
       teamType: 'Solo',
@@ -707,7 +738,7 @@ export const gamingevents = {
       color1: '#091B29',
       color2: '#139F8F',
     },
-    "62":{
+    62: {
       eventId: 62,
       name: 'Pani Puri Competition',
       teamType: 'Solo',
@@ -752,7 +783,7 @@ export const gamingevents = {
       color1: '#FFBE70',
       color2: '#1E262A',
     },
-    "58":{
+    58: {
       eventId: 58,
       name: 'Tambola',
       teamType: 'Solo',
@@ -790,7 +821,7 @@ export const gamingevents = {
       color1: '#B4464D',
       color2: '#280E22',
     },
-    "46":{
+    46: {
       eventId: 46,
       name: 'Tug of War ',
       teamType: 'Team(6/8)',
@@ -821,7 +852,7 @@ export const gamingevents = {
       color1: '#F27320',
       color2: '#01A0A3',
     },
-    "47":{
+    47: {
       eventId: 47,
       name: 'Squid Game',
       teamType: 'Solo',
@@ -858,7 +889,7 @@ export const gamingevents = {
       color1: '#193C47',
       color2: '#911C58',
     },
-    "49":{
+    49: {
       eventId: 49,
       name: 'Valorant',
       teamType: 'Team',
@@ -901,7 +932,7 @@ export const gamingevents = {
       color1: '#F64858',
       color2: '#1C3752',
     },
-    "57":{
+    57: {
       eventId: 57,
       name: 'Money Hiest',
       teamType: 'Team',
@@ -941,10 +972,9 @@ export const gamingevents = {
       color1: '#A11F2E',
       color2: '#000000',
     },
-  }
-  
-export const nontechnicalevents = {
-    "48":{
+  },
+  nontechnical: {
+    48: {
       eventId: 48,
       name: 'Quiz Monster',
       teamType: 'Solo',
@@ -978,7 +1008,7 @@ export const nontechnicalevents = {
       color1: '#000212',
       color2: '#005D9F',
     },
-    "1":{
+    1: {
       eventId: 1,
       name: 'Stand-up Comedy',
       teamType: 'Solo',
@@ -1009,7 +1039,7 @@ export const nontechnicalevents = {
       color1: '#080607',
       color2: '#5F4D27',
     },
-    "3":{
+    3: {
       eventId: 3,
       name: 'Mono Acting',
       teamType: 'Solo',
@@ -1041,7 +1071,7 @@ export const nontechnicalevents = {
       color1: '#06425D',
       color2: '#683811',
     },
-    "4":{
+    4: {
       eventId: 4,
       name: 'Jingle',
       description:
@@ -1075,7 +1105,7 @@ export const nontechnicalevents = {
       color1: '#F64858',
       color2: '#1C3752',
     },
-    "5":{
+    5: {
       eventId: 5,
       name: 'Da Vinci Code',
       teamType: 'Solo',
@@ -1104,7 +1134,7 @@ export const nontechnicalevents = {
       color1: '#0881AA',
       color2: '#DD433E',
     },
-    "6":{
+    6: {
       eventId: 6,
       name: 'Cover It',
       teamType: 'Solo/Duo',
@@ -1135,7 +1165,7 @@ export const nontechnicalevents = {
       color1: '#566D80',
       color2: '#B65E5C',
     },
-    "9":{
+    9: {
       eventId: 9,
       name: 'Twinkle Toes',
       teamType: 'Solo',
@@ -1168,7 +1198,7 @@ export const nontechnicalevents = {
       color1: '#FDCA17',
       color2: '#FD4B67',
     },
-    "7":{
+    7: {
       eventId: 7,
       name: 'Rangoli',
       teamType: 'Team(2/3/4)',
@@ -1199,7 +1229,7 @@ export const nontechnicalevents = {
       color1: '#272425',
       color2: '#F8066D',
     },
-    "10":{
+    10: {
       eventId: 10,
       name: 'Face Painting',
       teamType: 'Team(3)',
@@ -1237,7 +1267,7 @@ export const nontechnicalevents = {
       color1: '#A40FDA',
       color2: '#E01E81',
     },
-    "11":{
+    11: {
       eventId: 11,
       name: 'Grafitti',
       teamType: 'Team(4-6)',
@@ -1267,7 +1297,7 @@ export const nontechnicalevents = {
       color1: '#3E3B43',
       color2: '#E68036',
     },
-    "13":{
+    13: {
       eventId: 13,
       name: 'Sharktank',
       teamType: 'Solo',
@@ -1302,10 +1332,9 @@ export const nontechnicalevents = {
       color1: '#26403C',
       color2: '#8B8060',
     },
-  }
-  
-export const technicalevents = {
-    "14":{
+  },
+  technical: {
+    14: {
       eventId: 14,
       name: 'Robo-War',
       teamType: 'Team',
@@ -1331,26 +1360,26 @@ export const technicalevents = {
         },
       ],
       rules: [
-        "The robots must fit in a box with dimension: 50CM X 50CM X 50CM at the beginning of a Battle.There are no size constraints once the Battle has begun, the robot can expand its parts after the battle starts.",
-  "Nothing can intentionally detach from the robot. Robots will not be immediately penalised if pieces detach as a result of breakage. In the case of repeated breakage, the Referee may invalidate a Battle, request certain remedies be taken, or disqualify the Team",
-  "The maximum weight allowed is 40kg excluding batteries. Weight will be measured at the time of inspection before starting the competition.",
-  "The robot can be autonomous or manual. It should have an external source of control that is wireless or wired remote control.",
-  "Teams have approximately two minute between battles. During this time, they may perform any adjustments they want to perform on their robot, with the explicit exception of altering the software of the robot in any way.",
-  "No technical inspections are permitted during this time, teams must not add or remove mechanisms or components except to replace them with identical components.",
-  "Teams that are not ready after time elapsed will receive a warning. On further violation of this time limit, the Referee may judge that the violating Team has forfeit the Match.",
-  "The only exception to both the time and technical inspection limitations are for readily correctable safety issues, as determined by Staff, for which contestants may be asked to remove or rectify hazardous or broken systems.",
-  "Judgement.",
-  "If one team’s robo damages the other team’s robo then latter will be disqualified",
-  "If the robo crosses the event arena line then he will be penalised with 10 pts.",
-  "If the robo malfunction in between the fight, that team will be given 2 minutes for its correction, if correction time limit exceeds, other team will be declared winner.",
-  "PROPS-",
-  "war arena will be provided"
+        'The robots must fit in a box with dimension: 50CM X 50CM X 50CM at the beginning of a Battle.There are no size constraints once the Battle has begun, the robot can expand its parts after the battle starts.',
+        'Nothing can intentionally detach from the robot. Robots will not be immediately penalised if pieces detach as a result of breakage. In the case of repeated breakage, the Referee may invalidate a Battle, request certain remedies be taken, or disqualify the Team',
+        'The maximum weight allowed is 40kg excluding batteries. Weight will be measured at the time of inspection before starting the competition.',
+        'The robot can be autonomous or manual. It should have an external source of control that is wireless or wired remote control.',
+        'Teams have approximately two minute between battles. During this time, they may perform any adjustments they want to perform on their robot, with the explicit exception of altering the software of the robot in any way.',
+        'No technical inspections are permitted during this time, teams must not add or remove mechanisms or components except to replace them with identical components.',
+        'Teams that are not ready after time elapsed will receive a warning. On further violation of this time limit, the Referee may judge that the violating Team has forfeit the Match.',
+        'The only exception to both the time and technical inspection limitations are for readily correctable safety issues, as determined by Staff, for which contestants may be asked to remove or rectify hazardous or broken systems.',
+        'Judgement.',
+        'If one team’s robo damages the other team’s robo then latter will be disqualified',
+        'If the robo crosses the event arena line then he will be penalised with 10 pts.',
+        'If the robo malfunction in between the fight, that team will be given 2 minutes for its correction, if correction time limit exceeds, other team will be declared winner.',
+        'PROPS-',
+        'war arena will be provided',
       ],
       category: 'Technical',
       color1: '#566D80',
       color2: '#B65E5C',
     },
-    "15":{
+    15: {
       eventId: 15,
       name: 'Pathick',
       teamType: 'team',
@@ -1385,7 +1414,7 @@ export const technicalevents = {
       color1: '#FEC600',
       color2: '#B1353F',
     },
-    "16":{
+    16: {
       eventId: 16,
       name: 'Identokit',
       teamType: 'Solo',
@@ -1420,7 +1449,7 @@ export const technicalevents = {
       color1: '#303030',
       color2: '#E41512',
     },
-    "17":{
+    17: {
       eventId: 17,
       name: 'Spartans',
       teamType: 'team',
@@ -1455,7 +1484,7 @@ export const technicalevents = {
       color1: '#EBD57B',
       color2: '#579E9B',
     },
-    "8":{
+    8: {
       eventId: 8,
       name: 'Capture The Moment',
       teamType: 'Team',
@@ -1485,7 +1514,7 @@ export const technicalevents = {
       color1: '#81021F',
       color2: '#034A2B',
     },
-    "18":{
+    18: {
       eventId: 18,
       name: 'Bob-the-builder',
       teamType: 'team(2/3/4)',
@@ -1520,7 +1549,7 @@ export const technicalevents = {
       color1: '#33767D',
       color2: '#F37B41',
     },
-    "19":{
+    19: {
       eventId: 19,
       name: 'Dimensions',
       teamType: 'solo',
@@ -1549,7 +1578,7 @@ export const technicalevents = {
       color1: '#010D17',
       color2: '#0176BC',
     },
-    "20":{
+    20: {
       eventId: 20,
       name: 'Best from waste',
       teamType: 'team(max: 3)',
@@ -1579,10 +1608,9 @@ export const technicalevents = {
       color1: '#017E06',
       color2: '#803808',
     },
-  }
-  
-export const cybernatedevents = {
-    "41":{
+  },
+  cybernated: {
+    41: {
       eventId: 41,
       name: 'Timeline',
       teamType: 'Solo',
@@ -1617,7 +1645,7 @@ export const cybernatedevents = {
       color1: '#1C5FA3',
       color2: '#4C4D6F',
     },
-    "40":{
+    40: {
       eventId: 40,
       name: 'Ad-sense',
       teamType: 'Duo',
@@ -1654,7 +1682,7 @@ export const cybernatedevents = {
       color1: '#EB0004',
       color2: '#F1C140',
     },
-    "39":{
+    39: {
       eventId: 39,
       name: 'Selfievation',
       teamType: 'Solo',
@@ -1687,7 +1715,7 @@ export const cybernatedevents = {
       color1: '#F65A58',
       color2: '#69868A',
     },
-    "32":{
+    32: {
       eventId: 32,
       name: 'Web Dextro',
       teamType: 'Duo',
@@ -1728,7 +1756,7 @@ export const cybernatedevents = {
       color1: '#2ED2CF',
       color2: '#0F3554',
     },
-    "33":{
+    33: {
       eventId: 33,
       name: 'Bug-d-code',
       teamType: 'Duo',
@@ -1762,7 +1790,7 @@ export const cybernatedevents = {
       color1: '#03831C',
       color2: '#EE3E3C',
     },
-    "34":{
+    34: {
       eventId: 34,
       name: 'Codervation',
       teamType: 'Duo',
@@ -1793,7 +1821,7 @@ export const cybernatedevents = {
       color1: '#000000',
       color2: '#000000',
     },
-    "35":{
+    35: {
       eventId: 35,
       name: 'Capture the flag',
       teamType: 'Duo',
@@ -1823,7 +1851,7 @@ export const cybernatedevents = {
       color1: '#272A30',
       color2: '#53A92F',
     },
-    "37":{
+    37: {
       eventId: 37,
       name: ' Pic-a-Thon',
       teamType: 'Solo',
@@ -1852,7 +1880,7 @@ export const cybernatedevents = {
       color1: '#0D3759',
       color2: '#D40863',
     },
-    "38":{
+    38: {
       eventId: 38,
       name: ' Reels-Camera-Action',
       teamType: 'Solo',
@@ -1882,7 +1910,7 @@ export const cybernatedevents = {
       color1: '#C42C25',
       color2: '#686870',
     },
-    "36":{
+    36: {
       eventId: 36,
       name: ' Hackathon',
       teamType: 'team',
@@ -1907,4 +1935,7 @@ export const cybernatedevents = {
       color1: '#F3792C',
       color2: '#0FA4C6',
     },
-  }
+  },
+}
+
+export default eventData
