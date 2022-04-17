@@ -233,7 +233,7 @@ const eventData = {
         {
           name: 'Yash Shekhar',
           mobile: 8960576910,
-          email: 'yadavzaish@gmail.com',
+          email: 'shekhar.yash01@gmail.com',
         },
         {
           name: 'Akhilesh Kr.Tiwari',
@@ -343,7 +343,6 @@ const eventData = {
         },
       ],
       rules: [
-        'No portion. ',
         'You have to bring your paints, brushes, and other tools you will use. ',
         'At the time of the event, you will be given a clean wall, where you have to present your creativity. ',
         'You will be given 2hrs to complete your painting (time extending more than the given period will lead you to be disqualified).',
@@ -444,7 +443,7 @@ const eventData = {
         'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/soccer_2BzoRQ1lI.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1650051993367',
       coordinators: [
         {
-          name: 'Anirudh Singh',
+          name: 'Anirudh Kumar',
           mobile: 8979388624,
           email: 'anirudhk1577@gmail.com',
         },
@@ -476,7 +475,8 @@ const eventData = {
         'The robots are not allowed to use grippers or actuations which are intended to harm the opponent’s robot.',
         'The competition is aimed at making the game a friendly football match rather than a robo war.',
       ],
-      __v: 0,
+      color1: '#498E27',
+      color2: '#030303',
     },
     16: {
       eventId: 16,
@@ -521,7 +521,8 @@ const eventData = {
         'Air Cycle Pump, Liquid Water Pump, Electricity is required, that will be provided.',
         'Fire Extinguisher is also provided.',
       ],
-      __v: 0,
+      color1: '#000F30',
+      color2: '#FF4653',
     },
     17: {
       eventId: 17,
@@ -550,7 +551,33 @@ const eventData = {
         'Round I - To be held in hall ( 30 minutes quiz) Qualifiers',
         'Round II - Eliminator - Buzzer Round (1 hour)',
       ],
-      __v: 0,
+      color1: '#12345A',
+      color2: '#27ACBF',
+    },
+    18: {
+      eventId: 18,
+      name: 'Type Racing',
+      teamType: 'solo',
+      category: 'Technical',
+      description: 'It is a typing speed test.',
+      image:
+        'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/MS-Automotive-Engineering_XGYnq2rdq.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650051030305',
+      coordinators: [
+        {
+          name: ' Ritika Verma',
+          mobile: 8765073545,
+          email: 'Ritiver04@gmail.com',
+        },
+        {
+          name: 'Dilshad Khan',
+          mobile: 9711492719,
+          email: 'dilshadkhan.7ind@gmail.com',
+        },
+      ],
+      rules: [
+        'A typing-software is to be provided to participants.',
+        'Judging criteria will be speed(words per minute) and accuracy.',
+      ],
     },
     19: {
       eventId: 19,
@@ -615,9 +642,9 @@ const eventData = {
       category: 'technical',
       rules: [
         'There will be a time limit, after which no answers will be accepted.',
-        'To win the event, contestants will have to pass both the levels',
-        'Instead of time limit, your submitting time will also matter(how fast you are submitting).',
-        'In case of tie, you will be given one extra quest, which will be time based plus accuracy',
+        'The event will be conducted in two rounds. To win, contestants will have to clear both rounds',
+        'Apart from time limit, your submission time will also be taken into consideration.',
+        'In case of a tie, you will be given one extra quest, which will be time plus accuracy based',
       ],
       color1: '#303030',
       color2: '#E41512',
@@ -652,7 +679,6 @@ const eventData = {
         'Exception under rule2-glue gun and glue sticks will not be provided but can be brought on individual basis',
         'Event will have 2 rounds.',
       ],
-      __v: 0,
     },
     24: {
       eventId: 24,
@@ -711,7 +737,6 @@ const eventData = {
         },
       ],
       rules: [
-        'Important points has been marked by “*” 2. ',
         'Only working models are eligible for the exhibition.',
         'Winner will be declared by Judges for both the categories(Individual as well as Team-up). ',
         'In working model every participant have to model your project related to given topics. ',
@@ -771,7 +796,7 @@ const eventData = {
         {
           name: 'Mansi Singh',
           mobile: 1001,
-          email: 'XX',
+          email: 'singhmansi343@gmail.com',
         },
       ],
       rules: [
@@ -780,7 +805,8 @@ const eventData = {
         'Every team will be given 2-5 minutes.',
         'We will provide an image or model.',
       ],
-      __v: 0,
+      color1: '#2B2927',
+      color2: '#817243',
     },
     29: {
       eventId: 20,
@@ -1057,7 +1083,7 @@ const eventData = {
       ],
       rules: [
         "You can send only one photo of your's.",
-        'Photo you will send should only be selfie clicked by you (no timer selfie, no back camera photo clicked by others).',
+        'Photo you send should only be a selfie clicked by you (no timer selfie, no back camera photo clicked by others, and no mirror selfie).',
         'Liks you gain should not be fake.',
         'If any of the contestent caught with the fake likes in his/her photo, will be disqualified immediately.',
         'Procedure-',
@@ -1248,9 +1274,9 @@ const eventData = {
           email: 'shubhamr2520@gmail.com',
         },
         {
-          name: 'sh',
-          mobile: 25522,
-          email: 'dfs@jsdnj.ckkdn',
+          name: 'Abhishek Chaubey',
+          mobile: 9696872257,
+          email: 'chaubeyabhishek3011@gmail.com',
         },
       ],
       rules: [
@@ -1886,12 +1912,12 @@ const eventData = {
         {
           name: 'Mansi Singh',
           mobile: 8448312843,
-          email: 'Singhmansi343@gmail.com',
+          email: 'singhmansi343@gmail.com',
         },
         {
           name: 'Sandeep Kumar Maurya',
           mobile: 6388600148,
-          email: 'Sk0276200@gmail.com',
+          email: 'sk02762000@gmail.com',
         },
       ],
       rules: [
