@@ -111,32 +111,40 @@ const logout = (next) => {
   signOut(auth).then(() => next())
 }
 
-const subscribe = () => {
-  Notification.requestPermission().then((permission) => {
-    if (permission === 'granted') {
-      getToken(messaging, {
-        vapidKey:
-          'BGNIbMxAWVHhGFWyTJcRw5t9JD-WYzfqHc6Dx4518PwOuXTOqkef6cCSF4AVN5KICJIgtn5FQqZOjwrAup3V3r4',
+const subscribe = async () => {
+  try {
+    const permission = await Notification.requestPermission()
+    if (permission !== 'granted') return
+    const currentToken = await getToken(messaging, {
+      vapidKey:
+        'BGNIbMxAWVHhGFWyTJcRw5t9JD-WYzfqHc6Dx4518PwOuXTOqkef6cCSF4AVN5KICJIgtn5FQqZOjwrAup3V3r4',
+    })
+    if (currentToken) {
+      console.log('currentToken: ', currentToken)
+
+      await fetch(process.env.REACT_APP_BACKEND_URL + '/notify/new-device', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          token: currentToken,
+        }),
       })
-        .then((currentToken) => {
-          if (currentToken) {
-            console.log('currentToken: ', currentToken)
-            onMessage(messaging, (payload) => {
-              console.log('Message received. ', payload)
-              alert('Message received. ')
-              return payload
-            })
-          } else {
-            console.log(
-              'No registration token available. Request permission to generate one.'
-            )
-          }
-        })
-        .catch((err) => {
-          console.log('An error occurred while retrieving token. ', err)
-        })
+
+      onMessage(messaging, (payload) => {
+        console.log('Message received. ', payload)
+        alert('Message received. ')
+        return payload
+      })
+    } else {
+      console.log(
+        'No registration token available. Request permission to generate one.'
+      )
     }
-  })
+  } catch (err) {
+    console.log('An error occurred while retrieving token. ', err)
+  }
 }
 
 export {

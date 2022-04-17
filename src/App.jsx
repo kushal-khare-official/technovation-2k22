@@ -196,7 +196,7 @@ function App() {
         0.009
       )
       .then(animateMain)
-  }, [tl, tl2, tl3, tl4, tl5, animateMain])
+  }, [tl, tl2, tl3, tl4, tl5])
 
   return (
     <div className="App">
