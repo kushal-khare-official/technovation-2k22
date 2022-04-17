@@ -30,6 +30,7 @@
 
 .cs-style-4 {
   overflow: auto;
+  max-height: 100vh;
   margin-left: 60px;
   width: calc(100% - 60px) !important;
   overflow-x: hidden;
