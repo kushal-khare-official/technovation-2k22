@@ -1,31 +1,31 @@
 const eventData = {
   category: {
     1: {
-      category: 'Technical',
+      name: 'Technical',
       image:
         'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/bee_W1IB91p-C.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649626089917',
       link: 'technical',
     },
     2: {
-      category: 'Non Technical',
+      name: 'Non Technical',
       image:
         'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/bee_W1IB91p-C.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649626089917',
       link: 'nontechnical',
     },
     3: {
-      category: 'Literary',
+      name: 'Literary',
       image:
         'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/bee_W1IB91p-C.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649626089917',
       link: 'literary',
     },
     4: {
-      category: 'Gaming',
+      name: 'Gaming',
       image:
         'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/bee_W1IB91p-C.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649626089917',
       link: 'gaming',
     },
     5: {
-      category: 'Cybernated',
+      name: 'Cybernated',
       image:
         'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/bee_W1IB91p-C.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649626089917',
       link: 'cybernated',
