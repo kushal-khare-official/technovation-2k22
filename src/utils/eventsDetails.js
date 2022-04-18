@@ -1178,12 +1178,12 @@ const eventData = {
       coordinators: [
         {
           name: 'Faizan Anwar',
-          mobile: 8737826121,
-          email: 'dfs@jsdnj.ckkdn',
+          mobile: 9554392144,
+          email: 'faizananwar131313@gmail.com',
         },
         {
           name: 'Shubhanshu Srivastava ',
-          mobile: 9554392144,
+          mobile: 8737826121,
           email: 'kayasthashubhanshu50@gmail.com',
         },
       ],
@@ -1214,7 +1214,6 @@ const eventData = {
           mobile: 6390083371,
           email: 'Deekshabrh0052@gmail.com',
         },
-        { name: 'sh', mobile: 25522, email: 'dfs@jsdnj.ckkdn' },
       ],
       rules: [
         'The rules are same as of normal ludo.',
@@ -1400,11 +1399,6 @@ const eventData = {
       image:
         'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/valo_WfgncZQBJ.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649658737886',
       coordinators: [
-        {
-          name: 'Anirudh Kumar',
-          mobile: 8979388624,
-          email: 'anirudhk1577@gmail.com',
-        },
         {
           name: 'Kushal Khare',
           mobile: 9554409188,
@@ -1759,7 +1753,7 @@ const eventData = {
         {
           name: 'Aryan Kumar',
           mobile: 8005350800,
-          email: 'dfs@jsdnj.ckkdn',
+          email: 'aryanjk01@gmail.com',
         },
       ],
       rules: [
@@ -1796,12 +1790,12 @@ const eventData = {
         {
           name: 'Aryan Kumar',
           mobile: 8005350800,
-          email: 'dfs@jsdnj.ckkdn',
+          email: 'aryanjk01@gmail.com',
         },
         {
           name: 'Rahul Gautam',
-          mobile: 8933944962,
-          email: 'dfs@jsdnj.ckkdn',
+          mobile: 9005286625,
+          email: 'rahulgautam8933@gmail.com',
         },
       ],
       rules: [
@@ -2093,6 +2087,11 @@ const eventData = {
           name: 'Nishkarsh chandra',
           mobile: 8081526990,
           email: 'nishkarsh2105@gmail.com',
+        },
+        {
+          name: 'Gaurav Kumar',
+          mobile: 9170659712,
+          email: 'kumargscientist@gmail.com',
         },
       ],
       rules: [
