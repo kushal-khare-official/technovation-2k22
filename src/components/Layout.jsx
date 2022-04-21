@@ -5,15 +5,11 @@ import BgRight from './BgRight'
 import './Layout.css'
 import './Forms.css'
 
-function Layout({
-  polygons1,
-  polygons2,
-  children,
-}) {
+function Layout({ tl, tl2, children }) {
   return (
     <>
-      <BgLeft polygons1={polygons1} />
-      <BgRight polygons2={polygons2} />
+      <BgLeft />
+      <BgRight />
       <div className="area">
         <ul className="circles">
           <li></li>

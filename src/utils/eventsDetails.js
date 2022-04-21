@@ -36,6 +36,7 @@ const eventData = {
       eventId: 1,
       name: 'Stand-up Comedy',
       teamType: 'Solo',
+      price: 20,
       description:
         'We give all the young comedians out there a platform to tickle the audience with the best of your comic skills. Be the reason for all the giggles and laughs around, and be the best of all.',
       image:
@@ -67,6 +68,7 @@ const eventData = {
       eventId: 3,
       name: 'Mono Acting',
       teamType: 'Solo',
+      price: 20,
       description:
         'Mono act is a short solo play where only one person(male/female) performs in a single character or multiple characters.',
       image:
@@ -98,6 +100,7 @@ const eventData = {
     4: {
       eventId: 4,
       name: 'Jingle',
+      price: 0,
       description:
         ' A quiz is a form of game or mind sport in which players attempt to answer questions correctly about a certain or variety of subjects. Quizzes can be used as a brief assessment in education and similar fields to measure growth in knowledge, abilities, or skills. Quiz, a contest in which participants test what they know by answering questions on one or more topics.Quizzes may be held on a variety of subjects, or they may be on just one.',
       image:
@@ -133,6 +136,7 @@ const eventData = {
       eventId: 5,
       name: 'Da Vinci Code',
       teamType: 'Solo',
+      price: 20,
       description:
         'It is a unique drawing, sketching, painting, and art competition designed to encourage creative expression. These are the bast avenues to show your masterpieces, through which you can finally break the ice and gain the exposure.',
       image:
@@ -162,6 +166,7 @@ const eventData = {
       eventId: 6,
       name: 'Cover It',
       teamType: 'Solo/Duo',
+      price: 25,
       description:
         "Sometime It's best to put makeup on your phone covers rather than just face. In cover design, decorate the cover using materials.",
       image:
@@ -193,6 +198,7 @@ const eventData = {
       eventId: 7,
       name: 'Rangoli',
       teamType: 'Team(2/3/4)',
+      price: 60,
       description:
         ' Rangoli is a Hindu folk art generally prepared for special festive occation.',
       image:
@@ -224,6 +230,7 @@ const eventData = {
       eventId: 8,
       name: 'Capture The Moment',
       teamType: 'Team',
+      price: 0,
       category: 'Non Technical',
       description:
         'Photography Event in which Individual have to click the image of diffrent and iconic moments into either smartphone or professional camera.',
@@ -254,6 +261,7 @@ const eventData = {
       eventId: 9,
       name: 'Twinkle Toes',
       teamType: 'Solo',
+      price: 30,
       category: 'Non Technical',
       description:
         'Nail art is a creative way to paint, decorate, enhance, and embellish nails.',
@@ -287,6 +295,7 @@ const eventData = {
       eventId: 10,
       name: 'Face Painting',
       teamType: 'Team(3)',
+      price: 90,
       category: 'Non Technical',
       description:
         'The expression of ideas and emotions, with the creation of certain aesthetic qualities, in a two-dimensional visual language.',
@@ -325,6 +334,7 @@ const eventData = {
       eventId: 11,
       name: 'Grafitti',
       teamType: 'Team(4-6)',
+      price: 50,
       category: 'Non Technical',
       description:
         'It is a painting event where you will have to show your creativity in walls, (spread your colors and create something innovative).',
@@ -354,6 +364,7 @@ const eventData = {
       eventId: 13,
       name: 'Sharktank',
       teamType: 'Solo',
+      price: 0,
       category: 'Non Technical',
       description:
         'To promote business idea. To provide exposure of project presentation',
@@ -391,6 +402,7 @@ const eventData = {
       eventId: 14,
       name: 'Robo-War',
       teamType: 'Team',
+      price: 60,
       description:
         'The Challenge is to design and build a robot competent to fight other robots in the Battle. The competition is carried out in a tournament format in which the competitors bring their robots ready to battle and are pitted against their competitor’s robots in 1v1 matches where the aim is to cause maximum damage or to push the opponent’s robot off the arena to score maximum points. Team scoring the maximum points wins the championship.',
       image:
@@ -436,6 +448,7 @@ const eventData = {
       eventId: 15,
       name: ' Robo Soccer',
       teamType: 'team',
+      price: 40,
       category: 'Technical',
       description:
         'A hackathon, also known as a codefest, is a social coding event that brings computer programmers and other interested people together to improve upon or build a new software program. The word hackathon is a portmanteau of the words hacker, which means clever programmer, and marathon, an event marked by endurance. ',
@@ -482,6 +495,7 @@ const eventData = {
       eventId: 16,
       name: 'Rocket Propulsion ',
       teamType: 'team',
+      price: 40,
       category: 'Technical',
       description:
         'The Rocket Propulsion object applies a force on a part so that it both it both follows and faces a target part. It acts like hybrid of Body Position and Body Gyro',
@@ -528,6 +542,7 @@ const eventData = {
       eventId: 17,
       name: 'Automobile Quiz',
       teamType: 'solo',
+      price: 0,
       category: 'Technical',
       description:
         'A hackathon, also known as a codefest, is a social coding event that brings computer programmers and other interested people together to improve upon or build a new software program. The word hackathon is a portmanteau of the words hacker, which means clever programmer, and marathon, an event marked by endurance. ',
@@ -558,6 +573,7 @@ const eventData = {
       eventId: 18,
       name: 'Type Racing',
       teamType: 'solo',
+      price: 0,
       category: 'Technical',
       description: 'It is a typing speed test.',
       image:
@@ -583,6 +599,7 @@ const eventData = {
       eventId: 19,
       name: 'Pathick',
       teamType: 'team',
+      price: 50,
       description:
         'The robot must follow the black and white line specified by organisers. The robot will go through different obstacles During competition on the track like different joints, zig-zag lines, curve lines, intersecting lines, and even interruptions.',
       image:
@@ -618,6 +635,7 @@ const eventData = {
       eventId: 22,
       name: 'Identokit',
       teamType: 'Solo',
+      price: 0,
       description:
         'This is a technical kit based quest event. Where you have to identify and name the given pictures, also describe them (if needed).',
       image:
@@ -653,6 +671,7 @@ const eventData = {
       eventId: 23,
       name: 'Flying Jatt ',
       teamType: 'team',
+      price: 30,
       category: 'Technical',
       description:
         'To design and fabricate a glider ouspot and glider distance and showcase your Aerospace and Designing skills.',
@@ -684,6 +703,7 @@ const eventData = {
       eventId: 24,
       name: 'Spartans',
       teamType: 'team',
+      price: 40,
       category: 'technical',
       description:
         'This is an obstacle car racing event. In this event participants will have to come with their working model of car.Participants will have to cross the different levels of obstacle race and will be judged accordingly.',
@@ -719,6 +739,7 @@ const eventData = {
       eventId: 25,
       name: 'Bob-the-builder',
       teamType: 'team(2/3/4)',
+      price: 50,
       category: 'technical',
       description:
         'Working Model Exhibition is a competition where contestants present their working projects/models that they have created. It allows students to compete in today’s challenging technologies. Its motive is to implement its theoretical knowledge into practice by conducting a range of experiments. So that the questions or tasks spark a true interest in the student, they should be able to have an interesting, eye-catching project. It also provides a mechanism for students with an intense interest in projects to be paired with students/mentors from nearby colleges. ',
@@ -753,6 +774,7 @@ const eventData = {
       eventId: 26,
       name: 'Dimensions',
       teamType: 'solo',
+      price: 0,
       category: 'technical',
       description:
         'This event is done with the help of AutoCAD software. Every participant has to create a specific given object, etc. And the result criteria depend upon the judgment.',
@@ -782,6 +804,7 @@ const eventData = {
       eventId: 27,
       name: 'Chain Reaction',
       teamType: 'team',
+      price: 30,
       category: 'Technical',
       description:
         'A hackathon, also known as a codefest, is a social coding event that brings computer programmers and other interested people together to improve upon or build a new software program. The word hackathon is a portmanteau of the words hacker, which means clever programmer, and marathon, an event marked by endurance. ',
@@ -812,6 +835,7 @@ const eventData = {
       eventId: 20,
       name: 'Best from waste',
       teamType: 'team(max: 3)',
+      price: 0,
       category: 'technical',
       description:
         'This is an event based on 3R’s i.e Reduce,Reuse,Recycle. In this event, participants will have to make innovative things from waste.',
@@ -844,6 +868,7 @@ const eventData = {
       eventId: 32,
       name: 'Web Dextro',
       teamType: 'Duo',
+      price: 0,
       category: 'Cybernated',
       description:
         'Web Dextro(Web design) encompasses many different skills and disciplines in the production and maintenance of websites. ',
@@ -885,6 +910,7 @@ const eventData = {
       eventId: 33,
       name: 'Bug-d-code',
       teamType: 'Duo',
+      price: 0,
       category: 'Cybernated',
       description:
         'Debugging means to run your code step by step in a debugging tool like Visual Studio, to find the exact point where you made a programming mistake. You then understand what corrections you need to make in your code, and debugging tools often allow you to make temporary changes so you can continue running the program.',
@@ -919,6 +945,7 @@ const eventData = {
       eventId: 34,
       name: 'Codervation',
       teamType: 'Duo',
+      price: 0,
       category: 'Cybernated',
       description:
         'Codervation (Competitive programming) is a mind sport usually held over   the Internet or a local network, involving participants trying to program according to provided specifications.',
@@ -950,6 +977,7 @@ const eventData = {
       eventId: 35,
       name: 'Capture the flag',
       teamType: 'Duo',
+      price: 0,
       category: 'Cybernated',
       description:
         'Capture the flag is an exercise in computer security in which “flags” are hidden in purposefully vulnerable websites. Competitors find the flags using the attack/defense style of web security.',
@@ -980,6 +1008,7 @@ const eventData = {
       eventId: 36,
       name: ' Hackathon',
       teamType: 'team',
+      price: 0,
       category: 'Cybernated',
       description:
         'A hackathon, also known as a codefest, is a social coding event that brings computer programmers and other interested people together to improve upon or build a new software program. The word hackathon is a portmanteau of the words hacker, which means clever programmer, and marathon, an event marked by endurance. ',
@@ -1005,6 +1034,7 @@ const eventData = {
       eventId: 37,
       name: ' Pic-a-Thon',
       teamType: 'Solo',
+      price: 0,
       category: 'Cybernated',
       description: 'Photo editing, Online Event',
       image:
@@ -1034,6 +1064,7 @@ const eventData = {
       eventId: 38,
       name: ' Reels-Camera-Action',
       teamType: 'Solo',
+      price: 0,
       category: 'Cybernated',
       description:
         'This contest is for all the Video creators who depict a message through their creative videos on the Instagram platform. ',
@@ -1064,6 +1095,7 @@ const eventData = {
       eventId: 39,
       name: 'Selfievation',
       teamType: 'Solo',
+      price: 0,
       category: 'Cybernated',
       description:
         'This is an online selfie contest, where you have to give the best selfie of your which will be posted on social media and you have to gain your maximum likes to win the contest',
@@ -1097,6 +1129,7 @@ const eventData = {
       eventId: 40,
       name: 'Ad-sense',
       teamType: 'Duo',
+      price: 0,
       category: 'Cybernated',
       description:
         'An advertisement (often shortened to advert or ad) is the promotion of a product, brand or service to a viewership in order to attract interest, engagement and sales. Advertisements come in many forms, from copy to interactive video, and have evolved to become a crucial feature of the app marketplace.',
@@ -1134,6 +1167,7 @@ const eventData = {
       eventId: 41,
       name: 'Timeline',
       teamType: 'Solo',
+      price: 0,
       category: 'Cybernated',
       description:
         'Timeline is an event in which you have to make a video by mixing many short videos simply say video editing .',
@@ -1169,8 +1203,43 @@ const eventData = {
   gaming: {
     42: {
       eventId: 42,
-      name: 'BGMI',
-      teamType: 'Solo/Team',
+      name: 'BGMI-Solo',
+      teamType: 'Solo',
+      price: 20,
+      description:
+        'BGMI is a player versus player shooter game in which up to one hundred players fight in a battle royale, a type of large-scale last man standing deathmatch where players fight to remain the last alive. Players can choose to enter the match solo, duo, or with a small team of up to four people. The last person or team alive wins the match',
+      image:
+        'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/Pubg_NoN14zKJK.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649267023397',
+      coordinators: [
+        {
+          name: 'Faizan Anwar',
+          mobile: 9554392144,
+          email: 'faizananwar131313@gmail.com',
+        },
+        {
+          name: 'Shubhanshu Srivastava ',
+          mobile: 8737826121,
+          email: 'kayasthashubhanshu50@gmail.com',
+        },
+      ],
+      rules: [
+        'Players must register their teams on the given Link.',
+        'Only the registered players can play in the tournament. (If any other player is caught playing, then the team will be disqualified.)',
+        'Each Team must maintain, during the tournament exactly four players which is the minimum and the maximum number of players allowed.',
+        'Each team must select its captain who shall be responsible for communications with the officials of the tournament. A team cannot change the team captain during the tournament without prior approval of the tournament officials',
+        'Players must not use an emulator to play on a PC or other device that is not a handheld device.',
+        'To begin with, BGMI players with a level of 25.',
+        'No one allows playing with a new ID.',
+      ],
+      category: 'Gaming',
+      color2: '#1D1C1A',
+      color1: '#FE8D1B',
+    },
+    71: {
+      eventId: 71,
+      name: 'BGMI-Squad',
+      teamType: 'Team',
+      price: 80,
       description:
         'BGMI is a player versus player shooter game in which up to one hundred players fight in a battle royale, a type of large-scale last man standing deathmatch where players fight to remain the last alive. Players can choose to enter the match solo, duo, or with a small team of up to four people. The last person or team alive wins the match',
       image:
@@ -1204,6 +1273,7 @@ const eventData = {
       eventId: 43,
       name: 'Human Ludo',
       teamType: 'Team',
+      price: 0,
       description:
         'Human Ludo is a strategy board to 4 game for 2 players, in which the players race their four tokens(players themselves are their respective colour tokens) from start to finish according to the rolls of a single die.',
       image:
@@ -1229,6 +1299,7 @@ const eventData = {
       eventId: 44,
       name: 'Call of Duty Mobile',
       teamType: 'Team',
+      price: 80,
       description:
         "Multiplayer is at the core of COD Mobile, and you'll be able to join up with friends to play in teams. Play battle royale or multiplayer with B;ackout style.",
       image:
@@ -1260,8 +1331,41 @@ const eventData = {
     },
     45: {
       eventId: 45,
-      name: 'Counter Strike',
+      name: 'Counter Strike-Solo',
+      teamType: 'Solo',
+      price: 20,
+      description:
+        ': Counter-Strike: Global Offensive, widely  known as CS:GO, is a competitive first-person shooting game. Two teams compete in multiple rounds of objective-based game modes with the goal of winning enough rounds to win the match. CS:GO was released on Windows, OS X, Xbox 360 and Playstation 3, but all professionals play the game on PC.',
+      image:
+        'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/cs-go_fhDe3fQui.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649619779764',
+      coordinators: [
+        {
+          name: 'Shubham Pal',
+          mobile: 9118736191,
+          email: 'shubhamr2520@gmail.com',
+        },
+        {
+          name: 'Abhishek Chaubey',
+          mobile: 9696872257,
+          email: 'chaubeyabhishek3011@gmail.com',
+        },
+      ],
+      rules: [
+        'The game pits two teams of five players against each other, with each team having to complete certain objectives to win.',
+        'One team takes on the role of the Terrorists (Ts), while the other team is the Counter-Terrorists (CTs).',
+        'In this mode, the attacking Ts must plant and detonate a bomb in a specific location - site A or B - or take out all five of the CTs to win around.',
+        'The CTs must defuse the bomb when it is planted, or take out all five of the Ts to win the round.',
+        'Each match comprises 30 rounds in total, with rounds lasting a maximum of one minute and 55 seconds. The first team to win 16 rounds wins the match.',
+      ],
+      category: 'Gaming',
+      color2: '#693C00',
+      color1: '#03356B',
+    },
+    72: {
+      eventId: 72,
+      name: 'Counter Strike-Squad',
       teamType: 'Team',
+      price: 60,
       description:
         ': Counter-Strike: Global Offensive, widely  known as CS:GO, is a competitive first-person shooting game. Two teams compete in multiple rounds of objective-based game modes with the goal of winning enough rounds to win the match. CS:GO was released on Windows, OS X, Xbox 360 and Playstation 3, but all professionals play the game on PC.',
       image:
@@ -1293,6 +1397,7 @@ const eventData = {
       eventId: 46,
       name: 'Tug of War ',
       teamType: 'Team(6/8)',
+      price: 70,
       description: 'Takat ka mukabla ',
       image:
         'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/istockphoto-483718137-612x612_AKSKrnP7y.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649672265833',
@@ -1324,6 +1429,7 @@ const eventData = {
       eventId: 47,
       name: 'Squid Game',
       teamType: 'Solo',
+      price: 50,
       description:
         'Squid Game is based on popular NETFLIX web series THE SQUID GAME. This event will consist of various games which we all have played in our childhood. There will be multiple rounds in which the players will have to perform their best in order to maintain their place.  The one who will survive till the last will win the game. ',
       image:
@@ -1361,6 +1467,7 @@ const eventData = {
       eventId: 48,
       name: 'Quiz Monster',
       teamType: 'Solo',
+      price: 0,
       description:
         ' A quiz is a form of game or mind sport in which players attempt to answer questions correctly about a certain or variety of subjects. Quizzes can be used as a brief assessment in education and similar fields to measure growth in knowledge, abilities, or skills. Quiz, a contest in which participants test what they know by answering questions on one or more topics.Quizzes may be held on a variety of subjects, or they may be on just one.',
       image:
@@ -1395,6 +1502,7 @@ const eventData = {
       eventId: 49,
       name: 'Valorant',
       teamType: 'Team',
+      price: 0,
       description: ' A 5v5 character-based tactical shooter.',
       image:
         'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/valo_WfgncZQBJ.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649658737886',
@@ -1433,6 +1541,7 @@ const eventData = {
       eventId: 50,
       name: 'Dart',
       teamType: 'Solo',
+      price: 10,
       description:
         'Darts is a throwing game in which small missiles are thrown at a target, which is called a dartboard.',
       image:
@@ -1467,6 +1576,7 @@ const eventData = {
       eventId: 51,
       name: 'Arm Wresling',
       teamType: 'Solo',
+      price: 10,
       description:
         'A test of strength of one person’s arm against another it consists of two people who stand at or sit down at a table and then grip each others hand whilst placing their elbows on the table.',
       image:
@@ -1503,6 +1613,7 @@ const eventData = {
     52: {
       eventId: 52,
       name: 'Tekken',
+      price: 20,
       description:
         ' Tekken is a fighting PC game in which two players fight against each other for 3 rounds. The player who will be winning the majority of rounds will be considered as a winner. Players can choose their favourite character in the beginning of the game.',
       image:
@@ -1534,6 +1645,7 @@ const eventData = {
       eventId: 54,
       name: 'Paper Fold Dance',
       teamType: 'Solo',
+      price: 60,
       description:
         '- It is a competition where participants in a group dance on a piece of paper until the music stops. The paper is folded in every stopso it gets smaller and smaller with the proceeding rounds.',
       image:
@@ -1565,6 +1677,7 @@ const eventData = {
       eventId: 56,
       name: 'Blind Date',
       teamType: 'Solo',
+      price: 70,
       description:
         'It’s an event in which participants will get to know a random person by playing some games and doing some certain tasks together. Also they will learn to communicate with someone they have never known.',
       image:
@@ -1609,6 +1722,7 @@ const eventData = {
       eventId: 57,
       name: 'Money Hiest',
       teamType: 'Team',
+      price: 50,
       description:
         'What is it you have to answer? But to answer you have to ask? And to ask you have to speak?And to speak you have to know!',
       image:
@@ -1649,6 +1763,7 @@ const eventData = {
       eventId: 58,
       name: 'Tambola',
       teamType: 'Solo',
+      price: 0,
       description:
         "Tambola is a number based game. Host/organisor (or a player) picks a number randomly and calls out the Number/CUE one at a time. Players are given cards/tickets with numbers written on them. If the announced number is present on a player's card then player strikes out that Number on their tickets.",
       image:
@@ -1687,6 +1802,7 @@ const eventData = {
       eventId: 59,
       name: 'Futsal',
       teamType: 'Team(7)',
+      price: 70,
       description:
         'It is a short version of Soccer the only difference is that it restricts the height play with the ball on a small playground.',
       image:
@@ -1725,6 +1841,7 @@ const eventData = {
       eventId: 60,
       name: 'Mix Cricket',
       teamType: 'Team(6B/5G)',
+      price: 110,
       description:
         'As you know Cricket is a Gentlemen’s game which even brings Enemies together. Most of us are crazy about IPL now a days… so here we bring a smaller, similar and joyful version of IPL which makes us crazy ... In this version of cricket, we bring both boys and girls together as a team which makes playing this game even more cheerful and thrilling… Let’s come together and be a part of our jubilant event… ',
       image:
@@ -1782,6 +1899,7 @@ const eventData = {
       eventId: 61,
       name: 'Rubix Cube',
       teamType: 'Solo',
+      price: 25,
       description:
         "As we all Know life is full of p zles and we almost daily solve puzzles or riddles in our life. So here we bring another exciting puzzle for you, why can't you come with us and solve some more interesting puzzles.Show your hidden talent in solving puzzles and create a lasting impact here in Technovation and in your college life. Many of you are familiar with Rubix cube, Come show your Rubix cube skills and compete with others.",
       image:
@@ -1813,6 +1931,7 @@ const eventData = {
       eventId: 62,
       name: 'Pani Puri Competition',
       teamType: 'Solo',
+      price: 100,
       description: 'It is a pani-puri eating competition',
       image:
         'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/gol_SX1GktdWe.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649660051854',
@@ -1859,6 +1978,7 @@ const eventData = {
     63: {
       eventId: 63,
       name: 'Spell Bee',
+      price: 0,
       description:
         'A spell bee is a competition in which contestants are asked to spell a broad selection of words, usually with a varying degree of difficulty.Spell bee allows participants to compete in a supportive environment. The brain activity and excitement that goes with a spell bee is just as stimulating as physical competition, which means that the whole competition can pump up the adrenaline of the contestants and the audience alike.',
       image:
@@ -1898,6 +2018,7 @@ const eventData = {
     64: {
       eventId: 64,
       name: 'Tark-Vitark',
+      price: 0,
       description:
         'We are presenting Tark-Vitark, a stimulating debate competition as a part of our technical fest “Technovation 2022”. Debates are the vehicles of change in the society as by addressing, dialogue and management but also go the process of understanding, analysing , and acquisition. Do you have what it takes to be the best among the best? Are you the one who is bold and clear, then this is right event for you to participate. Come and get the taste of university level debate.',
       image:
@@ -1941,6 +2062,7 @@ const eventData = {
     65: {
       eventId: 65,
       name: 'Jam-Ham',
+      price: 0,
       description:
         'Jam-ham is an event based on impromptu speaking, where a speaker delivers a speech without any prior rehearsal on the theme. Impromptu, implies “doing something without preparation”. In declamation events, a random issue is given to the speaker on the spot, and the speaker gets barely a few seconds to think over the issue and then speak for about a minute or two regarding that very topic. This type of event is very productive for partakers. According to Jef Menguin (2010, as cited in Tetuko Barry ansyah 2018), the major benefits of an impromptu speaking technique; are that it can enhance the verbal expression of thought, evolve morale in public speaking, unfold thinking promptly on your feet, and build leadership and communication.',
       image:
@@ -1979,6 +2101,7 @@ const eventData = {
       eventId: 66,
       name: "Writer's Saga",
       teamType: 'Solo',
+      price: 0,
       description:
         "Let the flow of your pen be a testament to your skills, prove your writing skills by describing what has never been said before. Introducing Writer's Saga - An Article/Blog Writing Competition for Literary enthusiasts to work out their brains.",
       image:
@@ -2010,6 +2133,7 @@ const eventData = {
     67: {
       eventId: 67,
       name: 'QuillZest',
+      price: 0,
       description:
         'Let the ink from your quill flow and describe the beauty and wonders of our world, let your imagination run wild and visualize. Introducing Quill-Zest a Pictorial Theme based writing event to test the skills of ambitious writers such as yourself.',
       image:
@@ -2042,6 +2166,7 @@ const eventData = {
       eventId: 68,
       name: 'Ramayana Quiz',
       teamType: 'Solo',
+      price: 0,
       description:
         'सिया राममय सब जग जानी, करहू प्रणाम जोरीजुग पानि ।हरि अनंत हरि कथा अनंता, कहहीं सुनहिं बहुबिधिसब संता।ग्रंथराज रामायण के ज्ञान का बोध कराने हेतु एकसुन्दर प्रयास ।',
       image:
@@ -2073,6 +2198,7 @@ const eventData = {
       eventId: 69,
       name: 'Kavyanical',
       teamType: 'Solo',
+      price: 0,
       description:
         'Poetry, literature that invokes a concentrated imaginative awareness of experience or a specific emotional response through language chosen and arrange its meaning, sound and rhythm.',
       image:
@@ -2110,6 +2236,7 @@ const eventData = {
       eventId: 70,
       name: 'Story Teller',
       teamType: 'Solo',
+      price: 0,
       description:
         'Storytelling is relating a tale to one or more listener through voice and gesture .It is not the same as reding a story aloud or reciting a piece from memory or acting out a drama - though it shares common characteristics with these arts. The storyteller looks into the eyes of audience and together they compose the tale.',
       image:

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Apps, Call, Event, Home, Info } from '@mui/icons-material'
+import { AppRegistration, Apps, Call, Event, Home } from '@mui/icons-material'
 
 import './Nav.css'
 import { Link } from 'react-router-dom'
@@ -17,13 +17,17 @@ const Nav = () => {
         </Link>
       </div>
       <div className="menuIcons" id="about">
-        <Link to="/about">
-          <Info
+        <a
+          href="https://ksr19101999.wixsite.com/technovation-2k22"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <AppRegistration
             style={{
               color: 'white',
             }}
           />
-        </Link>
+        </a>
       </div>
       <div className="menuIcons" id="events">
         <Link to="/events">

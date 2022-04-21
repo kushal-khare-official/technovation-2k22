@@ -1,29 +1,19 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { lazy, Suspense, useEffect, useState } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import gsap, { Elastic } from 'gsap'
 import { makeStyles } from '@mui/styles'
 
+import Loader from './components/Loader'
 import { subscribe } from './firebase'
-import Layout from './components/Layout'
-import Home from './components/Home'
-import Events from './components/Events'
 import './App.css'
+import Contact from './components/Contact'
+
+const Layout = lazy(() => import('./components/Layout'))
+const Home = lazy(() => import('./components/Home'))
+const Events = lazy(() => import('./components/Events'))
+// const Dashboard = lazy(() => import('./components/Dashboard'))
 
 function App() {
-  const polygons1 = useRef()
-  const polygons2 = useRef()
-  const main = useRef()
-  const ea = useRef()
-  const pres = useRef()
-  const registerBtn = useRef()
-  const home = useRef()
-  const date = useRef()
-
-  const [tl] = useState(() => gsap.timeline())
-  const [tl2] = useState(() => gsap.timeline())
-  const [tl3] = useState(() => gsap.timeline())
-  const [tl4] = useState(() => gsap.timeline())
-  const [tl5] = useState(() => gsap.timeline())
+  const [mainOpen, setMainOpen] = useState(false)
 
   const useStyles = makeStyles({
     root: {
@@ -106,132 +96,51 @@ function App() {
 
   const classes = useStyles()
 
-  const animateMain = () => {
-    tl3.staggerFromTo(
-      [registerBtn.current, date.current, ea.current, pres.current],
-      1,
-      {
-        opacity: 1,
-        scale: 1,
-        transformOrigin: 'center center',
-        force3D: true,
-      },
-      {
-        marginTop: 0,
-        opacity: 0,
-        scale: 0,
-        height: 0,
-        ease: Elastic.easeInOut,
-        force3D: true,
-      },
-      0
-    )
-    tl4.staggerFromTo(
-      home.current,
-      2,
-      {
-        y: '55vh',
-        transformOrigin: 'center center',
-        force3D: true,
-      },
-      {
-        y: '0',
-        ease: Elastic.easeInOut,
-        force3D: true,
-      },
-      0
-    )
-    tl5.staggerFromTo(
-      main.current,
-      2,
-      {
-        y: '15vh',
-        transformOrigin: 'center center',
-        force3D: true,
-      },
-      {
-        y: '0',
-        ease: Elastic.easeInOut,
-        force3D: true,
-      },
-      0
-    )
-  }
-
   useEffect(() => {
     subscribe()
-    tl.staggerFromTo(
-      polygons1.current.children,
-      0.5,
-      {
-        opacity: 0,
-        scale: 0,
-        transformOrigin: 'center center',
-        force3D: true,
-      },
-      {
-        opacity: 1,
-        scale: 1,
-        ease: Elastic.easeInOut,
-        force3D: true,
-      },
-      0.009
-    )
-    tl2
-      .staggerFromTo(
-        polygons2.current.children,
-        0.5,
-        {
-          opacity: 0,
-          scale: 0,
-          transformOrigin: 'center center',
-          force3D: true,
-        },
-        {
-          opacity: 1,
-          scale: 1,
-          ease: Elastic.easeInOut,
-          force3D: true,
-        },
-        0.009
-      )
-      .then(animateMain)
-  }, [tl, tl2, tl3, tl4, tl5])
+  }, [])
 
   return (
     <div className="App">
-      <Layout polygons1={polygons1} polygons2={polygons2}>
-        <Router>
-          <Routes>
-            <Route
-              exact
-              path="/"
-              element={
-                <Home
-                  classes={classes}
-                  main={main}
-                  ea={ea}
-                  pres={pres}
-                  home={home}
-                  date={date}
-                  registerBtn={registerBtn}
-                  animateMain={animateMain}
-                />
-              }
-            />
-            <Route
-              exact
-              path="/events"
-              element={<Events classes={classes} />}
-            />
-            <Route
-              exact
-              path="/events/:category"
-              element={<Events classes={classes} />}
-            />
-          </Routes>
-        </Router>
-      </Layout>
+      <Suspense fallback={<Loader />}>
+        <Layout>
+          <Router>
+            <Routes>
+              <Route
+                exact
+                path="/"
+                element={
+                  <Home
+                    classes={classes}
+                    mainOpen={mainOpen}
+                    setMainOpen={setMainOpen}
+                  />
+                }
+              />
+              {/* <Route
+                exact
+                path="/register"
+                element={<Dashboard classes={classes} />}
+              /> */}
+              <Route
+                exact
+                path="/contact"
+                element={<Contact classes={classes} />}
+              />
+              <Route
+                exact
+                path="/events"
+                element={<Events classes={classes} />}
+              />
+              <Route
+                exact
+                path="/events/:category"
+                element={<Events classes={classes} />}
+              />
+            </Routes>
+          </Router>
+        </Layout>
+      </Suspense>
     </div>
   )
 }

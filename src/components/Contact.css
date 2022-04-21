@@ -1,0 +1,53 @@
+.popups {
+  text-align: left;
+  font-family: 'Raleway';
+  color: black;
+  width: 90vw !important;
+  margin: 30px auto;
+  margin-left: 5vw !important;
+  padding: 30px;
+  background: white;
+}
+
+.popMap {
+  float: right;
+  width: 60%;
+  height: 70vh;
+}
+
+.popMap iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.popCall h1 {
+  font-family: 'Raleway';
+  font-size: 130%;
+}
+
+.popMail h1 {
+  font-family: 'Raleway';
+  font-size: 130%;
+}
+
+.popCall p {
+  color: black;
+  font-family: 'Raleway';
+  font-weight: bold;
+}
+
+.popCall div {
+  margin: 0 30px;
+}
+
+.popMail {
+  margin: 30px;
+  color: black;
+  display: inline-block;
+}
+
+.popMail p {
+  margin: 20px;
+  color: black;
+  font-weight: bold;
+}

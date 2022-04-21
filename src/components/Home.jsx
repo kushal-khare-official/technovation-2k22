@@ -1,20 +1,82 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Box, Button, Grid } from '@mui/material'
+import gsap, { Elastic } from 'gsap'
 
-import Dashboard from './Dashboard'
+import Notification from './Notification'
 import './Home.css'
 
-function Home({
-  classes,
-  main,
-  ea,
-  pres,
-  home,
-  date,
-  registerBtn,
-  animateMain
-}) {
+function Home({ classes, mainOpen, setMainOpen }) {
+  const main = useRef()
+  const ea = useRef()
+  const pres = useRef()
+  const registerBtn = useRef()
+  const home = useRef()
+  const date = useRef()
+
+  const [tl3] = useState(() => gsap.timeline())
+  const [tl4] = useState(() => gsap.timeline())
+  const [tl5] = useState(() => gsap.timeline())
+
+  const animateMain = () => {
+    tl3.staggerFromTo(
+      [registerBtn.current, date.current, ea.current, pres.current],
+      1,
+      {
+        opacity: 1,
+        scale: 1,
+        transformOrigin: 'center center',
+        force3D: true,
+      },
+      {
+        marginTop: 0,
+        opacity: 0,
+        scale: 0,
+        height: 0,
+        ease: Elastic.easeInOut,
+        force3D: true,
+      },
+      0
+    )
+    tl4.staggerFromTo(
+      home.current,
+      2,
+      {
+        y: '55vh',
+        transformOrigin: 'center center',
+        force3D: true,
+      },
+      {
+        y: '0',
+        ease: Elastic.easeInOut,
+        force3D: true,
+      },
+      0
+    )
+    tl5.staggerFromTo(
+      main.current,
+      2,
+      {
+        y: '15vh',
+        transformOrigin: 'center center',
+        force3D: true,
+      },
+      {
+        y: '0',
+        ease: Elastic.easeInOut,
+        force3D: true,
+      },
+      0
+    )
+    setMainOpen(true)
+  }
+
+  useEffect(() => {
+    if (mainOpen) return
+
+    setTimeout(animateMain, 5000)
+  })
+
   return (
     <main ref={main}>
       <header>
@@ -55,12 +117,14 @@ function Home({
         <Grid container spacing={2}>
           <Grid item xs={11} md={6} style={{ maxWidth: '100%' }}>
             <div className="home-box">
-              <Link
-                to="/about"
+              <a
+                href="https://ksr19101999.wixsite.com/technovation-2k22"
+                target="_blank"
+                rel="noreferrer"
                 style={{ textDecoration: 'none', color: 'white' }}
               >
-                <h3>ABOUT US</h3>
-              </Link>
+                <h3>REGISTER</h3>
+              </a>
             </div>
             <div className="home-box">
               <Link
@@ -96,8 +160,7 @@ function Home({
             </div>
           </Grid>
           <Grid item xs={11} md={6} style={{ maxWidth: '100%' }}>
-            {/* <div className="login-box"></div> */}
-            <Dashboard classes={classes} />
+            <Notification />
           </Grid>
         </Grid>
       </Box>
