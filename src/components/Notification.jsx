@@ -7,23 +7,30 @@ import {
   Typography,
 } from '@mui/material'
 import { ExpandMore } from '@mui/icons-material'
-import { Link } from 'react-router-dom'
 import Loader from './Loader'
+
 const Notifications = () => {
   const [notifications, setNotification] = useState([])
-  const [Loading, setLoading] = useState(true)
-  useEffect(async () => {
-    const response = await fetch(
-      process.env.REACT_APP_BACKEND_URL + '/notify',
-      {
-        method: 'GET',
-      }
-    )
-    const data = await response.json()
-    setNotification(data)
+  const [Loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    const fetchNotice = async () => {
+      setLoading(true)
+      const response = await fetch(
+        process.env.REACT_APP_BACKEND_URL + '/notify',
+        {
+          method: 'GET',
+        }
+      )
+
+      const data = await response.json()
+      setNotification(data)
+      setLoading(false)
+    }
+
+    if (!notifications.length) fetchNotice()
     console.log(notifications)
-    setLoading(false)
-  }, [Loading])
+  }, [notifications])
   return (
     <>
       <div className="login-box">
@@ -65,15 +72,9 @@ const Notifications = () => {
                           m: 1,
                         }}
                       >
-                        {new Date(
-                          Date.now() - new Date(notification.createdAt)
-                        ).getDay()
-                          ? new Date(
-                              Date.now() - new Date(notification.createdAt)
-                            ).getDay() + ' Days Ago'
-                          : new Date(
-                              Date.now() - new Date(notification.createdAt)
-                            ).getHours() + ' Hours Ago'}
+                        {new Date(Date.now()).getDate() -
+                          new Date(notification.createdAt).getDate() +
+                          ' Days Ago'}
                       </Box>
                     </Typography>
                   </AccordionSummary>
