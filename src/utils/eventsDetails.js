@@ -1280,9 +1280,14 @@ const eventData = {
         'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/4498257_zDQnembwhu.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649267009373',
       coordinators: [
         {
-          name: 'DEEKSHA MAURYA',
+          name: 'Deeksha Maurya',
           mobile: 6390083371,
           email: 'Deekshabrh0052@gmail.com',
+        },
+        {
+          name: 'Yogesh Singh',
+          mobile: 6392877940,
+          email: 'singh28yogesh@gmail.com',
         },
       ],
       rules: [
@@ -1512,6 +1517,11 @@ const eventData = {
           mobile: 9554409188,
           email: 'kushalkhare.offcial@gmail.com',
         },
+        {
+          name: 'Nitish Kumar',
+          mobile: 08528421546,
+          email: 'nitishpal@gmail.com',
+        },
       ],
       rules: [
         'The game pits two teams of five players against each other, with each team having to complete certain objectives (Plant/Defuse spike) to win.',
@@ -1720,7 +1730,7 @@ const eventData = {
     },
     57: {
       eventId: 57,
-      name: 'Money Hiest',
+      name: 'Money Hiest (Treasure Hunt)',
       teamType: 'Team',
       price: 50,
       description:
@@ -1754,7 +1764,15 @@ const eventData = {
           email: 'test@test.test',
         },
       ],
-      rules: [],
+      rules: [
+        'There will a time limit given for all the competing teams to find the treasure.',
+        'The clues are to be found in a particular order. A team cannot skip a clue. Skipping a clue leads to disqualification of the team.',
+        'An entire team must stay together. It cannot split up to find different clues.',
+        'All the means used by the teams should be fair, in case of any violation of the rules or any use of unfair means, teams will be disqualified from the contest.',
+        'The Treasure Hunt consists of clues, each one leading to the next clue.',
+        'All the clues of the teams are different and located at different places but the final destination i.e. the treasure is same. The team which finds the treasure first wins.',
+        'Organizers are free to make any changes which will be informed prior to the competition',
+      ],
       category: 'Gaming',
       color1: '#A11F2E',
       color2: '#000000',
@@ -1901,7 +1919,7 @@ const eventData = {
       teamType: 'Solo',
       price: 25,
       description:
-        "As we all Know life is full of p zles and we almost daily solve puzzles or riddles in our life. So here we bring another exciting puzzle for you, why can't you come with us and solve some more interesting puzzles.Show your hidden talent in solving puzzles and create a lasting impact here in Technovation and in your college life. Many of you are familiar with Rubix cube, Come show your Rubix cube skills and compete with others.",
+        "As we all Know life is full of puzzles and we almost daily solve puzzles or riddles in our life. So here we bring another exciting puzzle for you, why can't you come with us and solve some more interesting puzzles. Show your hidden talent in solving puzzles and create a lasting impact here in Technovation and in your college life. Many of you are familiar with Rubix cube, Come show your Rubix cube skills and compete with others.",
       image:
         'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/thumb-1920-1050187_bjmya6qqz.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1649660051046',
       coordinators: [
@@ -1917,11 +1935,11 @@ const eventData = {
         },
       ],
       rules: [
-        'This is 3 rounds event.',
-        'In 1st round, one who solves a 3x3 Rubik cube in under 5min are proceed to the next round.',
+        'This is a 3 round event.',
+        'In 1st round, one who solves a 3x3 Rubix cube in under 5min proceed to the next round.',
         'In the 2nd round, one who solves it under 2mins is eligible for the next round.',
-        'In 3rd and last round, one who solves the cube faster is the winner.',
-        'In case of a tie 3rd round is done one more min.',
+        'In 3rd and last round, one who solves the cube fastest is the winner.',
+        'In case of a tie 3rd round is done one more time.',
       ],
       category: 'Gaming',
       color1: '#091B29',
