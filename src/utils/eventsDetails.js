@@ -362,8 +362,8 @@ const eventData = {
     },
     13: {
       eventId: 13,
-      name: 'Sharktank',
-      teamType: 'Solo',
+      name: 'Shark Tank',
+      teamType: 'Group',
       price: 0,
       category: 'Non Technical',
       description:
@@ -392,7 +392,10 @@ const eventData = {
           email: 'test@test.test',
         },
       ],
-      rules: [],
+      rules: [
+        'PPT. time duration :-15 min.',
+        'Points can be given based on their way of Demonstration.',
+      ],
       color1: '#26403C',
       color2: '#8B8060',
     },
@@ -427,7 +430,7 @@ const eventData = {
       rules: [
         'The robots must fit in a box with dimension: 50CM X 50CM X 50CM at the beginning of a Battle.There are no size constraints once the Battle has begun, the robot can expand its parts after the battle starts.',
         'Nothing can intentionally detach from the robot. Robots will not be immediately penalised if pieces detach as a result of breakage. In the case of repeated breakage, the Referee may invalidate a Battle, request certain remedies be taken, or disqualify the Team',
-        'The maximum weight allowed is 40kg excluding batteries. Weight will be measured at the time of inspection before starting the competition.',
+        'The maximum weight allowed is 20kg. Weight will be measured at the time of inspection before starting the competition.',
         'The robot can be autonomous or manual. It should have an external source of control that is wireless or wired remote control.',
         'Teams have approximately two minute between battles. During this time, they may perform any adjustments they want to perform on their robot, with the explicit exception of altering the software of the robot in any way.',
         'No technical inspections are permitted during this time, teams must not add or remove mechanisms or components except to replace them with identical components.',
@@ -450,8 +453,7 @@ const eventData = {
       teamType: 'team',
       price: 40,
       category: 'Technical',
-      description:
-        'A hackathon, also known as a codefest, is a social coding event that brings computer programmers and other interested people together to improve upon or build a new software program. The word hackathon is a portmanteau of the words hacker, which means clever programmer, and marathon, an event marked by endurance. ',
+      description: '',
       image:
         'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/soccer_2BzoRQ1lI.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1650051993367',
       coordinators: [
@@ -545,7 +547,7 @@ const eventData = {
       price: 0,
       category: 'Technical',
       description:
-        'A hackathon, also known as a codefest, is a social coding event that brings computer programmers and other interested people together to improve upon or build a new software program. The word hackathon is a portmanteau of the words hacker, which means clever programmer, and marathon, an event marked by endurance. ',
+        'Welcome to this ultimate trivia quiz on the automobile industry. One does not have to be a mechanical engineer to know that much about cars, but if you think you know just about enough to sit at the table with the big boys, then this quiz is for you. ',
       image:
         'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/MS-Automotive-Engineering_XGYnq2rdq.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650051030305',
       coordinators: [
@@ -807,7 +809,7 @@ const eventData = {
       price: 30,
       category: 'Technical',
       description:
-        'A hackathon, also known as a codefest, is a social coding event that brings computer programmers and other interested people together to improve upon or build a new software program. The word hackathon is a portmanteau of the words hacker, which means clever programmer, and marathon, an event marked by endurance. ',
+        ' A series of events so related to each other that each one initiates the next.',
       image:
         'https://ik.imagekit.io/v7f424mhzsk/Technovation_2k22/rube-goldberg-machine-1021x680_ADNVnnRDj.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1650188230721',
       coordinators: [
@@ -1517,11 +1519,6 @@ const eventData = {
           mobile: 9554409188,
           email: 'kushalkhare.offcial@gmail.com',
         },
-        {
-          name: 'Nitish Kumar',
-          mobile: 08528421546,
-          email: 'nitishpal@gmail.com',
-        },
       ],
       rules: [
         'The game pits two teams of five players against each other, with each team having to complete certain objectives (Plant/Defuse spike) to win.',
@@ -1850,6 +1847,9 @@ const eventData = {
         'The game will be of 2 halves 15 min each.',
         "In case, if the match is tied in 30 mins of play then there will be extra time of 5 mins and if still the score is tied then 3 penalty will be offered to both the teams and then sudden death if it isn't settled after penalties. ",
         'There will be no warmup time given, the tournament match will be started as per the time mentioned in schedule which will be provided later.',
+        'Direct shot attempt on the goal post is only valid after half line of the ground that too under the knee height.',
+        'There is no limitation in no. of substitutions.',
+        'There is no OFFSIDE be given in the match.',
       ],
       category: 'Gaming',
       color1: '#299678',
@@ -2202,9 +2202,9 @@ const eventData = {
         },
       ],
       rules: [
-        'Every participant will get a question paper consisting of 40 questions(30 MCQ 10 ONE WORD)',
+        'Every participant will get a question paper consisting of 40 questions(25 MCQ 5 MSQ, 10 ONE WORD)',
         'The maximum time duration is 25 minutes.',
-        'No mobile, phones, books, copies, pages, or any other printed or written material is allowed, as this material will be treated under UFM.',
+        'No mobile, phones, books, copies, pages, or any other printed or written material is allowed, as this material will be treated under UFM. Only a Blue/Black Pen is allowed',
         'All the participants are requested to behave properly and maintain the decorum of the event as if misbehavior came across will result in participant disqualification.',
         'The decision of the coordinators shall be final and no query will be entertained thereafter.',
       ],
@@ -2280,8 +2280,8 @@ const eventData = {
         'An impromptu topic will be given by the coordinators five minutes before the commencement of the event.',
         'Each participants is given 1.5min minimum & 3min maximum to tell the story to the audience. ',
         'The Topic will be given to each candidate by the lottery system to ensure that there will be no biasing.',
-        'The language in which participants are comfortable can use Hindi/English.  ',
-        'Evaluation of the story will depend on many points like the selection of words, the moral of the story, the way of representation, the body language of the candidate, and also depends on the audience how to engage with the candidate’s story. ',
+        'The language in which participants are comfortable can use Hindi/English.',
+        "Evaluation of the story will depend on many points like the selection of words, the moral of the story, the way of representation, the body language of the candidate, and also depends on the audience how to engage with the candidate's story. ",
         'It is expected that candidate should be present at a given time otherwise his/her will be disqualified. ',
         'In case of any discrepancy, the coordinators have full authority to disqualify the candidate. ',
         'In case there will be an entry fee it will be decided by the higher authorities as stated by the Chief coordinators',

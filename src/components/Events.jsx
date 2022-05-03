@@ -190,6 +190,7 @@ function Events({ classes }) {
               </div>
 
               <div className="event-rules" id="event-rules">
+                <p>{currentEvent.description}</p>
                 {currentEvent.rules.map((rule, i) => (
                   <ul key={i}>
                     <li>{rule}</li>
